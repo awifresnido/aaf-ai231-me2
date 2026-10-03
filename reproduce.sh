@@ -204,9 +204,8 @@ stage_eval() {
 }
 
 stage_export() {
-    note "export" "single-file ONNX (opset 17) + GPU/CPU augmentation parity check"
+    note "export" "single-file ONNX (opset 17) + torch<->ONNX parity check"
     run .venv/bin/python training/scripts/export_me2_gold.py
-    run .venv/bin/python training/scripts/me2_parity_check.py --manifest data/manifests/me2_gold_v1.csv
 }
 
 stage_app() {

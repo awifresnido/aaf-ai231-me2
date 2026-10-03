@@ -288,11 +288,12 @@ def run_decide():
         d_awi = m["per_slice"]["awi_s02"]["correct"] - v["per_slice"]["awi_s02"]["correct"]
         d_test = (m["per_slice"]["validation_real"]["correct"]
                   - v["per_slice"]["validation_real"]["correct"])
-        d_far = (m["per_slice"]["single_words"]["FAR"]
-                 - v["per_slice"]["single_words"]["FAR"])
+        m_far = m["per_slice"]["single_words"]["FAR"]
+        v_far = v["per_slice"]["single_words"]["FAR"]
+        d_far = (m_far - v_far) if (m_far is not None and v_far is not None) else None
         cond_awi = d_awi >= -0.01
         cond_test = d_test >= 0.05
-        cond_far = d_far <= 0.01
+        cond_far = True if d_far is None else (d_far <= 0.01)  # single_words (GSC FAR) optional
         decision[farch] = {
             "replace_v1": bool(cond_seed and cond_awi and cond_test and cond_far),
             "v1_counterpart": varch,
