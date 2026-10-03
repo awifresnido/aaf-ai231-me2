@@ -6,8 +6,8 @@
     "opset": 17,
     "parity_max_dprob": 4.76837158203125e-07,
     "parity_pass": true,
-    "latency_model_p95_ms": 1.07,
-    "deploy_path": "/mnt/jfs_hpc/home/aldwin.fresnido/projects/tinyvcm-me2/exports/me2_gold/E1f_s1/deploy.json"
+    "latency_model_p95_ms": 1.29,
+    "deploy_path": "exports/me2_gold/E1f_s1/deploy.json"
   },
   "B2f_s0": {
     "arch": "tcresnet",
@@ -17,6 +17,6 @@
     "parity_max_dprob": 2.384185791015625e-07,
     "parity_pass": true,
     "latency_model_p95_ms": 0.35,
-    "deploy_path": "/mnt/jfs_hpc/home/aldwin.fresnido/projects/tinyvcm-me2/exports/me2_gold/B2f_s0/deploy.json"
+    "deploy_path": "exports/me2_gold/B2f_s0/deploy.json"
   }
 }
