@@ -3,7 +3,7 @@ edge_service:
   port: 8765
   device_label: rpi4
   models_dir: models
-  tiny_vcm_root: ../tiny-vcm
+  tiny_vcm_root: ../training
   active_vcm: E1f_s1
   compare_ids: [A7_s0]
   window_s: 4.0

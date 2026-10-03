@@ -16,8 +16,8 @@ edge_service:
   port: 8765
   device_label: wsl-dev             # set to rpi4 on the Pi
   models_dir: models
-  tiny_vcm_root: ../tiny-vcm        # tiny-vcm checkout; its src/ supplies the feature code
-  active_vcm: E1f_s1                 # final model per tiny-vcm/MODELS.md
+  tiny_vcm_root: ../training        # training/ feature code (src/vcm_data_loader.py etc.)
+  active_vcm: E1f_s1                 # final model
   compare_ids: [A7_s0]              # challenger(s) run on the same clip
   window_s: 4.0                     # command capture window [s]
   result_hold_s: 1.5                # how long the result stays on screen before idle [s]

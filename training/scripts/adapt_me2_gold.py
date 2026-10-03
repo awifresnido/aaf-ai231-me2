@@ -168,7 +168,7 @@ def _awi_row(r: pd.Series, split: str, sha: str) -> dict:
     d["sample_id"] = "awi_" + r["filename"].replace(".wav", "")
     d["schema_version"] = "2.0.0"
     d["corpus_id"] = "personal_awi"
-    d["relative_path"] = f"data/external/personal_awi/{r['filename']}"
+    d["relative_path"] = f"data/personal/raw/202453069/{r['filename']}"
     d["sha256"] = sha
     d["speaker_id"] = "202453069"
     d["session_id"] = r["session_id"]
@@ -434,7 +434,7 @@ def main() -> int:
         rows.append(d)
 
     # ---- Awi rows (s01 train, s02 validation, s03 test) -----------------------
-    awi_root = TVCM / "data/external/personal_awi"
+    awi_root = TVCM / "data/personal/raw/202453069"
     awi = pd.read_csv(awi_root / "manifest.csv", dtype=str, keep_default_na=False)
     awi_map = pd.read_csv(awi_root / "awi01_mapping.csv", dtype=str, keep_default_na=False)
     awi_split = dict(zip(awi_map["new_filename"], awi_map["source_split"]))

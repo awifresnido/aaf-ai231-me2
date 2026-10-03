@@ -8,13 +8,14 @@ and writes a CSV with relative_path + label (UNKNOWN) for the eval.
 from __future__ import annotations
 
 import csv
+import os
 import sys
 from pathlib import Path
 
 import pyarrow.parquet as pq
 
 TVCM = Path(__file__).resolve().parents[2]
-ME2G = Path("ME2_GOLD")
+ME2G = Path(os.environ.get("ME2_GOLD_DIR", str(Path(__file__).resolve().parents[2] / "ME2_GOLD")))
 SRC = TVCM / "reports/me2_gold_v1_near_miss.csv"
 OUT = TVCM / "data/external/me2_gold/near_miss"
 OUT.mkdir(parents=True, exist_ok=True)

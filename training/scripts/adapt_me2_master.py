@@ -102,7 +102,7 @@ def main() -> int:
                                  (st["source"] == "FluentSpeechCommands")]["speaker_id"])
 
     # ---------------- Awi sessions --------------------------------------------
-    awi_root = TVCM / "data/external/personal_awi"
+    awi_root = TVCM / "data/personal/raw/202453069"
     awi = pd.read_csv(awi_root / "manifest.csv", dtype=str, keep_default_na=False)
     awi_map = pd.read_csv(awi_root / "awi01_mapping.csv", dtype=str, keep_default_na=False)
     awi_split = dict(zip(awi_map["new_filename"], awi_map["source_split"]))

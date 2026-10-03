@@ -1,0 +1,159 @@
+abs_path,split,command,slot_value,transcript,speaker_id
+train-00001-of-00002.parquet#train_010323_real_voice_set_timer_5_owner_20260930-123017-247.wav,train,TIMER,,set the timer for side maintenance.,202322013
+train-00001-of-00002.parquet#train_010324_real_voice_set_timer_10_owner_20260930-123022-307.wav,train,TIMER,,the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010325_real_voice_set_timer_5_owner_20260930-123910-804.wav,train,TIMER,,Set a timer for 5 minutes,202322013
+train-00001-of-00002.parquet#train_010326_real_voice_set_timer_10_owner_20260930-123915-368.wav,train,TIMER,,Set a timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010327_real_voice_set_timer_5_owner_20260930-124228-267.wav,train,TIMER,,Set the timer for 5 minutes,202322013
+train-00001-of-00002.parquet#train_010328_real_voice_set_timer_10_owner_20260930-124232-836.wav,train,TIMER,,Set a timer for 10 minutes,202322013
+train-00001-of-00002.parquet#train_010329_real_voice_set_timer_5_owner_20260930-124456-950.wav,train,TIMER,,Set a timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010330_real_voice_set_timer_10_owner_20260930-124501-717.wav,train,TIMER,,Set a timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010331_real_voice_set_timer_5_owner_20260930-124803-455.wav,train,TIMER,,set a timer for 5 minutes.,202322013_speaker2
+train-00001-of-00002.parquet#train_010332_real_voice_set_timer_10_owner_20260930-124807-914.wav,train,TIMER,,set the timer for 10 minutes,202322013_speaker2
+train-00001-of-00002.parquet#train_010333_real_voice_set_timer_5_owner_20260930-125552-424.wav,train,TIMER,,Set the timer for 5 minutes,202322013
+train-00001-of-00002.parquet#train_010334_real_voice_set_timer_10_owner_20260930-125600-333.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010335_real_voice_set_timer_5_owner_20260930-130036-718.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010336_real_voice_set_timer_10_owner_20260930-130041-787.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010337_real_voice_set_timer_5_owner_20260930-130405-141.wav,train,TIMER,,Set the timer for five minutes.,202322013
+train-00001-of-00002.parquet#train_010338_real_voice_set_timer_10_owner_20260930-130414-068.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010339_real_voice_set_timer_5_owner_20260930-133728-153.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010340_real_voice_set_timer_10_owner_20260930-133733-214.wav,train,TIMER,,set the timer for 10 minutes,202322013
+train-00001-of-00002.parquet#train_010341_real_voice_set_timer_1_owner_20260930-134650-266.wav,train,TIMER,,Set the timer for 180.,202322013
+train-00001-of-00002.parquet#train_010342_real_voice_set_timer_5_owner_20260930-134655-026.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010343_real_voice_set_timer_10_owner_20260930-134659-481.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010344_real_voice_set_timer_1_owner_20260930-134948-653.wav,train,TIMER,,Set the timer.,202322013
+train-00001-of-00002.parquet#train_010345_real_voice_set_timer_10_owner_20260930-135001-716.wav,train,TIMER,,Set a timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010346_real_voice_set_timer_5_owner_20260930-135306-682.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010347_real_voice_set_timer_10_owner_20260930-135311-237.wav,train,TIMER,,Set the timer for 10,202322013
+train-00001-of-00002.parquet#train_010348_real_voice_set_timer_5_owner_20260930-161942-701.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010349_real_voice_set_timer_10_owner_20260930-161947-561.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010350_real_voice_set_timer_5_owner_20260930-162724-003.wav,train,TIMER,,set the timer for 5 minutes,202322013
+train-00001-of-00002.parquet#train_010351_real_voice_set_timer_10_owner_20260930-162728-961.wav,train,TIMER,,Set the timer for 10 minutes,202322013
+train-00001-of-00002.parquet#train_010352_real_voice_set_timer_5_owner_20260930-163113-902.wav,train,TIMER,,Set the timer for 5 minutes,202322013
+train-00001-of-00002.parquet#train_010353_real_voice_set_timer_10_owner_20260930-163119-068.wav,train,TIMER,,Set the timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010354_real_voice_set_timer_5_owner_20260930-165248-766.wav,train,TIMER,,Set the timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010355_real_voice_set_timer_10_owner_20260930-165257-674.wav,train,TIMER,,Set a timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010356_real_voice_set_timer_5_owner_20260930-165901-390.wav,train,TIMER,,Set a timer for 5 minutes.,202322013
+train-00001-of-00002.parquet#train_010357_real_voice_set_timer_10_owner_20260930-165910-502.wav,train,TIMER,,Set a timer for 10 minutes.,202322013
+train-00001-of-00002.parquet#train_010358_real_voice_set_timer_5_owner_20260930-171043-847.wav,train,TIMER,,Set the timer for 5 minutes.,202322013_speaker2
+train-00001-of-00002.parquet#train_010359_real_voice_set_timer_10_owner_20260930-171049-425.wav,train,TIMER,,Set a timer for 10 minutes.,202322013_speaker2
+train-00001-of-00002.parquet#train_010360_real_voice_set_alarm_7am_owner_20260930-123043-004.wav,train,ALARM,,the set an alarm of seven years,202322013
+train-00001-of-00002.parquet#train_010361_real_voice_set_alarm_9pm_owner_20260930-123048-785.wav,train,ALARM,,Set an alarm at 9:00.,202322013
+train-00001-of-00002.parquet#train_010362_real_voice_set_alarm_7am_owner_20260930-123923-887.wav,train,ALARM,,Set an alarm at 7-8.,202322013
+train-00001-of-00002.parquet#train_010363_real_voice_set_alarm_9pm_owner_20260930-123928-236.wav,train,ALARM,,Set an alarm at 90.000.,202322013
+train-00001-of-00002.parquet#train_010364_real_voice_set_alarm_7am_owner_20260930-124242-768.wav,train,ALARM,,Set an alarm at 7am,202322013
+train-00001-of-00002.parquet#train_010365_real_voice_set_alarm_7am_owner_20260930-124511-251.wav,train,ALARM,,Set an alarm at 7 a.m.,202322013
+train-00001-of-00002.parquet#train_010366_real_voice_set_alarm_7am_owner_20260930-124817-448.wav,train,ALARM,,Set an alarm at 7am,202322013_speaker2
+train-00001-of-00002.parquet#train_010367_real_voice_set_alarm_7am_owner_20260930-125613-214.wav,train,ALARM,,"Set that alarm, set that alarm.",202322013
+train-00001-of-00002.parquet#train_010368_real_voice_set_alarm_7am_owner_20260930-130052-640.wav,train,ALARM,,Set an alarm at 7 a.m.,202322013
+train-00001-of-00002.parquet#train_010369_real_voice_set_alarm_7am_owner_20260930-130431-205.wav,train,ALARM,,Set an alarm at 7 AM,202322013
+train-00001-of-00002.parquet#train_010370_real_voice_set_alarm_7am_owner_20260930-133743-527.wav,train,ALARM,,set them alarm and set them in the day.,202322013
+train-00001-of-00002.parquet#train_010371_real_voice_set_alarm_6am_owner_20260930-134704-137.wav,train,ALARM,,that. Set an alarm at 6,202322013
+train-00001-of-00002.parquet#train_010372_real_voice_set_alarm_7am_owner_20260930-134712-744.wav,train,ALARM,,Set an alarm at 7 a.m.,202322013
+train-00001-of-00002.parquet#train_010373_real_voice_set_alarm_6am_owner_20260930-135316-810.wav,train,ALARM,,7 alarm at 6am,202322013
+train-00001-of-00002.parquet#train_010374_real_voice_set_alarm_7am_owner_20260930-135324-903.wav,train,ALARM,,Set the alarm at 78.,202322013
+train-00001-of-00002.parquet#train_010375_real_voice_set_alarm_7am_owner_20260930-161957-480.wav,train,ALARM,,Set an alarm at 7 a.m.,202322013
+train-00001-of-00002.parquet#train_010376_real_voice_set_alarm_7am_owner_20260930-162739-187.wav,train,ALARM,,set an alarm at 7 p.m.,202322013
+train-00001-of-00002.parquet#train_010377_real_voice_set_alarm_6am_owner_20260930-163124-529.wav,train,ALARM,,set an alarm on the 6th.,202322013
+train-00001-of-00002.parquet#train_010378_real_voice_set_alarm_7am_owner_20260930-163130-404.wav,train,ALARM,,Set an alarm at 7:00.,202322013
+train-00001-of-00002.parquet#train_010379_real_voice_set_alarm_9pm_owner_20260930-163135-871.wav,train,ALARM,,Set an alarm at night.,202322013
+train-00001-of-00002.parquet#train_010380_real_voice_set_alarm_7am_owner_20260930-165315-690.wav,train,ALARM,,Set an alarm at 7am.,202322013
+train-00001-of-00002.parquet#train_010381_real_voice_set_alarm_7am_owner_20260930-165924-472.wav,train,ALARM,,Set an alarm at 7am.,202322013
+train-00001-of-00002.parquet#train_010382_real_voice_set_alarm_7am_owner_20260930-171111-493.wav,train,ALARM,,Set an alarm at 7am.,202322013_speaker2
+train-00001-of-00002.parquet#train_010383_real_voice_set_temperature_22_owner_20260930-123101-865.wav,train,TEMPERATURE,,Set temperature to 20 degrees.,202322013
+train-00001-of-00002.parquet#train_010384_real_voice_set_temperature_18_owner_20260930-162749-611.wav,train,TEMPERATURE,,Set temperature to 80 degrees,202322013
+train-00001-of-00002.parquet#train_010385_real_voice_set_temperature_18_owner_20260930-163140-935.wav,train,TEMPERATURE,,Set temperature to 80 degrees,202322013
+train-00001-of-00002.parquet#train_010386_real_voice_set_temperature_18_owner_20260930-165328-547.wav,train,TEMPERATURE,,Set temperature to 80 degrees.,202322013
+train-00001-of-00002.parquet#train_010387_xela_SET_TEMPERATURE_REAL_VCM_008994.wav,train,TEMPERATURE,,Set the temperature to 20 degrees.,S1
+train-00001-of-00002.parquet#train_010388_xela_SET_TEMPERATURE_REAL_VCM_008996.wav,train,TEMPERATURE,,Set the temperature to 24 degrees.,S1
+train-00001-of-00002.parquet#train_010389_xela_SET_TEMPERATURE_REAL_VCM_008998.wav,train,TEMPERATURE,,Set the thermostat to 68 degrees.,S1
+train-00001-of-00002.parquet#train_010390_xela_SET_TEMPERATURE_REAL_VCM_008999.wav,train,TEMPERATURE,,Set the thermostat to 70 degrees.,S1
+train-00001-of-00002.parquet#train_010391_xela_SET_TEMPERATURE_REAL_VCM_009000.wav,train,TEMPERATURE,,Set the thermostat to 72 degrees.,S1
+train-00001-of-00002.parquet#train_010392_xela_SET_TEMPERATURE_REAL_VCM_009001.wav,train,TEMPERATURE,,Set the thermostat to 75 degrees.,S1
+train-00001-of-00002.parquet#train_010393_xela_SET_TEMPERATURE_REAL_VCM_009002.wav,train,TEMPERATURE,,Set it to 20 degrees.,S1
+train-00001-of-00002.parquet#train_010394_xela_SET_TEMPERATURE_REAL_VCM_009004.wav,train,TEMPERATURE,,Set it to 24 degrees.,S1
+train-00001-of-00002.parquet#train_010395_xela_SET_TEMPERATURE_REAL_VCM_009005.wav,train,TEMPERATURE,,Set it to 25 degrees.,S1
+train-00001-of-00002.parquet#train_010396_xela_SET_TEMPERATURE_REAL_VCM_009006.wav,train,TEMPERATURE,,Make the temperature 21 degrees.,S1
+train-00001-of-00002.parquet#train_010397_xela_SET_TEMPERATURE_REAL_VCM_009007.wav,train,TEMPERATURE,,Make the temperature 23 degrees.,S1
+train-00001-of-00002.parquet#train_010398_xela_SET_TEMPERATURE_REAL_VCM_009009.wav,train,TEMPERATURE,,Change the thermostat to 72 degrees.,S1
+train-00001-of-00002.parquet#train_010399_xela_SET_TEMPERATURE_REAL_VCM_009011.wav,train,TEMPERATURE,,Adjust the thermostat to 70 degrees.,S1
+train-00001-of-00002.parquet#train_010400_xela_SET_TEMPERATURE_REAL_VCM_009012.wav,train,TEMPERATURE,,Set the room temperature to 24 degrees.,S1
+train-00001-of-00002.parquet#train_010401_xela_SET_TEMPERATURE_REAL_VCM_009013.wav,train,TEMPERATURE,,Set the room temperature to 25 degrees.,S1
+train-00001-of-00002.parquet#train_010402_xela_SET_TEMPERATURE_REAL_VCM_009014.wav,train,TEMPERATURE,,Set the temperature to 20 degrees.,S2
+train-00001-of-00002.parquet#train_010403_xela_SET_TEMPERATURE_REAL_VCM_009016.wav,train,TEMPERATURE,,Set the temperature to 24 degrees.,S2
+train-00001-of-00002.parquet#train_010404_xela_SET_TEMPERATURE_REAL_VCM_009018.wav,train,TEMPERATURE,,Set the thermostat to 68 degrees.,S2
+train-00001-of-00002.parquet#train_010405_xela_SET_TEMPERATURE_REAL_VCM_009019.wav,train,TEMPERATURE,,Set the thermostat to 70 degrees.,S2
+train-00001-of-00002.parquet#train_010406_xela_SET_TEMPERATURE_REAL_VCM_009020.wav,train,TEMPERATURE,,Set the thermostat to 72 degrees.,S2
+train-00001-of-00002.parquet#train_010407_xela_SET_TEMPERATURE_REAL_VCM_009021.wav,train,TEMPERATURE,,Set the thermostat to 75 degrees.,S2
+train-00001-of-00002.parquet#train_010408_xela_SET_TEMPERATURE_REAL_VCM_009022.wav,train,TEMPERATURE,,Set it to 20 degrees.,S2
+train-00001-of-00002.parquet#train_010409_xela_SET_TEMPERATURE_REAL_VCM_009024.wav,train,TEMPERATURE,,Set it to 24 degrees.,S2
+train-00001-of-00002.parquet#train_010410_xela_SET_TEMPERATURE_REAL_VCM_009025.wav,train,TEMPERATURE,,Set it to 25 degrees.,S2
+train-00001-of-00002.parquet#train_010411_xela_SET_TEMPERATURE_REAL_VCM_009026.wav,train,TEMPERATURE,,Make the temperature 21 degrees.,S2
+train-00001-of-00002.parquet#train_010412_xela_SET_TEMPERATURE_REAL_VCM_009027.wav,train,TEMPERATURE,,Make the temperature 23 degrees.,S2
+train-00001-of-00002.parquet#train_010413_xela_SET_TEMPERATURE_REAL_VCM_009029.wav,train,TEMPERATURE,,Change the thermostat to 72 degrees.,S2
+train-00001-of-00002.parquet#train_010414_xela_SET_TEMPERATURE_REAL_VCM_009031.wav,train,TEMPERATURE,,Adjust the thermostat to 70 degrees.,S2
+train-00001-of-00002.parquet#train_010415_xela_SET_TEMPERATURE_REAL_VCM_009032.wav,train,TEMPERATURE,,Set the room temperature to 24 degrees.,S2
+train-00001-of-00002.parquet#train_010416_xela_SET_TEMPERATURE_REAL_VCM_009033.wav,train,TEMPERATURE,,Set the room temperature to 25 degrees.,S2
+train-00001-of-00002.parquet#train_010417_xela_SET_TEMPERATURE_REAL_VCM_009034.wav,train,TEMPERATURE,,Set the temperature to 20 degrees.,S3
+train-00001-of-00002.parquet#train_010418_xela_SET_TEMPERATURE_REAL_VCM_009036.wav,train,TEMPERATURE,,Set the temperature to 24 degrees.,S3
+train-00001-of-00002.parquet#train_010419_xela_SET_TEMPERATURE_REAL_VCM_009038.wav,train,TEMPERATURE,,Set the thermostat to 68 degrees.,S3
+train-00001-of-00002.parquet#train_010420_xela_SET_TEMPERATURE_REAL_VCM_009039.wav,train,TEMPERATURE,,Set the thermostat to 70 degrees.,S3
+train-00001-of-00002.parquet#train_010421_xela_SET_TEMPERATURE_REAL_VCM_009040.wav,train,TEMPERATURE,,Set the thermostat to 72 degrees.,S3
+train-00001-of-00002.parquet#train_010422_xela_SET_TEMPERATURE_REAL_VCM_009041.wav,train,TEMPERATURE,,Set the thermostat to 75 degrees.,S3
+train-00001-of-00002.parquet#train_010423_xela_SET_TEMPERATURE_REAL_VCM_009042.wav,train,TEMPERATURE,,Set it to 20 degrees.,S3
+train-00001-of-00002.parquet#train_010424_xela_SET_TEMPERATURE_REAL_VCM_009044.wav,train,TEMPERATURE,,Set it to 24 degrees.,S3
+train-00001-of-00002.parquet#train_010425_xela_SET_TEMPERATURE_REAL_VCM_009045.wav,train,TEMPERATURE,,Set it to 25 degrees.,S3
+train-00001-of-00002.parquet#train_010426_xela_SET_TEMPERATURE_REAL_VCM_009046.wav,train,TEMPERATURE,,Make the temperature 21 degrees.,S3
+train-00001-of-00002.parquet#train_010427_xela_SET_TEMPERATURE_REAL_VCM_009047.wav,train,TEMPERATURE,,Make the temperature 23 degrees.,S3
+train-00001-of-00002.parquet#train_010428_xela_SET_TEMPERATURE_REAL_VCM_009049.wav,train,TEMPERATURE,,Change the thermostat to 72 degrees.,S3
+train-00001-of-00002.parquet#train_010429_xela_SET_TEMPERATURE_REAL_VCM_009051.wav,train,TEMPERATURE,,Adjust the thermostat to 70 degrees.,S3
+train-00001-of-00002.parquet#train_010430_xela_SET_TEMPERATURE_REAL_VCM_009052.wav,train,TEMPERATURE,,Set the room temperature to 24 degrees.,S3
+train-00001-of-00002.parquet#train_010431_xela_SET_TEMPERATURE_REAL_VCM_009053.wav,train,TEMPERATURE,,Set the room temperature to 25 degrees.,S3
+train-00001-of-00002.parquet#train_010432_real_voice_dim_lights_50_owner_20260930-122844-966.wav,train,BRIGHTNESS,,the dim lights to 50%.,202322013
+train-00001-of-00002.parquet#train_010433_real_voice_dim_lights_80_owner_20260930-123901-781.wav,train,BRIGHTNESS,,lean lights to 80%,202322013
+train-00001-of-00002.parquet#train_010434_real_voice_dim_lights_50_owner_20260930-124213-865.wav,train,BRIGHTNESS,,dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010435_real_voice_dim_lights_80_owner_20260930-124218-836.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010436_real_voice_dim_lights_50_owner_20260930-124443-258.wav,train,BRIGHTNESS,,Deep lights to 50%.,202322013
+train-00001-of-00002.parquet#train_010437_real_voice_dim_lights_80_owner_20260930-124447-823.wav,train,BRIGHTNESS,,dim lights to 80%.,202322013
+train-00001-of-00002.parquet#train_010438_real_voice_dim_lights_50_owner_20260930-124749-155.wav,train,BRIGHTNESS,,the dim lights to 50%.,202322013_speaker2
+train-00001-of-00002.parquet#train_010439_real_voice_dim_lights_80_owner_20260930-124753-823.wav,train,BRIGHTNESS,,the dim lights to 80%.,202322013_speaker2
+train-00001-of-00002.parquet#train_010440_real_voice_dim_lights_50_owner_20260930-130022-315.wav,train,BRIGHTNESS,,dim lights the 50%.,202322013
+train-00001-of-00002.parquet#train_010441_real_voice_dim_lights_80_owner_20260930-130027-081.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010442_real_voice_dim_lights_50_owner_20260930-133713-171.wav,train,BRIGHTNESS,,Dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010443_real_voice_dim_lights_80_owner_20260930-133718-029.wav,train,BRIGHTNESS,,dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010444_real_voice_dim_lights_50_owner_20260930-134640-748.wav,train,BRIGHTNESS,,Dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010445_real_voice_dim_lights_80_owner_20260930-134645-104.wav,train,BRIGHTNESS,,the dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010446_real_voice_dim_lights_50_owner_20260930-134938-126.wav,train,BRIGHTNESS,,dim lights to 50%.,202322013
+train-00001-of-00002.parquet#train_010447_real_voice_dim_lights_80_owner_20260930-134943-492.wav,train,BRIGHTNESS,,dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010448_real_voice_dim_lights_80_owner_20260930-135255-241.wav,train,BRIGHTNESS,,the limb lights to 80%.,202322013
+train-00001-of-00002.parquet#train_010449_real_voice_dim_lights_50_owner_20260930-161926-406.wav,train,BRIGHTNESS,,Dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010450_real_voice_dim_lights_50_owner_20260930-162659-506.wav,train,BRIGHTNESS,,the deep lights to 50%,202322013
+train-00001-of-00002.parquet#train_010451_real_voice_dim_lights_50_owner_20260930-163058-114.wav,train,BRIGHTNESS,,Dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010452_real_voice_dim_lights_80_owner_20260930-164342-940.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010453_real_voice_dim_lights_80_owner_20260930-164358-327.wav,train,BRIGHTNESS,,the dim lights to 80% 1.3 585 585,202322013
+train-00001-of-00002.parquet#train_010454_real_voice_dim_lights_80_owner_20260930-164405-918.wav,train,BRIGHTNESS,,Dim lights to 80%.,202322013
+train-00001-of-00002.parquet#train_010455_real_voice_dim_lights_80_owner_20260930-164413-106.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010456_real_voice_dim_lights_80_owner_20260930-164423-641.wav,train,BRIGHTNESS,,team lights to 80%,202322013
+train-00001-of-00002.parquet#train_010457_real_voice_dim_lights_80_owner_20260930-164431-115.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010458_real_voice_dim_lights_80_owner_20260930-164444-390.wav,train,BRIGHTNESS,,Dim lights to 80%,202322013
+train-00001-of-00002.parquet#train_010459_real_voice_dim_lights_50_owner_20260930-164952-110.wav,train,BRIGHTNESS,,dim lights to 50%,202322013
+train-00001-of-00002.parquet#train_010460_real_voice_dim_lights_80_owner_20260930-165234-390.wav,train,BRIGHTNESS,,beam lights to 80%,202322013
+train-00001-of-00002.parquet#train_010461_real_voice_dim_lights_50_owner_20260930-165838-819.wav,train,BRIGHTNESS,,the dim lights are 50%,202322013
+train-00001-of-00002.parquet#train_010462_real_voice_dim_lights_80_owner_20260930-165845-298.wav,train,BRIGHTNESS,,the beam lights to 80%.,202322013
+train-00001-of-00002.parquet#train_010463_real_voice_dim_lights_50_owner_20260930-171025-535.wav,train,BRIGHTNESS,,Game lights to 50%.,202322013_speaker2
+train-00001-of-00002.parquet#train_010464_real_voice_dim_lights_80_owner_20260930-171032-622.wav,train,BRIGHTNESS,,the dim lights to 80%,202322013_speaker2
+train-00001-of-00002.parquet#train_010465_real_voice_remind_trash_owner_20260930-123201-818.wav,train,CREATE_REMINDER,,Remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010466_real_voice_remind_trash_owner_20260930-123538-317.wav,train,CREATE_REMINDER,,Remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010467_real_voice_remind_trash_owner_20260930-124015-510.wav,train,CREATE_REMINDER,,Remind me to take off the flash.,202322013
+train-00001-of-00002.parquet#train_010468_real_voice_remind_trash_owner_20260930-124338-352.wav,train,CREATE_REMINDER,,"""Remind me to take out the trash.""",202322013
+train-00001-of-00002.parquet#train_010469_real_voice_remind_trash_owner_20260930-124609-056.wav,train,CREATE_REMINDER,,remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010470_real_voice_remind_trash_owner_20260930-124910-203.wav,train,CREATE_REMINDER,,remind me to take out the trash,202322013_speaker2
+train-00001-of-00002.parquet#train_010471_real_voice_remind_trash_owner_20260930-125719-753.wav,train,CREATE_REMINDER,,No. Remind me to take off the brush.,202322013
+train-00001-of-00002.parquet#train_010472_real_voice_remind_trash_owner_20260930-130150-652.wav,train,CREATE_REMINDER,,Remind me to take out the trash.,202322013
+train-00001-of-00002.parquet#train_010473_real_voice_remind_trash_owner_20260930-133840-973.wav,train,CREATE_REMINDER,,Remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010474_real_voice_remind_trash_owner_20260930-135116-433.wav,train,CREATE_REMINDER,,remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010475_real_voice_remind_trash_owner_20260930-135428-387.wav,train,CREATE_REMINDER,,remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010476_real_voice_remind_trash_owner_20260930-162105-105.wav,train,CREATE_REMINDER,,"""Remind me to take off the trash.""",202322013
+train-00001-of-00002.parquet#train_010477_real_voice_remind_trash_owner_20260930-162848-935.wav,train,CREATE_REMINDER,,Remind me the take of the trash.,202322013
+train-00001-of-00002.parquet#train_010478_real_voice_remind_trash_owner_20260930-163243-295.wav,train,CREATE_REMINDER,,Remind me to take out the trash.,202322013
+train-00001-of-00002.parquet#train_010479_real_voice_remind_trash_owner_20260930-165432-121.wav,train,CREATE_REMINDER,,remind me to take out the trash,202322013
+train-00001-of-00002.parquet#train_010480_real_voice_remind_trash_owner_20260930-171219-722.wav,train,CREATE_REMINDER,,Remind me to take out the trash.,202322013_speaker2

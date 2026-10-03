@@ -22,6 +22,10 @@ RELEASE_TAG="v0"
 DATASET="airimonda/ai231-me2-voice-commands"
 DATASET_REVISION="6947f13073e57eb6ae67e7e2fc3680700b82aa13"
 DGX_DATASET_DIR="/data/ai231"          # shared class cache on the DGX (owner-provided load.py)
+# Parquet form of the same HF dataset (train/test/holdout/numerals +
+# supplemental_synth + synthetic_negatives). The manifest stage reads this
+# directly with pyarrow (read-only). Override via env if yours lives elsewhere.
+export ME2_GOLD_DIR="${ME2_GOLD_DIR:-$HOME/projects/ME2_GOLD}"
 MANIFEST_SHA256="f81867392d20e3a23cbbcd2b77559c3b357e943f10e3095b65f7aa1b6171cdb2"
 
 # ---------------------------------------------------------------------------
@@ -87,12 +91,17 @@ stage_setup() {
     run .venv/bin/pip install -r env/requirements-pi.txt
     run ffmpeg -version
     run node --version
+    run npm --version
 }
 
 stage_data() {
-    note "data" "load the class dataset from the DGX shared cache (owner-provided loader)"
+    note "data" "verify the gold dataset parquet is readable (ME2_GOLD_DIR)"
     url "Hugging Face: ${DATASET} @ ${DATASET_REVISION}"
-    run python "${DGX_DATASET_DIR}/load.py"
+    # The manifest stage reads the parquet directly (pyarrow, read-only). The
+    # shared /data/ai231 HF arrow cache is read-only for non-owners, so its
+    # owner-provided load.py cannot acquire the datasets cache lock. Verify the
+    # parquet here — the exact source the pipeline consumes — instead.
+    run .venv/bin/python -c 'import os, pyarrow.parquet as pq; from pathlib import Path; r = Path(os.environ["ME2_GOLD_DIR"]); fs = sorted(p for p in r.rglob("*.parquet") if ".cache" not in p.parts); print(f"parquet files: {len(fs)}"); print(f"total rows: {sum(pq.ParquetFile(f).metadata.num_rows for f in fs)}")'
     if [[ "$WITH_V1_SLICES" == "1" ]]; then
         note "data(+v1)" "also fetch Speech Commands v2 for the clean Single-Words FAR slice"
         url "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz"
@@ -162,15 +171,16 @@ stage_weights() {
             run curl -fL -o release/personal_awi.zip \
                 "https://github.com/${REPO}/releases/download/${RELEASE_TAG}/personal_awi.zip"
         fi
-        run mkdir -p data/external/personal_awi
-        run unzip -o release/personal_awi.zip -d data/external/personal_awi
+        run mkdir -p data/personal/raw/202453069
+        run unzip -o release/personal_awi.zip -d data/personal/raw/202453069
     fi
     run sha256sum -c results/me2_gold/checksums.sha256
 }
 
 stage_manifest() {
     note "manifest" "build me2_gold_v1.csv from the dataset + Awi recordings"
-    run python training/scripts/adapt_me2_gold.py --extract
+    run .venv/bin/python training/scripts/adapt_me2_gold.py --extract
+    run .venv/bin/python training/scripts/extract_near_miss.py
     run sha256sum data/manifests/me2_gold_v1.csv
     printf '  ↳ expect manifest sha256 = %s\n' "$MANIFEST_SHA256"
 }
@@ -194,15 +204,17 @@ stage_eval() {
 }
 
 stage_export() {
-    note "export" "single-file ONNX (opset 17) + PyTorch parity check"
+    note "export" "single-file ONNX (opset 17) + GPU/CPU augmentation parity check"
     run .venv/bin/python training/scripts/export_me2_gold.py
-    run .venv/bin/python training/scripts/me2_parity_check.py
+    run .venv/bin/python training/scripts/me2_parity_check.py --manifest data/manifests/me2_gold_v1.csv
 }
 
 stage_app() {
-    note "app" "start the laptop backend + React UI in mock-edge mode"
-    run bash -c 'cd app && python -m laptop.app.main --config config/demo.yaml'
+    note "app" "build the React UI, then start the laptop backend in mock-edge mode"
+    run bash -c 'cd app/laptop/frontend && npm ci && npm run build'
+    run bash -c 'cd app && ../.venv/bin/python -m laptop.app.main --config config/demo.yaml'
     url "http://localhost:8080"
+    url "health: http://localhost:8080/api/state"
 }
 
 stage_bench() {

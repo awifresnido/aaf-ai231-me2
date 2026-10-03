@@ -71,7 +71,7 @@ def speed_hist(lst):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=500)
-    ap.add_argument("--manifest", default="data/manifests/composite_v1.csv")
+    ap.add_argument("--manifest", default="data/manifests/me2_gold_v1.csv")
     args = ap.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
