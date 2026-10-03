@@ -142,6 +142,7 @@ stage_weights() {
     run mkdir -p checkpoints exports/me2_gold release
     for a in "${assets[@]}"; do
         local src="${a%%:*}"; local dst="${a##*:}"
+        run mkdir -p "${dst%/*}"
         if [[ -n "$WEIGHTS_LOCAL" && -f "$WEIGHTS_LOCAL/$src" ]]; then
             run cp "$WEIGHTS_LOCAL/$src" "$dst"
         else
