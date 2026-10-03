@@ -151,12 +151,18 @@ def load_slices():
 
 
 def load_single_words(gold_train_sha, gold_train_spk):
+    # single_words (v1 GSC FAR slice) is optional: needs composite_v1.csv plus the
+    # GSC v0.02 audio (download via reproduce.sh --with-v1-slices).
+    if not COMPOSITE.exists():
+        return []
     items = []
     for r in csv.DictReader(open(COMPOSITE)):
         if r["corpus_id"] != "gsc_v2" or r["source_split"] != "test":
             continue
         if r["sha256"] in gold_train_sha or r["speaker_id"] in gold_train_spk:
             continue
+        if not (ROOT / r["relative_path"]).exists():
+            continue  # GSC audio not downloaded
         items.append((r["relative_path"], r["training_label"], r["sha256"], r["speaker_id"]))
     return items
 

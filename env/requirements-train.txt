@@ -13,3 +13,4 @@ datasets>=2.18.0
 huggingface_hub>=0.20.0
 onnx>=1.16.0
 onnxruntime>=1.16.0
+torchcodec>=0.4.0  # audio decode backend required by torchaudio>=2.9 load()
