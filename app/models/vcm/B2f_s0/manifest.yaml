@@ -5,7 +5,7 @@ description: Sweep fine-tuned on the ME2 Gold dataset plus Awi's practice sessio
 based_on: TC-ResNet (temporal convolution)
 task: vcm
 engine: onnx_tinyvcm
-weights: ../../../../tiny-vcm/exports/B2f_s0/model.onnx
+weights: ../../../../exports/me2_gold/B2f_s0/model.onnx
 architecture:
   arch: tcresnet
   width_mult: 1.0

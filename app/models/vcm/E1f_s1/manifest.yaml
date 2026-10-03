@@ -5,7 +5,7 @@ description: Focus fine-tuned on the ME2 Gold dataset plus Awi's practice sessio
 based_on: CRNN with attention (conv + GRU + attention pooling)
 task: vcm
 engine: onnx_tinyvcm
-weights: ../../../../tiny-vcm/exports/E1f_s1/model.onnx
+weights: ../../../../exports/me2_gold/E1f_s1/model.onnx
 architecture:
   arch: crnn_attn
   width_mult: 1.0
