@@ -18,7 +18,7 @@ edge_service:
   models_dir: models
   tiny_vcm_root: ../training        # training/ feature code (src/vcm_data_loader.py etc.)
   active_vcm: E1f_s1                 # final model
-  compare_ids: [A7_s0]              # challenger(s) run on the same clip
+  compare_ids: [B2f_s0]              # challenger(s) run on the same clip
   window_s: 4.0                     # command capture window [s]
   result_hold_s: 1.5                # how long the result stays on screen before idle [s]
   benchmark_mode: false          # vcm-benchmark: log lines + music/chime off

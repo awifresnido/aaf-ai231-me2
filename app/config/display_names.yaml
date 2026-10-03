@@ -3,22 +3,10 @@
 # and currently only "benchmark" (a reference model kept for comparison): the UI
 # uses it for ordering only (benchmark models are listed last), never as a badge.
 models:
-  A2_s0:        {name: "Sweep Basic",   based_on: "TC-ResNet (temporal convolution)",
-                 description: "Early Sweep trained on synthetic voices only. Recognises the command type but not slot values (no brightness %, no timer length)."}
-  A7_s0:        {name: "Sweep Preview", based_on: "TC-ResNet (temporal convolution)",
-                 description: "Early Sweep trained on synthetic voices only, with slot values. The starting point for Sweep."}
-  B2_s0:        {name: "Sweep (TC-ResNet)", based_on: "TC-ResNet (temporal convolution)",
-                 description: "Scans the whole command for sound patterns. Steady and consistent."}
   B2f_s0:       {name: "Sweep (TC-ResNet Gold)", based_on: "TC-ResNet (temporal convolution)",
                  description: "Sweep fine-tuned on the ME2 Gold dataset plus Awi's practice session. Secondary gold-trained model."}
-  E1_s0:        {name: "Focus (CRNN-Attn)", based_on: "CRNN with attention (conv + GRU + attention pooling)",
-                 description: "Listens in order and focuses on the deciding word. Best at telling on/off and up/down apart."}
   E1f_s1:       {name: "Focus (CRNN-Attn Gold)", based_on: "CRNN with attention (conv + GRU + attention pooling)",
                  description: "Focus fine-tuned on the ME2 Gold dataset plus Awi's practice session. Best gold-trained model; the app default."}
-  AGREE_B2_E1:  {name: "Double-Check (Agreement)", based_on: "Agreement of Sweep and Focus",
-                 description: "Safety mode. Acts only when Sweep and Focus agree and both are confident. Rarely wrong; sometimes asks you to repeat."}
-  G2_s0:        {name: "Benchmark (DS-CNN)", based_on: "DS-CNN (depthwise-separable 2-D CNN, Hello Edge)", role: benchmark,
-                 description: "The field-standard tiny keyword model, retrained on Blend v1 at the same size as Sweep and Focus. Reads the sound as a grid of small time-frequency tiles."}
 # ``display_id`` (optional) is the public alias for a dataset id: the UI shows it
 # wherever a dataset id is displayed, so the internal id never leaks to users.
 datasets:

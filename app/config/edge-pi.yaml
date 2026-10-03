@@ -5,7 +5,7 @@ edge_service:
   models_dir: models
   tiny_vcm_root: ../training
   active_vcm: E1f_s1
-  compare_ids: [A7_s0]
+  compare_ids: [B2f_s0]
   window_s: 4.0
   result_hold_s: 1.5
   benchmark_mode: false          # vcm-benchmark: log lines + music/chime off
