@@ -13,7 +13,7 @@ the class "ME2 Gold" set, published on Hugging Face as
 | Revision | `6947f13073e57eb6ae67e7e2fc3680700b82aa13` |
 | Configs | `default` (train / test / holdout / numerals), `supplemental_synth`, `synthetic_negatives` |
 | Access (DGX) | read via `/data/ai231/load.py` (owner-provided loader; `cache_dir=/data/ai231`) |
-| DOI | pending — see `CITATION.cff` / `.zenodo.json` |
+| DOI | [10.57967/hf/10723](https://doi.org/10.57967/hf/10723) |
 
 `load.py` (the dataset owner's loader) uses the `datasets` library to open the
 four splits and the two auxiliary configs from the shared cache:
@@ -54,9 +54,8 @@ in full, and the `listen_other_command.csv` rows.
 
 Manifest sha256 (with personal audio included): `f81867392d20e3a23cbbcd2b77559c3b357e943f10e3095b65f7aa1b6171cdb2`.
 
-## DOI route (owner decision)
+## DOI
 
+- Dataset: [10.57967/hf/10723](https://doi.org/10.57967/hf/10723) (Hugging Face dataset DOI).
 - Derived artefacts (manifest, splits, exclusion list, checksums — no audio) are
   prepared for a Zenodo deposit via `.zenodo.json`.
-- Whether the HF dataset itself receives a DOI is for the dataset owner; a
-  short request message is drafted in `docs/reproduce.md#doi`.

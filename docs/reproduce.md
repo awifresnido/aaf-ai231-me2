@@ -44,10 +44,4 @@ small (GPU non-determinism); the tolerance is stated in the release notes.
 
 ## DOI
 
-A short message the owner can send to the dataset owner asking whether a DOI
-can be minted for the Hugging Face dataset itself is kept here for reference:
-
-> Hi — we'd like to cite the AI231 ME2 voice-commands dataset with a persistent
-> identifier in our submission. Is it possible to mint a DOI (e.g. via Zenodo)
-> for `airimonda/ai231-me2-voice-commands`, or is there an existing DOI we
-> should use? We'd also be glad to help set up the Zenodo deposit.
+The dataset has a Hugging Face DOI: [10.57967/hf/10723](https://doi.org/10.57967/hf/10723).

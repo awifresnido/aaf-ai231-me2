@@ -21,5 +21,6 @@ preferred-citation:
   authors:
     - name: "ME2 dataset owner (see dataset card)"
   repository: "https://huggingface.co/datasets/airimonda/ai231-me2-voice-commands"
+  doi: 10.57967/hf/10723
   version: "6947f13073e57eb6ae67e7e2fc3680700b82aa13"
   year: 2026
