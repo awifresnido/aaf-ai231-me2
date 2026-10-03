@@ -94,3 +94,6 @@ per-stage expected outputs and wall-clock times.
 - Model weights: **CC BY-NC 4.0** (`LICENSE-WEIGHTS.md`)
 - Dataset: per-source terms; FSC is non-commercial academic use; no audio is
   re-hosted in this repository (`docs/data.md`).
+- Wake word (`hey_rhasspy`): **openWakeWord** by David Scripka
+  (https://github.com/dscripka/openWakeWord) — code Apache-2.0, pretrained models
+  CC BY-NC-SA 4.0.
