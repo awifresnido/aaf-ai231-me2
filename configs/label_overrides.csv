@@ -1,0 +1,6 @@
+prompt_id,old_label,new_label,rule
+UNKNOWN_09,UNKNOWN,CALL,explicit_override
+UNKNOWN_10,UNKNOWN,MESSAGE,explicit_override
+UNKNOWN_11,UNKNOWN,LIST_REMINDERS,explicit_override
+UNKNOWN_17,UNKNOWN,NEXT,explicit_override
+UNKNOWN_08,UNKNOWN,DROP,explicit_override

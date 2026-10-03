@@ -1,0 +1,109 @@
+id: B2_s0
+display_name: Sweep (TC-ResNet)
+description: Scans the whole command for sound patterns. Steady and consistent.
+based_on: TC-ResNet (temporal convolution)
+task: vcm
+engine: onnx_tinyvcm
+weights: ../../../../tiny-vcm/exports/B2_s0/model.onnx
+architecture:
+  arch: tcresnet
+  width_mult: 1.0
+  kernel: 9
+  dropout_rate: 0.1
+label_scheme: leaf
+labels:
+- ALARM|6:00 AM
+- ALARM|8:00 AM
+- ALARM|9:00 PM
+- BRIGHTNESS|20 percent
+- BRIGHTNESS|60 percent
+- BRIGHTNESS|100 percent
+- CALL
+- COLOR|Red
+- COLOR|Blue
+- COLOR|Green
+- CREATE_REMINDER|Drink water
+- CREATE_REMINDER|Study
+- CREATE_REMINDER|Exercise
+- LIGHT_OFF
+- LIGHT_ON
+- LIST_REMINDERS
+- MESSAGE
+- NEXT
+- PAUSE
+- PLAY_MUSIC
+- SILENCE
+- STOP
+- TEMPERATURE|18 degrees
+- TEMPERATURE|22 degrees
+- TEMPERATURE|26 degrees
+- TIME
+- TIMER|10 seconds
+- TIMER|30 seconds
+- TIMER|1 minute
+- UNKNOWN
+- VOLUME_DOWN
+- VOLUME_UP
+- WEATHER
+features:
+  sample_rate: 16000
+  n_mels: 40
+  n_fft: 512
+  hop_length: 160
+  f_min: 50
+  f_max: 7600
+  top_db: 80.0
+  trim_db: 40.0
+  max_duration_s: 3.0
+reject:
+  min_confidence: 0.8
+  non_command_labels:
+  - UNKNOWN
+  - SILENCE
+quantization: fp32
+lineage:
+  training_phase: phase2
+  training_data: composite_v1
+  git_commit: null
+  mlflow_run_id: null
+  trained_on: DGX ai-n003
+  notes: Canonical final checkpoint per tiny-vcm/MODELS.md; tau=0.80 selected on this
+    seed. Weights referenced in place from tiny-vcm/checkpoints (dev); scripts/register_model.py
+    copies them for the Pi.
+offline_metrics:
+  command_macro_f1_test: 0.9946
+  command_wrong_rate_tau080: 0.0089
+  false_accept_rate_tau080: 0.0106
+  personal_s02_correct: 0.9694
+engine_options:
+  num_threads: 2
+scores:
+  training:
+    dataset_id: composite_v1
+    split: train
+    metrics:
+      train_acc: 0.922
+    threshold: null
+    source: checkpoints/B2_s0/best.pt history (train_acc at best epoch)
+    note: on augmented training batches (not comparable to validation)
+    status: reported
+  validation:
+    dataset_id: composite_v1
+    split: validation
+    metrics:
+      command_wrong: 0.0089
+      far: 0.0106
+      tuning_session_correct: 0.9694
+      command_correct_tau090: 0.8289
+    threshold: 0.8
+    source: PHASE2_RESULTS.md section 3.1 (s0 @ tau 0.80); CRNN_ATTN_RESULTS.md McNemar
+      (s0 @ tau 0.90)
+    status: reported
+  test:
+    dataset_id: composite_v1
+    split: test
+    metrics:
+      command_macro_f1: 0.9946
+    threshold: 0.0
+    source: PHASE2_RESULTS.md section 6 (one-shot, tau 0)
+    status: reported

@@ -1,0 +1,621 @@
+{
+  "pipeline": {
+    "audio_input": "16 kHz mono 16-bit PCM WAV",
+    "features": "log-mel 40 x 301 (3.0 s; n_fft=512, hop=160/10 ms, f_min=50, f_max=7600), per-mel CMVN",
+    "crop_mode": "start",
+    "crop_mode_rationale": "GATE 2 (carried from me2-master): energy crop helped quiet group recordings 201435283 but the pre-registered rule required BOTH >= 5 pt; kept 'start'",
+    "source": "checkpoints/*/model_config.json + results/me2/crop_check.json"
+  },
+  "encoders": {
+    "B2f": {
+      "arch": "tcresnet",
+      "role": "sweep",
+      "layers": "TC-ResNet8-style: Conv1d stem (40->16) + 3 residual blocks (16->24->32->48, stride 2, temporal kernel 9) + mean/max pool -> Linear(96->33)",
+      "params": 67793
+    },
+    "E1f": {
+      "arch": "crnn_attn",
+      "role": "focus",
+      "layers": "Conv front-end (stem Conv2d 1->32 + 2 DSConv 32->48->64) -> Linear proj (->64) -> bi-GRU(64->48) -> additive attention -> Linear(96->33)",
+      "params": 69234
+    },
+    "G2f": {
+      "arch": "dscnn",
+      "role": "benchmark",
+      "layers": "DS-CNN-S: Conv2d stem (1->64, k10x4, stride 2) + 4 depthwise-separable blocks (64 ch) -> mean(freq)+mean/max pool -> Linear(128->33)",
+      "params": 68129
+    },
+    "source": "src/vcm_models_v2.py + checkpoints/*/model_config.json"
+  },
+  "head": {
+    "classes": 33,
+    "ontology": "13 fixed intents + 6 slotted intents x 3 slot values (18 leaves) + UNKNOWN + SILENCE",
+    "label_mode": "leaf",
+    "source": "configs/ontology.json"
+  },
+  "sizes_and_parameters": {
+    "E1f_s1": {
+      "params": 69234,
+      "onnx_kb": 279.2,
+      "fp32_mb": 0.27,
+      "opset": 17,
+      "parity_max_dprob": 4.76837158203125e-07,
+      "parity_pass": true
+    },
+    "B2f_s0": {
+      "params": 67793,
+      "onnx_kb": 268.3,
+      "fp32_mb": 0.26,
+      "opset": 17,
+      "parity_max_dprob": 2.384185791015625e-07,
+      "parity_pass": true
+    },
+    "G2f_s0": {
+      "params": 68129,
+      "onnx_kb": null,
+      "fp32_mb": null,
+      "opset": null,
+      "parity_max_dprob": null,
+      "parity_pass": null,
+      "note": "not exported: G2f failed the decision rule decisively (gold test 11.0%, Awi s02 56.6%) and was not staged as an app candidate"
+    },
+    "source": "results/me2_gold/onnx_parity_report.json + exports/me2_gold/*/deploy.json"
+  },
+  "dataset": {
+    "total_rows": 19200,
+    "splits": {
+      "train": {
+        "clips": 14061,
+        "hours": 7.171,
+        "unique_speakers": 726
+      },
+      "validation": {
+        "clips": 4815,
+        "hours": 2.626,
+        "unique_speakers": 201
+      },
+      "test": {
+        "clips": 324,
+        "hours": 0.179,
+        "unique_speakers": 6
+      }
+    },
+    "holdout_composition": "test split = gold holdout 202 (84 real + 100 synthetic + 16 out-of-scope + 2 paraphrase) + Awi s03 122",
+    "personal_awi": "1,220 clips (train 976 = s01 repeat x4, validation 122 = s02, test 122 = s03); sha256-verified copies, originals untouched, 0 augmented",
+    "exclusions": "90 relabelled group recordings (OUT_OF_SCOPE) + 2 other-command rows excluded from train; all supplemental_synth excluded",
+    "gates": {
+      "G1_contradictions": {
+        "no_file_two_labels": true,
+        "no_stop_in_unknown": true,
+        "exclusions_applied": {
+          "other_command": 2,
+          "relabelled_group_recording": 90
+        }
+      },
+      "G2_coverage": {
+        "train_missing": [],
+        "val_missing": [],
+        "pass": true
+      },
+      "G3_balance": {
+        "unk_share": 0.18,
+        "silence_n": 483,
+        "pass": true
+      },
+      "G4_disjointness": {
+        "speaker_leak": {},
+        "sha_shared": [],
+        "pass": true
+      }
+    },
+    "source": "reports/me2_gold_v1.json"
+  },
+  "cluster": {
+    "hostname": "ai-n003.ai-n003",
+    "gpu_model": "NVIDIA A100-SXM4-40GB",
+    "gpus_used": [
+      0,
+      1,
+      3
+    ],
+    "concurrency": "9 runs (3 GPUs x 3 concurrent runs)",
+    "torch_version": "2.14.0+cu130",
+    "cuda_version": "13.0",
+    "source": "logs/summary_*f_s*.json"
+  },
+  "objective": {
+    "loss": "weighted cross-entropy (nn.CrossEntropyLoss with sqrt-inverse class weights over 33 classes; no label smoothing)",
+    "class_weighting": "sqrt_inverse",
+    "source": "src/vcm_trainer.py (criterion = CrossEntropyLoss(weight=class_weights))"
+  },
+  "optimiser": {
+    "class": "Adam",
+    "base_lr": 0.0005,
+    "weight_decay": 0.0001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "scheduler": "plateau (ReduceLROnPlateau), early-stopping patience 8",
+    "source": "logs/summary_*f_s*.json (phase2 recipe)"
+  },
+  "steps_and_loss": {
+    "epochs_max": 30,
+    "batch_size": 64,
+    "per_run": {
+      "B2f_s0": {
+        "epochs_run": 22,
+        "global_steps": 4840,
+        "best_epoch": 14,
+        "final_train_loss": 0.3303,
+        "final_val_loss": 0.2184
+      },
+      "E1f_s1": {
+        "epochs_run": 9,
+        "global_steps": 1980,
+        "best_epoch": 1,
+        "final_train_loss": 0.2995,
+        "final_val_loss": 0.1511
+      },
+      "G2f_s0": {
+        "epochs_run": 14,
+        "global_steps": 3080,
+        "best_epoch": 6,
+        "final_train_loss": 0.8835,
+        "final_val_loss": 0.891
+      }
+    },
+    "source": "logs/summary_*f_s*.json"
+  },
+  "wall_clock": {
+    "per_run_seconds": {
+      "B2f_s0": 174.995,
+      "E1f_s1": 112.231,
+      "G2f_s0": 173.257
+    },
+    "total_9_runs_gpu_seconds": 1381.4,
+    "total_9_runs_min": 23.0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "source": "logs/summary_*f_s*.json"
+  },
+  "operating_tau": {
+    "rule": "largest tau with wrong <= 1% for EVERY seed on the tau set (min over seeds); tau set = group real + group synthetic + gold test out-of-scope + synthetic_negatives:test + Awi s02",
+    "B2f": {
+      "tau": 0.95,
+      "per_seed_tau": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "per_seed_wrong": [
+        0.0003,
+        0.0008,
+        0.0005
+      ]
+    },
+    "E1f": {
+      "tau": 0.95,
+      "per_seed_tau": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "per_seed_wrong": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "G2f": {
+      "tau": 0.95,
+      "per_seed_tau": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "per_seed_wrong": [
+        0.0,
+        0.0,
+        0.0003
+      ]
+    },
+    "source": "results/me2_gold/eval_arch_*.json"
+  },
+  "accuracies_at_operating_tau": {
+    "note": "me2-gold rates pooled over 3 seeds (eval_arch_*); v1 rates pooled over 3 seeds too (eval_arch_B2/E1/G2). all at tau=0.95.",
+    "validation_real": {
+      "B2f": {
+        "correct": 0.6331,
+        "wrong": 0.0112,
+        "rejected": 0.3557
+      },
+      "B2": {
+        "correct": 0.6145,
+        "wrong": 0.0093,
+        "rejected": 0.3762
+      },
+      "E1f": {
+        "correct": 0.6574,
+        "wrong": 0.0,
+        "rejected": 0.3426
+      },
+      "E1": {
+        "correct": 0.4804,
+        "wrong": 0.0019,
+        "rejected": 0.5177
+      },
+      "G2f": {
+        "correct": 0.1099,
+        "wrong": 0.0019,
+        "rejected": 0.8883
+      },
+      "G2": {
+        "correct": 0.0987,
+        "wrong": 0.0019,
+        "rejected": 0.8994
+      }
+    },
+    "awi_s02": {
+      "B2f": {
+        "correct": 0.8889,
+        "wrong": 0.0,
+        "rejected": 0.1111
+      },
+      "B2": {
+        "correct": 0.9391,
+        "wrong": 0.0,
+        "rejected": 0.0609
+      },
+      "E1f": {
+        "correct": 0.914,
+        "wrong": 0.0,
+        "rejected": 0.086
+      },
+      "E1": {
+        "correct": 0.9427,
+        "wrong": 0.0,
+        "rejected": 0.0573
+      },
+      "G2f": {
+        "correct": 0.5663,
+        "wrong": 0.0,
+        "rejected": 0.4337
+      },
+      "G2": {
+        "correct": 0.6308,
+        "wrong": 0.0,
+        "rejected": 0.3692
+      }
+    },
+    "awi_s03": {
+      "B2f": {
+        "correct": 0.9211,
+        "wrong": 0.0036,
+        "rejected": 0.0753
+      },
+      "B2": {
+        "correct": 0.957,
+        "wrong": 0.0036,
+        "rejected": 0.0394
+      },
+      "E1f": {
+        "correct": 0.9283,
+        "wrong": 0.0,
+        "rejected": 0.0717
+      },
+      "E1": {
+        "correct": 0.9391,
+        "wrong": 0.0,
+        "rejected": 0.0609
+      },
+      "G2f": {
+        "correct": 0.6918,
+        "wrong": 0.0,
+        "rejected": 0.3082
+      },
+      "G2": {
+        "correct": 0.7061,
+        "wrong": 0.0036,
+        "rejected": 0.2903
+      }
+    },
+    "holdout_real": {
+      "B2f": {
+        "correct": 0.6984,
+        "wrong": 0.0,
+        "rejected": 0.3016
+      },
+      "B2": {
+        "correct": 0.7183,
+        "wrong": 0.004,
+        "rejected": 0.2778
+      },
+      "E1f": {
+        "correct": 0.7778,
+        "wrong": 0.0,
+        "rejected": 0.2222
+      },
+      "E1": {
+        "correct": 0.7381,
+        "wrong": 0.004,
+        "rejected": 0.2579
+      },
+      "G2f": {
+        "correct": 0.3056,
+        "wrong": 0.0,
+        "rejected": 0.6944
+      },
+      "G2": {
+        "correct": 0.2937,
+        "wrong": 0.0,
+        "rejected": 0.7063
+      }
+    },
+    "holdout_syn": {
+      "B2f": {
+        "correct": 1.0,
+        "wrong": 0.0,
+        "rejected": 0.0
+      },
+      "B2": {
+        "correct": 0.99,
+        "wrong": 0.0,
+        "rejected": 0.01
+      },
+      "E1f": {
+        "correct": 0.9967,
+        "wrong": 0.0,
+        "rejected": 0.0033
+      },
+      "E1": {
+        "correct": 0.9767,
+        "wrong": 0.0,
+        "rejected": 0.0233
+      },
+      "G2f": {
+        "correct": 0.8833,
+        "wrong": 0.0,
+        "rejected": 0.1167
+      },
+      "G2": {
+        "correct": 0.87,
+        "wrong": 0.0,
+        "rejected": 0.13
+      }
+    },
+    "holdout_only": {
+      "B2f": {
+        "correct": 0.862,
+        "wrong": 0.0,
+        "FAR": 0.0625
+      },
+      "B2": {
+        "correct": 0.862,
+        "wrong": 0.0072,
+        "FAR": 0.1042
+      },
+      "E1f": {
+        "correct": 0.8925,
+        "wrong": 0.0,
+        "FAR": 0.0625
+      },
+      "E1": {
+        "correct": 0.8638,
+        "wrong": 0.0072,
+        "FAR": 0.0625
+      },
+      "G2f": {
+        "correct": 0.6129,
+        "wrong": 0.0,
+        "FAR": 0.0208
+      },
+      "G2": {
+        "correct": 0.6022,
+        "wrong": 0.0036,
+        "FAR": 0.0417
+      }
+    },
+    "source": "results/me2_gold/eval_arch_*.json"
+  },
+  "false_accept_rates": {
+    "near_miss_158": {
+      "B2f": 0.2152,
+      "B2": 0.1857,
+      "E1f": 0.1498,
+      "E1": 0.1878,
+      "G2f": 0.1329,
+      "G2": 0.135
+    },
+    "single_words_clean_10730": {
+      "B2f": 0.0118,
+      "B2": 0.0422,
+      "E1f": 0.0058,
+      "E1": 0.0206,
+      "G2f": 0.0026,
+      "G2": 0.0209
+    },
+    "synthetic_neg_test_250": {
+      "B2f": 0.0253,
+      "B2": 0.0453,
+      "E1f": 0.0227,
+      "E1": 0.032,
+      "G2f": 0.0173,
+      "G2": 0.0213
+    },
+    "source": "results/me2_gold/eval_arch_*.json"
+  },
+  "decision_rule": {
+    "rule": "Pre-registered: a fine-tuned model replaces its v1 parent in the app only if ALL: (1) every seed wrong<=1% on the tau set; (2) Awi s02 correct >= v1-1pt; (3) gold test speaker 201435283 correct >= v1+5pt; (4) Single Words FAR <= v1+1pt",
+    "verdict": {
+      "B2f": {
+        "replace_v1": false,
+        "failed_conditions": [
+          "awi_s02_ge_v1_minus_1pt (88.9% vs 93.9%, -5.0pt)",
+          "gold_test_ge_v1_plus_5pt (63.3% vs 61.5%, +1.9pt)"
+        ]
+      },
+      "E1f": {
+        "replace_v1": false,
+        "failed_conditions": [
+          "awi_s02_ge_v1_minus_1pt (91.4% vs 94.3%, -2.9pt)"
+        ]
+      },
+      "G2f": {
+        "replace_v1": false,
+        "failed_conditions": [
+          "awi_s02_ge_v1_minus_1pt (56.6% vs 63.1%, -6.5pt)",
+          "gold_test_ge_v1_plus_5pt (11.0% vs 9.9%, +1.1pt)"
+        ]
+      }
+    },
+    "deployment_action": "Decision rule => RETAIN v1 models. HOWEVER Awi explicitly chose to keep E1f_s1 as the app default (documented deviation from the pre-registered rule): the fine-tunes improved the group test speaker (+17.7pt E1f) and cut false-accepts (Single Words FAR 2.06% -> 0.58%), at the cost of a 2.9pt Awi s02 regression that the rule's floor forbids.",
+    "source": "results/me2_gold/decision.json"
+  },
+  "pi4_latency": {
+    "status": "measured_live",
+    "inference_p95_ms": {
+      "E1f_s1": {
+        "model_ms": 1.29,
+        "features_ms": 2.91,
+        "total_ms": 4.2
+      },
+      "B2f_s0": {
+        "model_ms": 0.35,
+        "features_ms": 1.49,
+        "total_ms": 1.84
+      }
+    },
+    "live_response_latency": null,
+    "rtf": {
+      "mean": 0.00786,
+      "p95": 0.00971
+    },
+    "threads": 1,
+    "runtime": "onnxruntime 1.30.0",
+    "reason": "live response latency / RTF / inference p95 from vcm-benchmark run 20261003-005002 (full, E1f_s1); offline inference p95 from exports/me2_gold/*/deploy.json",
+    "live_response_latency_s": {
+      "p50": 2.375,
+      "p95": 3.176,
+      "p99": 3.456
+    },
+    "live_inference_ms_p95": 38.9
+  },
+  "wake_word_kws": {
+    "status": "measured",
+    "reason": "openWakeWord 'hey_rhasspy' (threshold 0.5, patience 2, debounce 1.5 s); wake detect rate 92.1% from live benchmark run 20261003-005002",
+    "wake_detect_rate": 0.9208
+  },
+  "licenses": {
+    "FluentSpeechCommands": "Non-commercial research use only",
+    "GoogleSpeechCommands_v2": "CC-BY 4.0",
+    "MLEndSpokenNumerals": "CC-BY 4.0",
+    "SLURP": "CC-BY-NC-SA 4.0",
+    "SNIPS": "MIT",
+    "TimersAndSuch": "Apache 2.0",
+    "GroupAudio": "not re-hosted; retrieved via ME2 gold parquet metadata (link only)",
+    "AwiAudio": "personal recordings, consented for project use",
+    "source": "ME2 Gold dataset card + reports/me2_gold_v1.json"
+  },
+  "reproduction": {
+    "git_commit": "bc2ff80",
+    "git_branch": "me2-gold",
+    "dataset_manifest": "data/manifests/me2_gold_v1.csv",
+    "manifest_sha256": "f81867392d20e3a23cbbcd2b77559c3b357e943f10e3095b65f7aa1b6171cdb2",
+    "dataset_revision": "6947f13073e57eb6ae67e7e2fc3680700b82aa13",
+    "training_recipe": "python scripts/launch_parallel.py --runs configs/runs_me2_gold.txt --gpus 0,1,3 --per-gpu 3 --waveform-cache data/cache/me2_gold_v1_wave16k",
+    "eval_recipe": "python scripts/me2_gold_eval.py",
+    "export_recipe": "python scripts/export_me2_gold.py"
+  },
+  "live_benchmark": {
+    "run_id": "20261003-005002",
+    "source": "vcm-benchmark full run on the Pi (218 inputs = 202 with wake word + 16 without), model E1f_s1 (app default), shuffle seed 15206, holdout from HuggingFace",
+    "wake_word": "hey_rhasspy (openWakeWord, threshold 0.5, patience 2, debounce 1.5 s)",
+    "intent_accuracy_19": 0.8069,
+    "command_accuracy_93": 0.8069,
+    "false_accept_rate": 0.0625,
+    "false_accepts": 1,
+    "n_out_of_scope": 16,
+    "false_reject_rate": 0.2043,
+    "misfire_rate": 0.0,
+    "false_wake_rate": 0.0,
+    "false_wakes": 0,
+    "n_false_wake_trials": 16,
+    "wake_detect_rate": 0.9208,
+    "response_rate": 0.9109,
+    "no_response": 18,
+    "slot_exact": 1.0,
+    "real_voice_intent_accuracy": 0.74,
+    "synthetic_intent_accuracy": 0.868,
+    "latency_s": {
+      "mean": 2.226,
+      "p50": 2.375,
+      "p95": 3.176,
+      "p99": 3.456
+    },
+    "inference_ms": {
+      "mean": 31.4,
+      "p95": 38.9
+    },
+    "rtf": {
+      "mean": 0.00786,
+      "p95": 0.00971
+    },
+    "pi": {
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "cpu_temp_c_max": 58.4,
+      "cpu_process_pct_mean": 22.2,
+      "rss_mb_process_peak": 466.8,
+      "throttled": "none",
+      "test_wall_time_min": 61.6
+    },
+    "note": "live intent accuracy (80.7%) is ~8.5 pt below the offline holdout (89.2% E1f) and false-reject is 20.4% vs ~11% offline - the live gap is room noise + speaker distance + the 4 s fixed capture; response latency p95 3.18 s is dominated by that fixed window. See live_benchmark_vad for the VAD-endpointed rerun of the same 218 inputs (latency -77%, but accuracy -12.4 pt on played audio)."
+  },
+  "live_benchmark_vad": {
+    "run_id": "20261003-033915",
+    "source": "vcm-benchmark full run on the Pi (same 218 inputs + seed 15206 as 005002), model E1f_s1, VAD endpointing ENABLED (Silero v4, hangover 500 ms, max_window 4 s)",
+    "wake_word": "hey_rhasspy (openWakeWord, threshold 0.5, patience 2, debounce 1.5 s)",
+    "intent_accuracy_19": 0.6832,
+    "command_accuracy_93": 0.6832,
+    "false_accept_rate": 0.0625,
+    "false_accepts": 1,
+    "n_out_of_scope": 16,
+    "false_reject_rate": 0.3387,
+    "misfire_rate": 0.0,
+    "false_wake_rate": 0.0,
+    "false_wakes": 0,
+    "n_false_wake_trials": 16,
+    "wake_detect_rate": 0.802,
+    "response_rate": 0.802,
+    "no_response": 40,
+    "slot_exact": 1.0,
+    "real_voice_intent_accuracy": 0.6771,
+    "synthetic_intent_accuracy": 0.6887,
+    "latency_s": {
+      "mean": 0.446,
+      "p50": 0.645,
+      "p95": 0.744,
+      "p99": 0.794
+    },
+    "inference_ms": {
+      "mean": 21.8,
+      "p95": 32.3
+    },
+    "rtf": {
+      "mean": 0.0101,
+      "p95": 0.0167
+    },
+    "pi": {
+      "model": "Raspberry Pi 4 Model B Rev 1.5",
+      "cpu_temp_c_max": 61.3,
+      "cpu_process_pct_mean": 25.2,
+      "rss_mb_process_peak": 477.6,
+      "throttled": "none",
+      "test_wall_time_min": 61.4
+    },
+    "note": "VAD cuts the fixed 4 s window to speech end (latency p95 0.74 s vs 3.18 s fixed, -77%). BUT on the benchmark's PLAYED (recorded) commands it rejects far more: false-reject 33.9% vs 20.4% fixed, 40 no-response (vs 18), so intent accuracy drops 80.7% -> 68.3%. Rejections are almost all X->REJECT (VAD misses onset / truncates the played audio), asymmetric: synthetic voice -17.9 pt vs real voice -6.3 pt. Live close-mic speech is confirmed working; this is a recorded-audio artifact, not live behaviour."
+  }
+}

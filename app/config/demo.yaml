@@ -1,0 +1,88 @@
+# TinyVCM demo configuration.
+#   edge_service  -> read by `python -m edge.server` (WSL now, the Pi later)
+#   edge_link + laptop -> read by `python -m laptop.app.main` when everything runs in WSL
+# The Windows laptop app (with microphone) uses config/laptop-windows.yaml instead.
+# Relative paths are resolved from the repository root.
+
+edge_link:
+  # local  = edge pipeline runs inside the laptop process (UI work, Replay, Simulate; no mic)
+  # remote = connect to the edge service over WebSocket
+  mode: local
+  host: <lan-ip>
+  port: 8765
+
+edge_service:
+  bind_host: 0.0.0.0
+  port: 8765
+  device_label: wsl-dev             # set to rpi4 on the Pi
+  models_dir: models
+  tiny_vcm_root: ../tiny-vcm        # tiny-vcm checkout; its src/ supplies the feature code
+  active_vcm: E1f_s1                 # final model per tiny-vcm/MODELS.md
+  compare_ids: [A7_s0]              # challenger(s) run on the same clip
+  window_s: 4.0                     # command capture window [s]
+  result_hold_s: 1.5                # how long the result stays on screen before idle [s]
+  benchmark_mode: false          # vcm-benchmark: log lines + music/chime off
+  pre_capture_delay_s: 0.35         # after wake: chime plays, then the 4 s window opens [s]
+  endpointing:
+    enabled: false          # turn on only after §5 picks the hangover
+    engine: silero
+    model_path: null
+    search_roots: ["../openwakeword"]
+    n_threads: 1
+    onset_threshold: 0.5
+    offset_threshold: 0.35
+    min_speech_ms: 200
+    hangover_ms: 500
+    no_speech_timeout_ms: 2000
+    max_window_ms: 4000     # = old window_s; the safety cap
+    fallback_to_energy: true
+  wake_engines:
+    # Stock openWakeWord model (Hermes' bench: ../openwakeword/WAKE_WORD_STATUS.md).
+    # Recall on Awi's voice is NOT yet proven; the manual button always works as well.
+    - kind: openwakeword
+      id: hey_rhasspy
+      display_name: Hey Rhasspy (openWakeWord stock)
+      phrase: Hey Rhasspy
+      model: ../openwakeword/models/pretrained/hey_rhasspy_v0.1.onnx
+      melspec_model: ../openwakeword/models/pretrained/melspectrogram.onnx
+      embedding_model: ../openwakeword/models/pretrained/embedding_model.onnx
+      threshold: 0.5                # do not go below ~0.4 (admits noise, per bench)
+      patience: 2                   # consecutive 80 ms frames above threshold
+      debounce_s: 1.5
+  default_wake: oww:hey_rhasspy     # falls back to manual if the model cannot load
+  chime:
+    play_on_edge: false             # true on the Pi (speaker on the edge); the UI always chimes
+    player: aplay
+  media:
+    backend: simulated              # simulated | mpv (Pi + speaker)
+    folder: media                   # 3 local tracks; <opt-path> on the Pi
+    volume_steps_pct: [20, 40, 60, 80, 100]
+    duck_volume_pct: 10
+    initial_level: 3
+
+laptop:
+  host: 127.0.0.1
+  port: 8080
+  timezone: Asia/Manila
+  mic:
+    enabled: false                  # no dependable mic inside WSL; use laptop-windows.yaml
+    device: null
+  weather:
+    provider: open_meteo
+    location_name: UP Cebu
+    latitude: 10.3225               # approx. UP Cebu, Lahug -- confirm before demo
+    longitude: 123.8985
+    timeout_s: 4.0
+    fallback_enabled: true          # use data/weather_fixture.json if the API fails
+  contacts:
+    default:
+      name: Demo Contact
+      phone: "<phone>"
+  message:
+    default_text: This is a TinyVCM demo message.
+  data_dir: runtime                 # SQLite + command logs (gitignored)
+
+# GitHub repo URL for the About tab "Details on GitHub" links. null (default)
+# renders them as muted "coming soon"; set it after the public repo is published.
+about:
+  repo_url: null

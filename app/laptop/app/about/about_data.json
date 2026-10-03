@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-09-30T02:38:54Z",
+  "app_commit": "14f00db",
+  "tvcm_commit": "f01a5c5",
+  "host": {
+    "composition": "dgx:ai-n003"
+  },
+  "constraints": {
+    "n_classes": 33,
+    "n_intents": 19,
+    "n_fixed": 13,
+    "n_slotted": 6,
+    "params_default_k": 68,
+    "onnx_kb_default": 268,
+    "window_s": 3.0,
+    "n_frames": 301
+  },
+  "intents": [
+    "Play music",
+    "Weather",
+    "Time",
+    "Light on",
+    "Light off",
+    "Pause",
+    "Stop",
+    "Next",
+    "Volume up",
+    "Volume down",
+    "Call",
+    "Message",
+    "List reminders",
+    "Timer",
+    "Alarm",
+    "Temperature",
+    "Brightness",
+    "Color",
+    "Create reminder"
+  ],
+  "audit": {
+    "relabeled": 4043,
+    "dropped": 139
+  },
+  "story": {
+    "first_acc": "19%",
+    "fixed_acc": "99.7%"
+  },
+  "composition": {
+    "total_clips": 71601,
+    "datasets": {
+      "synthetic_tts": {
+        "name": "Synthetic Voices",
+        "train": 14376,
+        "validation": 1632,
+        "test": 1978
+      },
+      "fsc": {
+        "name": "Home Commands",
+        "train": 19003,
+        "validation": 3103,
+        "test": 3776
+      },
+      "gsc_v2": {
+        "name": "Single Words",
+        "train": 3763,
+        "validation": 9962,
+        "test": 10730
+      },
+      "gsc_noise": {
+        "name": "Background Noise",
+        "train": 110,
+        "validation": 24,
+        "test": 24
+      },
+      "personal_awi": {
+        "name": "Demo Speaker",
+        "train": 2880,
+        "validation": 120,
+        "test": 120
+      }
+    }
+  },
+  "headline": {
+    "B2_s0": {
+      "id": "B2_s0",
+      "name": "Sweep",
+      "correct": 0.8288928359976317,
+      "correct_sd": null,
+      "wrong": 0.0049,
+      "wrong_sd": 0.001,
+      "random_far": 0.0662,
+      "random_far_sd": 0.0149
+    },
+    "E1_s0": {
+      "id": "E1_s0",
+      "name": "Focus",
+      "correct": 0.8614564831261101,
+      "correct_sd": null,
+      "wrong": 0.0054,
+      "wrong_sd": 0.0016,
+      "random_far": 0.039,
+      "random_far_sd": 0.0163
+    },
+    "AGREE_B2_E1": {
+      "id": "AGREE_B2_E1",
+      "name": "Double-Check",
+      "correct": null,
+      "correct_sd": null,
+      "wrong": 0.00178,
+      "wrong_sd": null,
+      "random_far": null,
+      "random_far_sd": null
+    },
+    "G2_s0": {
+      "id": "G2_s0",
+      "name": "Benchmark",
+      "correct": 0.40781527531083483,
+      "correct_sd": 0.06122005741881331,
+      "wrong": 0.005802249851983422,
+      "wrong_sd": 0.0020251783749540633,
+      "random_far": 0.07357469829379941,
+      "random_far_sd": 0.012794897198858577
+    }
+  },
+  "table": {
+    "B2_s0": {
+      "id": "B2_s0",
+      "name": "Sweep",
+      "correct": 0.8288928359976317,
+      "wrong": 0.0049,
+      "far": 0.0064,
+      "cmd_f1_val": 0.9557,
+      "cmd_f1_test": 0.9946,
+      "final_test": 0.9591836734693877
+    },
+    "E1_s0": {
+      "id": "E1_s0",
+      "name": "Focus",
+      "correct": 0.8614564831261101,
+      "wrong": 0.0054,
+      "far": 0.0089,
+      "cmd_f1_val": 0.9677,
+      "cmd_f1_test": 0.9956,
+      "final_test": 0.9387755102040817
+    },
+    "AGREE_B2_E1": {
+      "id": "AGREE_B2_E1",
+      "name": "Double-Check",
+      "correct": null,
+      "wrong": 0.00178,
+      "far": 0.00065,
+      "cmd_f1_val": null,
+      "cmd_f1_test": null,
+      "final_test": null
+    },
+    "G2_s0": {
+      "id": "G2_s0",
+      "name": "Benchmark",
+      "correct": 0.40781527531083483,
+      "wrong": 0.005802249851983422,
+      "far": 0.026205997392438073,
+      "cmd_f1_val": 0.8791051663200398,
+      "cmd_f1_test": 0.9494,
+      "final_test": 0.7346938775510204
+    }
+  },
+  "params": {
+    "B2_s0": 67793,
+    "E1_s0": 69234,
+    "G2_s0": 68129
+  },
+  "b0": {
+    "correct": 0.27353463587921845,
+    "wrong": 0.1557134399052694
+  },
+  "mcnemar": {
+    "n": 1689,
+    "e1_b2_p": "0.0001"
+  },
+  "final_test": {
+    "B2_s0": 0.9591836734693877,
+    "E1_s0": 0.9387755102040817,
+    "G2_s0": 0.7346938775510204
+  },
+  "tuning_sd": {
+    "B2": 0.0102
+  },
+  "agree": {
+    "wrong": 0.00178,
+    "far": 0.00065
+  },
+  "parity": {
+    "B2_s0": 5.675246939063072e-10
+  },
+  "deployment": {
+    "B2_s0": {
+      "name": "Sweep",
+      "onnx_kb": 268,
+      "runtime": "ONNX Runtime",
+      "quantization": "fp32"
+    },
+    "E1_s0": {
+      "name": "Focus",
+      "onnx_kb": 278,
+      "runtime": "ONNX Runtime",
+      "quantization": "fp32"
+    },
+    "G2_s0": {
+      "name": "Benchmark",
+      "onnx_kb": 266,
+      "runtime": "ONNX Runtime",
+      "quantization": "fp32"
+    }
+  },
+  "latency_pi": {
+    "status": "pending"
+  },
+  "repo_url": null,
+  "sources": {
+    "constraints.n_fixed": "vcm_common/ontology.json (labels.fixed)",
+    "constraints.n_slotted": "vcm_common/ontology.json (labels.slotted)",
+    "constraints.n_intents": "vcm_common/ontology.json (fixed + slotted)",
+    "constraints.n_classes": "vcm_common/ontology.json (leaf labels incl. UNKNOWN/SILENCE)",
+    "constraints.window_s": "models/vcm/B2_s0/manifest.yaml (features.max_duration_s: 3.0)",
+    "constraints.n_frames": "tiny-vcm/exports/B2_s0/deploy.json (n_frames)",
+    "constraints.params_default_k": "tiny-vcm/exports/B2_s0/deploy.json (params: 67793)",
+    "constraints.onnx_kb_default": "tiny-vcm/exports/B2_s0/model.onnx (268 KB)",
+    "audit.relabeled": "about_sources.yaml -> tiny-vcm/PHASE2_RESULTS.md",
+    "audit.dropped": "about_sources.yaml -> tiny-vcm/PHASE2_RESULTS.md",
+    "story.first_acc": "about_sources.yaml -> VCM_TRAINING_TROUBLESHOOTING.md",
+    "story.fixed_acc": "about_sources.yaml -> tiny-vcm/ABLATION_RESULTS.md",
+    "mcnemar.e1_b2_p": "about_sources.yaml -> tiny-vcm/CRNN_ATTN_RESULTS.md",
+    "mcnemar.n": "tiny-vcm/results/dscnn/analysis.json (mcnemar.n_paired)",
+    "composition.datasets.synthetic_tts.train": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.synthetic_tts.validation": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.synthetic_tts.test": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.fsc.train": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.fsc.validation": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.fsc.test": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_v2.train": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_v2.validation": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_v2.test": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_noise.train": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_noise.validation": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.gsc_noise.test": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.personal_awi.train": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.personal_awi.validation": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.datasets.personal_awi.test": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "composition.total_clips": "tiny-vcm/data/manifests/composite_v1.csv counted on dgx:ai-n003",
+    "headline.B2_s0.correct": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.B2_s0.correct_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.B2_s0.wrong": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.B2_s0.wrong_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.B2_s0.random_far": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.B2_s0.random_far_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "table.B2_s0.correct": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.B2_s0.wrong": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.B2_s0.far": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.B2_s0.cmd_f1_val": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.B2_s0.cmd_f1_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.B2_s0.final_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "headline.E1_s0.correct": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.E1_s0.correct_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.E1_s0.wrong": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.E1_s0.wrong_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.E1_s0.random_far": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.E1_s0.random_far_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "table.E1_s0.correct": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.E1_s0.wrong": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.E1_s0.far": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.E1_s0.cmd_f1_val": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.E1_s0.cmd_f1_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.E1_s0.final_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "headline.AGREE_B2_E1.correct": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.AGREE_B2_E1.correct_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.AGREE_B2_E1.wrong": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.AGREE_B2_E1.wrong_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.AGREE_B2_E1.random_far": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.AGREE_B2_E1.random_far_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "table.AGREE_B2_E1.correct": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.AGREE_B2_E1.wrong": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.AGREE_B2_E1.far": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.AGREE_B2_E1.cmd_f1_val": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.AGREE_B2_E1.cmd_f1_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.AGREE_B2_E1.final_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "headline.G2_s0.correct": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.G2_s0.correct_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.G2_s0.wrong": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.G2_s0.wrong_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.G2_s0.random_far": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "headline.G2_s0.random_far_sd": "tiny-vcm/results/dscnn/analysis.json (models/published_means/gsc_far)",
+    "table.G2_s0.correct": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.G2_s0.wrong": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.G2_s0.far": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.G2_s0.cmd_f1_val": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.G2_s0.cmd_f1_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "table.G2_s0.final_test": "tiny-vcm/results/dscnn/analysis.json + models/vcm manifest scores",
+    "params.B2_s0": "tiny-vcm/exports/B2_s0/deploy.json (params)",
+    "params.E1_s0": "tiny-vcm/exports/E1_s0/deploy.json (params)",
+    "params.G2_s0": "tiny-vcm/exports/G2_s0/deploy.json (params)",
+    "b0.correct": "tiny-vcm/results/dscnn/analysis.json (A7 seed0 @ tau 0.90)",
+    "b0.wrong": "tiny-vcm/results/dscnn/analysis.json (A7 seed0 @ tau 0.90)",
+    "final_test.B2_s0": "tiny-vcm/results/dscnn/analysis.json (test_split B2_s0 personal_awi)",
+    "final_test.E1_s0": "tiny-vcm/results/dscnn/analysis.json (test_split E1_s0 personal_awi)",
+    "final_test.G2_s0": "tiny-vcm/results/dscnn/analysis.json (test_split G2_s0 personal_awi)",
+    "tuning_sd.B2": "tiny-vcm/results/dscnn/analysis.json (published_means.B2.tuning_sd)",
+    "agree.wrong": "tiny-vcm/results/dscnn/analysis.json (published_means.AGREE.wrong)",
+    "agree.far": "tiny-vcm/results/dscnn/analysis.json (published_means.AGREE.FAR)",
+    "deployment.B2_s0.onnx_kb": "tiny-vcm/exports/B2_s0/model.onnx (268 KB)",
+    "deployment.E1_s0.onnx_kb": "tiny-vcm/exports/E1_s0/model.onnx (278 KB)",
+    "deployment.G2_s0.onnx_kb": "tiny-vcm/exports/G2_s0/model.onnx (266 KB)",
+    "parity.B2_s0": "tiny-vcm/exports/B2_s0/deploy.json (fp32_parity_max_dprob)"
+  }
+}

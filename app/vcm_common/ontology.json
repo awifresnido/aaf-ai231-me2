@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0.0-optionb",
+  "source": "AI231 ME2 class schema (ayla011/ai231-me2-voice-data schema/prompts.csv, 19 labels) with UNKNOWN and SILENCE added locally per Phase 0",
+  "note": "leaf_label equals training_label for every class so validation stays 1:1. slot_value carries the class slot for the 6 slotted intents.",
+  "labels": {
+    "fixed": [
+      "PLAY_MUSIC", "WEATHER", "TIME", "LIGHT_ON", "LIGHT_OFF", "PAUSE",
+      "STOP", "NEXT", "VOLUME_UP", "VOLUME_DOWN", "CALL", "MESSAGE",
+      "LIST_REMINDERS"
+    ],
+    "slotted": [
+      "TIMER", "ALARM", "TEMPERATURE", "BRIGHTNESS", "COLOR", "CREATE_REMINDER"
+    ],
+    "local_only": ["UNKNOWN", "SILENCE"]
+  },
+  "slot_values": {
+    "TIMER": ["10 seconds", "30 seconds", "1 minute"],
+    "ALARM": ["6:00 AM", "8:00 AM", "9:00 PM"],
+    "TEMPERATURE": ["18 degrees", "22 degrees", "26 degrees"],
+    "BRIGHTNESS": ["20 percent", "60 percent", "100 percent"],
+    "COLOR": ["Red", "Blue", "Green"],
+    "CREATE_REMINDER": ["Drink water", "Study", "Exercise"]
+  },
+  "training_labels": {
+    "PLAY_MUSIC": ["PLAY_MUSIC"],
+    "WEATHER": ["WEATHER"],
+    "TIME": ["TIME"],
+    "LIGHT_ON": ["LIGHT_ON"],
+    "LIGHT_OFF": ["LIGHT_OFF"],
+    "PAUSE": ["PAUSE"],
+    "STOP": ["STOP"],
+    "NEXT": ["NEXT"],
+    "VOLUME_UP": ["VOLUME_UP"],
+    "VOLUME_DOWN": ["VOLUME_DOWN"],
+    "CALL": ["CALL"],
+    "MESSAGE": ["MESSAGE"],
+    "LIST_REMINDERS": ["LIST_REMINDERS"],
+    "TIMER": ["TIMER"],
+    "ALARM": ["ALARM"],
+    "TEMPERATURE": ["TEMPERATURE"],
+    "BRIGHTNESS": ["BRIGHTNESS"],
+    "COLOR": ["COLOR"],
+    "CREATE_REMINDER": ["CREATE_REMINDER"],
+    "UNKNOWN": ["UNKNOWN"],
+    "SILENCE": ["SILENCE"]
+  },
+  "pool_policy": {
+    "pool_eligible_labels": "the 19 class labels only",
+    "local_only_labels": ["UNKNOWN", "SILENCE"],
+    "reason": "the shared pool schema has no UNKNOWN/SILENCE; sending them would pollute the class dataset"
+  }
+}

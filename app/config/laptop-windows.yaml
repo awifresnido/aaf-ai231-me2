@@ -1,0 +1,29 @@
+# Laptop app on native Windows Python (microphone via sounddevice/WASAPI),
+# talking to the edge service. Today the edge runs in WSL on the same laptop
+# (WSL2 forwards localhost:8765 to Windows); for the demo set host to the Pi.
+edge_link:
+  mode: remote
+  host: <lan-ip>            # Pi over Ethernet
+  port: 8765
+
+laptop:
+  host: 127.0.0.1
+  port: 8080
+  timezone: Asia/Manila
+  mic:
+    enabled: true
+    device: null             # index or name from `start-laptop.ps1 -ListMics`; null = Windows default
+  weather:
+    provider: open_meteo
+    location_name: UP Cebu
+    latitude: 10.3225
+    longitude: 123.8985
+    timeout_s: 4.0
+    fallback_enabled: true
+  contacts:
+    default:
+      name: Demo Contact
+      phone: "<phone>"
+  message:
+    default_text: This is a TinyVCM demo message.
+  data_dir: ~/tinyvcm-runtime  # Windows disk: SQLite must not sit on the \\wsl.localhost share

@@ -1,0 +1,24 @@
+# Values that exist only in markdown reports. ``scripts/build_about_data.py``
+# FAILS if a ``quote`` is not found verbatim in ``file`` (paths are relative to
+# the app repo root). This keeps hand-copied values verifiable: the quote is the
+# proof the number really appears in the source.
+story.first_acc:
+  value: "19%"
+  file: "../VCM_TRAINING_TROUBLESHOOTING.md"
+  quote: "phase 1 plateaus at ~19 %"
+story.fixed_acc:
+  value: "99.7%"
+  file: "../tiny-vcm/ABLATION_RESULTS.md"
+  quote: "**A2:** tcresnet + v2 inputs | 0.9967"
+mcnemar.e1_b2_p:
+  value: "0.0001"
+  file: "../tiny-vcm/CRNN_ATTN_RESULTS.md"
+  quote: "p=0.0001"
+audit.relabeled:
+  value: 4043
+  file: "../tiny-vcm/PHASE2_RESULTS.md"
+  quote: "4,043"
+audit.dropped:
+  value: 139
+  file: "../tiny-vcm/PHASE2_RESULTS.md"
+  quote: "139 rows dropped"

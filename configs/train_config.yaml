@@ -1,0 +1,83 @@
+# VCM Training Configuration: Two-phase pipeline
+# Revised 2026-09-25 -- see ARCH_REFACTOR_V2.md. Every key below is now
+# actually read by train_vcm.py (several were silently ignored before).
+# Floats need a decimal point in the mantissa (PyYAML reads 1e-3 as a string).
+
+model:
+  arch: "tcresnet"        # tcresnet | dscnn | legacy (legacy = old VCMModel, ablation baseline only)
+  width_mult: 1.0         # tcresnet: 1.0 ~68k params, 0.5 ~18k params
+  kernel: 9               # tcresnet temporal kernel
+  channels: 64            # dscnn only
+  n_blocks: 4             # dscnn only
+  dropout_rate: 0.1
+  gradient_clip: 1.0
+  # n_classes is NOT set here -- derived from configs/ontology.json + training.label_mode.
+
+training:
+  label_mode: "leaf"             # intent (21 classes) | leaf (33: one class per slot value, what the demo app needs)
+  class_weighting: "sqrt_inverse" # none | inverse | sqrt_inverse
+
+phase1:
+  description: "Synthetic Pretraining (Chatterbox TTS, Option B schema)"
+  train_manifest: "data/manifests/mark_optionb.csv"
+  val_manifest: "data/manifests/mark_optionb.csv"
+  train_split: "train"
+  val_split: "validation"
+  epochs: 60
+  batch_size: 64
+  learning_rate: 0.003
+  scheduler_type: "cosine"
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+
+phase2:
+  description: "Real Voice Finetuning (FSC + GSC + personal awi01, Option B schema)"
+  train_manifest: "data/manifests/composite_v0.csv"
+  val_manifest: "data/manifests/composite_v0.csv"
+  train_split: "train"
+  val_split: "validation"
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.0005
+  scheduler_type: "plateau"
+  weight_decay: 0.0001
+  early_stopping_patience: 8
+  warm_start: true
+  # must match the phase-1 run's arch / label_mode / n_mels (strict load)
+  init_checkpoint: "checkpoints/p1_tcresnet_leaf_s0/best.pt"
+
+data:
+  audio_root: "."
+  sample_rate: 16000
+  n_mels: 40              # standard for small KWS; was 80
+  n_fft: 512
+  hop_length: 160         # 10 ms
+  f_min: 50
+  f_max: 7600
+  top_db: 80.0            # clamp log-mel floor (digital silence was ~-100 dB)
+  trim_db: 40.0           # energy trim relative to clip peak; null disables
+  max_duration: 3.0       # s AFTER trimming (PHASE2 Step 0b decision: >2% real-speech command clips exceed 2.5 s)
+
+  augmentation:
+    spec_augment: true
+    freq_mask_param: 5    # of 40 mel bins (30 of 80 was very aggressive)
+    time_mask_param: 20   # frames
+    num_masks: 2
+    prob: 0.5
+
+  # PHASE2 FALLBACK addendum Step 3: train-only waveform augmentation,
+  # applied after resample, before trim. p = per-clip probability.
+  wave_augmentation:
+    noise_mix:      {p: 0.6, snr_db: [5, 25]}
+    reverb:         {p: 0.3, rt60_s: [0.15, 0.6]}
+    speed_perturb:  {p: 0.5, factors: [0.9, 1.0, 1.1]}
+    gain:           {p: 0.5, db: 6.0}
+    mic_bandlimit:  {p: 0.2, cutoff_hz: [3500, 7500]}
+
+checkpoints:
+  save_dir: "checkpoints"   # per-run subfolder: checkpoints/<run_name>/best.pt
+
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  log_interval: 100

@@ -1,0 +1,29 @@
+# Laptop app on native macOS Python (microphone via sounddevice/CoreAudio),
+# talking to the edge service on the Pi over the shared network.
+edge_link:
+  mode: remote
+  host: <lan-ip>            # Pi's WIFI IP (the Mac is on WiFi). <lan-ip> is the Pi's Ethernet IP.
+                                 # If you SSH to the Pi on a different IP, use that instead.
+  port: 8765
+
+laptop:
+  host: 127.0.0.1
+  port: 8080
+  timezone: Asia/Manila
+  mic:
+    enabled: true
+    device: null             # CoreAudio device index or name; null = system default input
+  weather:
+    provider: open_meteo
+    location_name: UP Cebu
+    latitude: 10.3225
+    longitude: 123.8985
+    timeout_s: 4.0
+    fallback_enabled: true
+  contacts:
+    default:
+      name: Demo Contact
+      phone: "<phone>"
+  message:
+    default_text: This is a TinyVCM demo message.
+  data_dir: ~/tinyvcm-runtime

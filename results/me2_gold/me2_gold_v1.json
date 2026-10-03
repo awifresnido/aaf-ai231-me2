@@ -1,0 +1,484 @@
+{
+  "gates": {
+    "G1_contradictions": {
+      "no_file_two_labels": true,
+      "no_stop_in_unknown": true,
+      "exclusions_applied": {
+        "other_command": 2,
+        "relabelled_group_recording": 90
+      }
+    },
+    "G2_coverage": {
+      "train_missing": [],
+      "val_missing": [],
+      "pass": true
+    },
+    "G3_balance": {
+      "unk_share": 0.18,
+      "silence_n": 483,
+      "pass": true
+    },
+    "G4_disjointness": {
+      "speaker_leak": {},
+      "sha_shared": [],
+      "pass": true
+    }
+  },
+  "splits": {
+    "test": {
+      "clips": 324,
+      "hours": 0.179,
+      "unique_speakers": 6,
+      "real": 218,
+      "synthetic": 106,
+      "per_source": {
+        "gold_oos": {
+          "clips": 16,
+          "real": 10,
+          "synthetic": 6
+        },
+        "gold_paraphrase": {
+          "clips": 2,
+          "real": 2,
+          "synthetic": 0
+        },
+        "gold_real": {
+          "clips": 84,
+          "real": 84,
+          "synthetic": 0
+        },
+        "gold_synthetic": {
+          "clips": 100,
+          "real": 0,
+          "synthetic": 100
+        },
+        "personal_awi": {
+          "clips": 122,
+          "real": 122,
+          "synthetic": 0
+        }
+      },
+      "per_label": {
+        "ALARM": 27,
+        "BRIGHTNESS": 27,
+        "CALL": 9,
+        "COLOR": 27,
+        "CREATE_REMINDER": 27,
+        "LIGHT_OFF": 9,
+        "LIGHT_ON": 9,
+        "LIST_REMINDERS": 9,
+        "MESSAGE": 9,
+        "NEXT": 9,
+        "PAUSE": 9,
+        "PLAY_MUSIC": 9,
+        "SILENCE": 9,
+        "STOP": 9,
+        "TEMPERATURE": 27,
+        "TIME": 9,
+        "TIMER": 27,
+        "UNKNOWN": 36,
+        "VOLUME_DOWN": 9,
+        "VOLUME_UP": 9,
+        "WEATHER": 9
+      },
+      "unknown_by_source": {
+        "gold_oos": 16,
+        "personal_awi": 20
+      },
+      "silence_by_source": {
+        "personal_awi": 9
+      },
+      "unknown_by_neg_kind": {
+        "": 36
+      },
+      "silence_by_neg_kind": {
+        "": 9
+      },
+      "per_leaf": {
+        "UNKNOWN": 36,
+        "PLAY_MUSIC": 9,
+        "STOP": 9,
+        "WEATHER": 9,
+        "TIME": 9,
+        "LIGHT_ON": 9,
+        "LIGHT_OFF": 9,
+        "PAUSE": 9,
+        "NEXT": 9,
+        "VOLUME_UP": 9,
+        "VOLUME_DOWN": 9,
+        "CALL": 9,
+        "MESSAGE": 9,
+        "LIST_REMINDERS": 9,
+        "TIMER|10 seconds": 9,
+        "TIMER|30 seconds": 9,
+        "TIMER|1 minute": 9,
+        "ALARM|6:00 AM": 9,
+        "ALARM|8:00 AM": 9,
+        "ALARM|9:00 PM": 9,
+        "TEMPERATURE|18 degrees": 9,
+        "TEMPERATURE|22 degrees": 9,
+        "TEMPERATURE|26 degrees": 9,
+        "BRIGHTNESS|20 percent": 9,
+        "BRIGHTNESS|60 percent": 9,
+        "BRIGHTNESS|100 percent": 9,
+        "COLOR|Red": 9,
+        "COLOR|Blue": 9,
+        "COLOR|Green": 9,
+        "CREATE_REMINDER|Drink water": 9,
+        "CREATE_REMINDER|Study": 9,
+        "CREATE_REMINDER|Exercise": 9,
+        "SILENCE": 9
+      },
+      "real_voice_per_leaf": {
+        "PLAY_MUSIC": 5,
+        "WEATHER": 6,
+        "TIME": 6,
+        "LIGHT_ON": 6,
+        "LIGHT_OFF": 6,
+        "PAUSE": 6,
+        "STOP": 5,
+        "NEXT": 6,
+        "VOLUME_UP": 6,
+        "VOLUME_DOWN": 6,
+        "CALL": 6,
+        "MESSAGE": 6,
+        "LIST_REMINDERS": 6,
+        "TIMER|10 seconds": 6,
+        "TIMER|30 seconds": 6,
+        "TIMER|1 minute": 6,
+        "ALARM|6:00 AM": 6,
+        "ALARM|8:00 AM": 6,
+        "ALARM|9:00 PM": 5,
+        "TEMPERATURE|18 degrees": 6,
+        "TEMPERATURE|22 degrees": 6,
+        "TEMPERATURE|26 degrees": 6,
+        "BRIGHTNESS|20 percent": 5,
+        "BRIGHTNESS|60 percent": 5,
+        "BRIGHTNESS|100 percent": 5,
+        "COLOR|Red": 5,
+        "COLOR|Blue": 5,
+        "COLOR|Green": 5,
+        "CREATE_REMINDER|Drink water": 6,
+        "CREATE_REMINDER|Study": 6,
+        "CREATE_REMINDER|Exercise": 6,
+        "SILENCE": 9,
+        "UNKNOWN": 20
+      }
+    },
+    "train": {
+      "clips": 14061,
+      "hours": 7.171,
+      "unique_speakers": 726,
+      "real": 3085,
+      "synthetic": 10976,
+      "per_source": {
+        "gold_numerals": {
+          "clips": 1602,
+          "real": 0,
+          "synthetic": 1602
+        },
+        "gold_oos": {
+          "clips": 180,
+          "real": 111,
+          "synthetic": 69
+        },
+        "gold_paraphrase": {
+          "clips": 1583,
+          "real": 1583,
+          "synthetic": 0
+        },
+        "gold_real": {
+          "clips": 415,
+          "real": 415,
+          "synthetic": 0
+        },
+        "gold_synthetic": {
+          "clips": 8305,
+          "real": 0,
+          "synthetic": 8305
+        },
+        "personal_awi": {
+          "clips": 976,
+          "real": 976,
+          "synthetic": 0
+        },
+        "synthetic_negative": {
+          "clips": 1000,
+          "real": 0,
+          "synthetic": 1000
+        }
+      },
+      "per_label": {
+        "ALARM": 1071,
+        "BRIGHTNESS": 1070,
+        "CALL": 350,
+        "COLOR": 1071,
+        "CREATE_REMINDER": 1071,
+        "LIGHT_OFF": 357,
+        "LIGHT_ON": 357,
+        "LIST_REMINDERS": 357,
+        "MESSAGE": 346,
+        "NEXT": 357,
+        "PAUSE": 357,
+        "PLAY_MUSIC": 356,
+        "SILENCE": 483,
+        "STOP": 357,
+        "TEMPERATURE": 1071,
+        "TIME": 357,
+        "TIMER": 1071,
+        "UNKNOWN": 2531,
+        "VOLUME_DOWN": 357,
+        "VOLUME_UP": 357,
+        "WEATHER": 357
+      },
+      "unknown_by_source": {
+        "gold_numerals": 1602,
+        "gold_oos": 169,
+        "personal_awi": 160,
+        "synthetic_negative": 600
+      },
+      "silence_by_source": {
+        "gold_oos": 11,
+        "personal_awi": 72,
+        "synthetic_negative": 400
+      },
+      "unknown_by_neg_kind": {
+        "": 1931,
+        "babble": 200,
+        "reversed": 200,
+        "truncated": 200
+      },
+      "silence_by_neg_kind": {
+        "": 83,
+        "near_silence": 200,
+        "noise_only": 200
+      },
+      "per_leaf": {
+        "UNKNOWN": 2531,
+        "SILENCE": 483,
+        "PLAY_MUSIC": 356,
+        "WEATHER": 357,
+        "TIME": 357,
+        "LIGHT_ON": 357,
+        "LIGHT_OFF": 357,
+        "PAUSE": 357,
+        "STOP": 357,
+        "NEXT": 357,
+        "VOLUME_UP": 357,
+        "VOLUME_DOWN": 357,
+        "CALL": 350,
+        "MESSAGE": 346,
+        "LIST_REMINDERS": 357,
+        "TIMER|30 seconds": 357,
+        "TIMER|1 minute": 357,
+        "ALARM|8:00 AM": 357,
+        "ALARM|6:00 AM": 357,
+        "ALARM|9:00 PM": 357,
+        "TEMPERATURE|26 degrees": 357,
+        "TEMPERATURE|22 degrees": 357,
+        "BRIGHTNESS|20 percent": 356,
+        "COLOR|Red": 357,
+        "COLOR|Blue": 357,
+        "COLOR|Green": 357,
+        "TEMPERATURE|18 degrees": 357,
+        "CREATE_REMINDER|Study": 357,
+        "TIMER|10 seconds": 357,
+        "BRIGHTNESS|60 percent": 357,
+        "BRIGHTNESS|100 percent": 357,
+        "CREATE_REMINDER|Drink water": 357,
+        "CREATE_REMINDER|Exercise": 357
+      },
+      "real_voice_per_leaf": {
+        "PLAY_MUSIC": 60,
+        "WEATHER": 41,
+        "TIME": 42,
+        "LIGHT_ON": 42,
+        "LIGHT_OFF": 41,
+        "PAUSE": 37,
+        "STOP": 50,
+        "NEXT": 62,
+        "VOLUME_UP": 53,
+        "VOLUME_DOWN": 46,
+        "CALL": 33,
+        "LIST_REMINDERS": 43,
+        "TIMER|1 minute": 40,
+        "ALARM|6:00 AM": 38,
+        "ALARM|9:00 PM": 37,
+        "TEMPERATURE|18 degrees": 40,
+        "TEMPERATURE|22 degrees": 42,
+        "TEMPERATURE|26 degrees": 41,
+        "BRIGHTNESS|20 percent": 40,
+        "COLOR|Red": 33,
+        "COLOR|Blue": 33,
+        "COLOR|Green": 33,
+        "CREATE_REMINDER|Study": 40,
+        "ALARM|8:00 AM": 24,
+        "BRIGHTNESS|60 percent": 24,
+        "BRIGHTNESS|100 percent": 24,
+        "CREATE_REMINDER|Drink water": 24,
+        "CREATE_REMINDER|Exercise": 24,
+        "MESSAGE": 24,
+        "SILENCE": 72,
+        "TIMER|10 seconds": 24,
+        "TIMER|30 seconds": 24,
+        "UNKNOWN": 160
+      }
+    },
+    "validation": {
+      "clips": 4815,
+      "hours": 2.626,
+      "unique_speakers": 201,
+      "real": 946,
+      "synthetic": 3869,
+      "per_source": {
+        "gold_oos": {
+          "clips": 76,
+          "real": 47,
+          "synthetic": 29
+        },
+        "gold_paraphrase": {
+          "clips": 598,
+          "real": 598,
+          "synthetic": 0
+        },
+        "gold_real": {
+          "clips": 179,
+          "real": 179,
+          "synthetic": 0
+        },
+        "gold_synthetic": {
+          "clips": 3590,
+          "real": 0,
+          "synthetic": 3590
+        },
+        "personal_awi": {
+          "clips": 122,
+          "real": 122,
+          "synthetic": 0
+        },
+        "synthetic_negative": {
+          "clips": 250,
+          "real": 0,
+          "synthetic": 250
+        }
+      },
+      "per_label": {
+        "ALARM": 432,
+        "BRIGHTNESS": 432,
+        "CALL": 144,
+        "COLOR": 432,
+        "CREATE_REMINDER": 432,
+        "LIGHT_OFF": 144,
+        "LIGHT_ON": 144,
+        "LIST_REMINDERS": 144,
+        "MESSAGE": 140,
+        "NEXT": 144,
+        "PAUSE": 144,
+        "PLAY_MUSIC": 144,
+        "SILENCE": 109,
+        "STOP": 144,
+        "TEMPERATURE": 432,
+        "TIME": 144,
+        "TIMER": 432,
+        "UNKNOWN": 246,
+        "VOLUME_DOWN": 144,
+        "VOLUME_UP": 144,
+        "WEATHER": 144
+      },
+      "unknown_by_source": {
+        "gold_oos": 76,
+        "personal_awi": 20,
+        "synthetic_negative": 150
+      },
+      "silence_by_source": {
+        "personal_awi": 9,
+        "synthetic_negative": 100
+      },
+      "unknown_by_neg_kind": {
+        "": 96,
+        "babble": 50,
+        "reversed": 50,
+        "truncated": 50
+      },
+      "silence_by_neg_kind": {
+        "": 9,
+        "near_silence": 50,
+        "noise_only": 50
+      },
+      "per_leaf": {
+        "UNKNOWN": 246,
+        "PLAY_MUSIC": 144,
+        "WEATHER": 144,
+        "TIME": 144,
+        "LIGHT_ON": 144,
+        "LIGHT_OFF": 144,
+        "PAUSE": 144,
+        "STOP": 144,
+        "NEXT": 144,
+        "VOLUME_UP": 144,
+        "VOLUME_DOWN": 144,
+        "CALL": 144,
+        "MESSAGE": 140,
+        "LIST_REMINDERS": 144,
+        "TIMER|1 minute": 144,
+        "ALARM|8:00 AM": 144,
+        "ALARM|6:00 AM": 144,
+        "ALARM|9:00 PM": 144,
+        "TEMPERATURE|26 degrees": 144,
+        "TEMPERATURE|22 degrees": 144,
+        "BRIGHTNESS|20 percent": 144,
+        "COLOR|Red": 144,
+        "COLOR|Blue": 144,
+        "COLOR|Green": 144,
+        "TIMER|10 seconds": 144,
+        "TIMER|30 seconds": 144,
+        "TEMPERATURE|18 degrees": 144,
+        "BRIGHTNESS|60 percent": 144,
+        "BRIGHTNESS|100 percent": 144,
+        "CREATE_REMINDER|Drink water": 144,
+        "CREATE_REMINDER|Study": 144,
+        "CREATE_REMINDER|Exercise": 144,
+        "SILENCE": 109
+      },
+      "real_voice_per_leaf": {
+        "PLAY_MUSIC": 9,
+        "WEATHER": 9,
+        "TIME": 8,
+        "LIGHT_ON": 9,
+        "LIGHT_OFF": 8,
+        "PAUSE": 8,
+        "STOP": 9,
+        "NEXT": 9,
+        "VOLUME_UP": 9,
+        "VOLUME_DOWN": 9,
+        "CALL": 9,
+        "MESSAGE": 9,
+        "LIST_REMINDERS": 9,
+        "TIMER|10 seconds": 9,
+        "TIMER|30 seconds": 9,
+        "TIMER|1 minute": 9,
+        "ALARM|6:00 AM": 9,
+        "ALARM|9:00 PM": 8,
+        "ALARM|8:00 AM": 6,
+        "TEMPERATURE|18 degrees": 9,
+        "TEMPERATURE|22 degrees": 9,
+        "TEMPERATURE|26 degrees": 9,
+        "BRIGHTNESS|20 percent": 9,
+        "BRIGHTNESS|60 percent": 9,
+        "BRIGHTNESS|100 percent": 9,
+        "COLOR|Red": 9,
+        "COLOR|Blue": 9,
+        "COLOR|Green": 9,
+        "CREATE_REMINDER|Drink water": 9,
+        "CREATE_REMINDER|Study": 9,
+        "CREATE_REMINDER|Exercise": 9,
+        "SILENCE": 9,
+        "UNKNOWN": 20
+      }
+    }
+  },
+  "totals": {
+    "rows": 19200
+  },
+  "manifest_sha256": "f81867392d20e3a23cbbcd2b77559c3b357e943f10e3095b65f7aa1b6171cdb2"
+}

@@ -1,0 +1,22 @@
+{
+  "E1f_s1": {
+    "arch": "crnn_attn",
+    "params": 69234,
+    "onnx_kb": 279.2,
+    "opset": 17,
+    "parity_max_dprob": 4.76837158203125e-07,
+    "parity_pass": true,
+    "latency_model_p95_ms": 1.29,
+    "deploy_path": "exports/me2_gold/E1f_s1/deploy.json"
+  },
+  "B2f_s0": {
+    "arch": "tcresnet",
+    "params": 67793,
+    "onnx_kb": 268.3,
+    "opset": 17,
+    "parity_max_dprob": 2.384185791015625e-07,
+    "parity_pass": true,
+    "latency_model_p95_ms": 0.35,
+    "deploy_path": "exports/me2_gold/B2f_s0/deploy.json"
+  }
+}

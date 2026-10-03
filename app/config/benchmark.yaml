@@ -1,0 +1,34 @@
+wake_timeout_s: 8
+result_timeout_s: 10
+negatives:
+  - "I'm just looking around"
+  - "What a nice room this is"
+  - "Can you hear me okay"
+  - "This is my first time here"
+  - "I had rice for lunch today"
+  - "The traffic was terrible this morning"
+  - "I like the colour of that wall"
+  - "We should start the meeting soon"
+fixed_set:
+  - {say: "Play music",                         expect: "PLAY_MUSIC"}
+  - {say: "What's the weather?",                expect: "WEATHER"}
+  - {say: "Turn on the lights",                 expect: "LIGHT_ON"}
+  - {say: "Brightness 60 percent",              expect: "BRIGHTNESS", slot: "60 percent"}
+  - {say: "Start a timer for 30 seconds",       expect: "TIMER",      slot: "30 seconds"}
+  - {say: "Set an alarm for 6 AM",              expect: "ALARM",      slot: "6 AM"}
+  - {say: "Set the temperature to 22 degrees",  expect: "TEMPERATURE", slot: "22 degrees"}
+  - {say: "Turn the volume up",                 expect: "VOLUME_UP"}
+  - {say: "Remind me to drink water",           expect: "CREATE_REMINDER", slot: "drink water"}
+  - {say: "Make a call",                        expect: "CALL"}
+  - {negative: 0}
+  - {negative: 1}
+random_set: {n_commands: 10, n_negatives: 2}
+targets:
+  correct_min: 0.85
+  wrong_max: 0.01
+  false_accept_max: 0.05
+  wake_miss_max: 0.05
+  pi_model_p95_ms_max: 50
+  pi_features_p95_ms_max: 30
+  params_max: 100000
+  model_size_kb_max: 1024

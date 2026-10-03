@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or the ME2 Gold dataset, please cite both as below."
+title: "aaf-ai231-me2: reproducible tiny voice-command model (AI231 ME2 submission)"
+version: 0.1.0
+date-released: 2026-10-03
+authors:
+  - family-names: Fresnido
+    given-names: Aldwin
+    orcid: ""
+license: MIT
+repository-code: "https://github.com/awifresnido/aaf-ai231-me2"
+keywords:
+  - keyword-command-spotting
+  - on-device-speech
+  - raspberry-pi
+  - TC-ResNet
+  - CRNN
+preferred-citation:
+  type: dataset
+  title: "ai231-me2-voice-commands"
+  authors:
+    - name: "ME2 dataset owner (see dataset card)"
+  repository: "https://huggingface.co/datasets/airimonda/ai231-me2-voice-commands"
+  version: "6947f13073e57eb6ae67e7e2fc3680700b82aa13"
+  year: 2026

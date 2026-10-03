@@ -1,0 +1,21 @@
+{
+  "title": "aaf-ai231-me2: derived artefacts (manifest, splits, exclusions, checksums)",
+  "description": "Derived, audio-free artefacts for the AI231 ME2 submission: the composite manifest me2_gold_v1.csv, the train/validation/holdout split definitions, the exclusion list, and the sha256 checksums of the released checkpoints and ONNX models.",
+  "creators": [
+    {
+      "name": "Fresnido, Aldwin",
+      "affiliation": "AI231 ME2"
+    }
+  ],
+  "license": "CC-BY-NC-4.0",
+  "access_right": "open",
+  "upload_type": "dataset",
+  "keywords": ["keyword spotting", "voice commands", "tiny models", "AI231"],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/awifresnido/aaf-ai231-me2",
+      "resource_type": "software"
+    }
+  ]
+}

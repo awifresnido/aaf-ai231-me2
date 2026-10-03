@@ -1,0 +1,96 @@
+id: B2f_s0
+display_name: Sweep (TC-ResNet Gold)
+description: Sweep fine-tuned on the ME2 Gold dataset plus Awi's practice session.
+  Secondary gold-trained model.
+based_on: TC-ResNet (temporal convolution)
+task: vcm
+engine: onnx_tinyvcm
+weights: ../../../../tiny-vcm/exports/B2f_s0/model.onnx
+architecture:
+  arch: tcresnet
+  width_mult: 1.0
+  kernel: 9
+  dropout_rate: 0.1
+label_scheme: leaf
+labels:
+- ALARM|6:00 AM
+- ALARM|8:00 AM
+- ALARM|9:00 PM
+- BRIGHTNESS|20 percent
+- BRIGHTNESS|60 percent
+- BRIGHTNESS|100 percent
+- CALL
+- COLOR|Red
+- COLOR|Blue
+- COLOR|Green
+- CREATE_REMINDER|Drink water
+- CREATE_REMINDER|Study
+- CREATE_REMINDER|Exercise
+- LIGHT_OFF
+- LIGHT_ON
+- LIST_REMINDERS
+- MESSAGE
+- NEXT
+- PAUSE
+- PLAY_MUSIC
+- SILENCE
+- STOP
+- TEMPERATURE|18 degrees
+- TEMPERATURE|22 degrees
+- TEMPERATURE|26 degrees
+- TIME
+- TIMER|10 seconds
+- TIMER|30 seconds
+- TIMER|1 minute
+- UNKNOWN
+- VOLUME_DOWN
+- VOLUME_UP
+- WEATHER
+features:
+  sample_rate: 16000
+  n_mels: 40
+  n_fft: 512
+  hop_length: 160
+  f_min: 50
+  f_max: 7600
+  top_db: 80.0
+  trim_db: 40.0
+  max_duration_s: 3.0
+reject:
+  min_confidence: 0.95
+  non_command_labels:
+  - UNKNOWN
+  - SILENCE
+quantization: fp32
+lineage:
+  training_phase: phase2
+  training_data: me2_gold_v1
+  git_commit: bc2ff80
+  mlflow_run_id: null
+  init_checkpoint: B2_s0/best.pt
+  notes: fine-tuned from B2_s0 (v1 TC-ResNet) on ME2 Gold rev 6947f130 (strict load);
+    selected on command_macro_f1 over gold_real + personal_awi s02.
+offline_metrics: {}
+engine_options:
+  num_threads: 2
+scores:
+  validation:
+    dataset_id: me2_gold_v1
+    split: validation
+    metrics:
+      tuning_session_correct: 0.8817
+      gold_test_speaker_correct: 0.6816
+      single_words_far: 0.0191
+    threshold: 0.95
+    source: results/me2_gold/eval_B2f_s0.json (per-seed, tau 0.95)
+    status: reported
+  test:
+    dataset_id: me2_gold_v1
+    split: test
+    metrics:
+      holdout_correct: 0.9516
+      final_test_session_correct: 0.914
+      command_macro_f1: 0.9586
+    threshold: 0.95
+    source: results/me2_gold/eval_B2f_s0.json + logs/summary_B2f_s0.json
+    status: reported

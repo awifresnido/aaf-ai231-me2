@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="244" font-family="sans-serif" font-size="13">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="8" y="24" fill="#111">E1f (CRNN-Attn)</text>
+<rect x="220" y="13" width="428" height="18" rx="3" fill="#0b6bcb"/>
+<text x="658" y="24" fill="#111">89.25 %</text>
+<text x="8" y="58" fill="#111">B2f (TC-ResNet)</text>
+<rect x="220" y="47" width="413" height="18" rx="3" fill="#0b6bcb"/>
+<text x="643" y="58" fill="#111">86.20 %</text>
+<text x="8" y="92" fill="#111">G2f (DS-CNN)</text>
+<rect x="220" y="81" width="294" height="18" rx="3" fill="#0b6bcb"/>
+<text x="524" y="92" fill="#111">61.29 %</text>
+<text x="8" y="126" fill="#111">v1 E1 (CRNN-Attn)</text>
+<rect x="220" y="115" width="414" height="18" rx="3" fill="#0b6bcb"/>
+<text x="644" y="126" fill="#111">86.38 %</text>
+<text x="8" y="160" fill="#111">v1 B2 (TC-ResNet)</text>
+<rect x="220" y="149" width="413" height="18" rx="3" fill="#0b6bcb"/>
+<text x="643" y="160" fill="#111">86.20 %</text>
+<text x="8" y="194" fill="#111">v1 G2 (DS-CNN)</text>
+<rect x="220" y="183" width="289" height="18" rx="3" fill="#0b6bcb"/>
+<text x="519" y="194" fill="#111">60.22 %</text>
+</svg>

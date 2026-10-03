@@ -1,0 +1,46 @@
+edge_service:
+  bind_host: 0.0.0.0
+  port: 8765
+  device_label: rpi4
+  models_dir: models
+  tiny_vcm_root: ../tiny-vcm
+  active_vcm: E1f_s1
+  compare_ids: [A7_s0]
+  window_s: 4.0
+  result_hold_s: 1.5
+  benchmark_mode: false          # vcm-benchmark: log lines + music/chime off
+  pre_capture_delay_s: 0.6
+  endpointing:
+    enabled: false          # turn on only after §5 picks the hangover
+    engine: silero
+    model_path: null
+    search_roots: ["../openwakeword"]
+    n_threads: 1
+    onset_threshold: 0.5
+    offset_threshold: 0.35
+    min_speech_ms: 200
+    hangover_ms: 500
+    no_speech_timeout_ms: 2000
+    max_window_ms: 4000     # = old window_s; the safety cap
+    fallback_to_energy: true
+  wake_engines:
+    - kind: openwakeword
+      id: hey_rhasspy
+      display_name: Hey Rhasspy (openWakeWord stock)
+      phrase: Hey Rhasspy
+      model: ../openwakeword/models/pretrained/hey_rhasspy_v0.1.onnx
+      melspec_model: ../openwakeword/models/pretrained/melspectrogram.onnx
+      embedding_model: ../openwakeword/models/pretrained/embedding_model.onnx
+      threshold: 0.5
+      patience: 2
+      debounce_s: 1.5
+  default_wake: oww:hey_rhasspy
+  chime:
+    play_on_edge: true
+    player: paplay
+  media:
+    backend: mpv
+    folder: media
+    volume_steps_pct: [20, 40, 60, 80, 100]
+    duck_volume_pct: 10
+    initial_level: 3

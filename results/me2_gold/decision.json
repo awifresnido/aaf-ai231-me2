@@ -1,0 +1,122 @@
+{
+  "B2f": {
+    "replace_v1": false,
+    "v1_counterpart": "B2",
+    "conditions": {
+      "every_seed_wrong_le_1pct_tauset": {
+        "pass": true,
+        "per_seed_wrong": [
+          0.0002589331952356292,
+          0.0007767995857068876,
+          0.0005178663904712584
+        ]
+      },
+      "awi_s02_ge_v1_minus_1pt": {
+        "pass": false,
+        "delta": -0.05017921146953408
+      },
+      "gold_test_spk_201435283_ge_v1_plus_5pt": {
+        "pass": false,
+        "delta": 0.01862197392923648
+      },
+      "single_words_far_le_v1_plus_1pt": {
+        "pass": true,
+        "delta": -0.03034407145851472
+      }
+    },
+    "numbers": {
+      "v1_tau": 0.95,
+      "finetuned_tau": 0.95,
+      "v1_awi_s02_correct": 0.9390681003584229,
+      "ft_awi_s02_correct": 0.8888888888888888,
+      "v1_gold_test_correct": 0.6145251396648045,
+      "ft_gold_test_correct": 0.633147113594041,
+      "v1_single_words_far": 0.04217858179355712,
+      "ft_single_words_far": 0.011834510335042405,
+      "v1_holdout_only_correct": 0.8620071684587813,
+      "ft_holdout_only_correct": 0.8620071684587813,
+      "v1_holdout_only_far": 0.10416666666666667,
+      "ft_holdout_only_far": 0.0625
+    }
+  },
+  "E1f": {
+    "replace_v1": false,
+    "v1_counterpart": "E1",
+    "conditions": {
+      "every_seed_wrong_le_1pct_tauset": {
+        "pass": true,
+        "per_seed_wrong": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "awi_s02_ge_v1_minus_1pt": {
+        "pass": false,
+        "delta": -0.028673835125448077
+      },
+      "gold_test_spk_201435283_ge_v1_plus_5pt": {
+        "pass": true,
+        "delta": 0.17690875232774678
+      },
+      "single_words_far_le_v1_plus_1pt": {
+        "pass": true,
+        "delta": -0.014801199574344587
+      }
+    },
+    "numbers": {
+      "v1_tau": 0.95,
+      "finetuned_tau": 0.95,
+      "v1_awi_s02_correct": 0.942652329749104,
+      "ft_awi_s02_correct": 0.9139784946236559,
+      "v1_gold_test_correct": 0.48044692737430167,
+      "ft_gold_test_correct": 0.6573556797020484,
+      "v1_single_words_far": 0.02060559156428364,
+      "ft_single_words_far": 0.005804391989939054,
+      "v1_holdout_only_correct": 0.8637992831541219,
+      "ft_holdout_only_correct": 0.8924731182795699,
+      "v1_holdout_only_far": 0.0625,
+      "ft_holdout_only_far": 0.0625
+    }
+  },
+  "G2f": {
+    "replace_v1": false,
+    "v1_counterpart": "G2",
+    "conditions": {
+      "every_seed_wrong_le_1pct_tauset": {
+        "pass": true,
+        "per_seed_wrong": [
+          0.0,
+          0.0,
+          0.0002589331952356292
+        ]
+      },
+      "awi_s02_ge_v1_minus_1pt": {
+        "pass": false,
+        "delta": -0.06451612903225801
+      },
+      "gold_test_spk_201435283_ge_v1_plus_5pt": {
+        "pass": false,
+        "delta": 0.011173184357541888
+      },
+      "single_words_far_le_v1_plus_1pt": {
+        "pass": true,
+        "delta": -0.01825158814614169
+      }
+    },
+    "numbers": {
+      "v1_tau": 0.95,
+      "finetuned_tau": 0.95,
+      "v1_awi_s02_correct": 0.6308243727598566,
+      "ft_awi_s02_correct": 0.5663082437275986,
+      "v1_gold_test_correct": 0.09869646182495345,
+      "ft_gold_test_correct": 0.10986964618249534,
+      "v1_single_words_far": 0.020895811163780594,
+      "ft_single_words_far": 0.0026442230176389023,
+      "v1_holdout_only_correct": 0.6021505376344086,
+      "ft_holdout_only_correct": 0.6129032258064516,
+      "v1_holdout_only_far": 0.041666666666666664,
+      "ft_holdout_only_far": 0.020833333333333332
+    }
+  }
+}

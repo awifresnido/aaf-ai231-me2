@@ -1,0 +1,148 @@
+{
+  "gsc_v2_benchmark": {
+    "description": "Google Speech Commands V2 benchmark reference numbers (published results)",
+    "dataset": {
+      "name": "Google Speech Commands V2",
+      "url": "https://arxiv.org/abs/1804.03209",
+      "num_classes": 35,
+      "num_samples": "~70,000 utterances",
+      "sample_rate": 16000,
+      "duration": "1 second per sample",
+      "task": "35-word keyword spotting (more fine-grained than your 13-intent task)"
+    },
+    "baseline_results": {
+      "cnn_small": {
+        "model": "Small CNN (custom, ~20K params)",
+        "accuracy": 0.943,
+        "latency_ms": 85,
+        "model_size_kb": 80,
+        "source": "TensorFlow Lite examples",
+        "notes": "Trained on GSC V2, int8 quantized"
+      },
+      "mobilenetv2_small": {
+        "model": "MobileNetV2 (depthwise-separable, ~1.2M params)",
+        "accuracy": 0.960,
+        "latency_ms": 120,
+        "model_size_kb": 1200,
+        "source": "TensorFlow model zoo",
+        "notes": "Over-parameterized for keyword spotting"
+      },
+      "crnn": {
+        "model": "CNN-RNN (LSTM fusion, ~50K params)",
+        "accuracy": 0.962,
+        "latency_ms": 45,
+        "model_size_kb": 200,
+        "source": "Google research",
+        "notes": "Good balance of accuracy and efficiency"
+      }
+    },
+    "quantization_impact": {
+      "float32_to_int8": {
+        "accuracy_drop": "0.5-2%",
+        "latency_improvement": "2-3x faster",
+        "size_reduction": "75%",
+        "source": "TensorFlow Lite quantization guide"
+      }
+    },
+    "context_for_your_task": {
+      "your_task": "13-intent voice commands (subset of GSC task)",
+      "your_dataset": "488 personal utterances (vs 70K public)",
+      "expected_accuracy_range": "85-95%",
+      "expected_latency_range": "50-150ms",
+      "why_different": [
+        "Fewer classes (13 vs 35) = easier task = higher accuracy possible",
+        "Smaller training data (488 vs 70K) = harder task = lower ceiling",
+        "Domain-specific (personal voice) = may generalize differently",
+        "RPi4 deployment = CPU-only (slower than Jetson GPU)"
+      ]
+    },
+    "literature_citations": {
+      "google_speech_commands": {
+        "title": "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition",
+        "authors": "Warden et al.",
+        "year": 2018,
+        "url": "https://arxiv.org/abs/1804.03209"
+      },
+      "mobilenet": {
+        "title": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications",
+        "authors": "Howard et al.",
+        "year": 2017,
+        "url": "https://arxiv.org/abs/1704.04861"
+      },
+      "depthwise_separable": {
+        "title": "Xception: Deep Learning with Depthwise Separable Convolutions",
+        "authors": "Chollet et al.",
+        "year": 2017,
+        "url": "https://arxiv.org/abs/1610.02357"
+      }
+    }
+  },
+  "your_vcm_benchmark": {
+    "description": "Your VCM baseline and tuned results (to be filled in during experiments)",
+    "baseline": {
+      "model": "VCM (14K params, default hyperparams)",
+      "accuracy": null,
+      "latency_ms": null,
+      "model_size_kb": null,
+      "f1_score_weighted": null,
+      "hardware": "Jetson Orin Nano 8GB",
+      "training_config": "configs/train_config.yaml (default values)"
+    },
+    "tuned_best": {
+      "model": "VCM (14K params, Optuna optimized, 30 trials)",
+      "trial_number": null,
+      "accuracy": null,
+      "latency_ms": null,
+      "model_size_kb": null,
+      "f1_score_weighted": null,
+      "hardware": "Jetson Orin Nano 8GB",
+      "training_config": "tuning_results/best_hyperparams_*.json"
+    },
+    "improvement": {
+      "accuracy_delta": null,
+      "accuracy_delta_pct": null,
+      "latency_delta_ms": null,
+      "latency_constraint_met": null,
+      "notes": "Will be computed after experiments complete"
+    }
+  },
+  "deployment_constraints": {
+    "rpi4_specs": {
+      "cpu": "ARM Cortex-A72 (quad-core, 1.5GHz)",
+      "ram": "4GB",
+      "storage": "MicroSD (depends on model)",
+      "inference_device": "CPU only (no GPU)",
+      "estimated_slowdown_vs_jetson": "3-5x slower due to CPU"
+    },
+    "latency_targets": {
+      "soft_constraint": "<500ms per 4s utterance",
+      "reasoning": "Acceptable user-facing response time",
+      "rtf_equivalent": "RTF < 0.125 (processes in 1/8 real-time)",
+      "feasibility": "Achievable with 14K param model on RPi4 CPU"
+    }
+  },
+  "metrics_tracked": {
+    "accuracy": {
+      "definition": "% correct predictions across 13 intents",
+      "metric_type": "primary",
+      "benchmark_comparison": "vs GSC (easier task, more data)"
+    },
+    "latency_ms": {
+      "definition": "Average inference time (Jetson GPU)",
+      "metric_type": "secondary (soft constraint)",
+      "benchmark_comparison": "vs GSC CNN-LSTM (45ms ref)",
+      "deployment_note": "Will be ~3-5x higher on RPi4 CPU"
+    },
+    "model_size_kb": {
+      "definition": "Model file size on disk (FP32 or int8)",
+      "metric_type": "secondary",
+      "benchmark_comparison": "vs GSC CNN (80KB) and MobileNetV2 (1200KB)",
+      "target": "<100KB for efficient deployment"
+    },
+    "f1_score_weighted": {
+      "definition": "Weighted F1 across 13 intent classes",
+      "metric_type": "secondary",
+      "use_case": "Handles potential class imbalance"
+    }
+  }
+}

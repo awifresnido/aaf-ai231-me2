@@ -1,0 +1,30 @@
+{
+  "type": "specs",
+  "t": 1790959871.8647385,
+  "hostname": "raspberrypi",
+  "model": "Raspberry Pi 4 Model B Rev 1.5",
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "kernel": "6.18.50+rpt-rpi-v8",
+  "arch": "aarch64",
+  "cpu_model": null,
+  "cores": 4,
+  "max_freq_mhz": 1800.0,
+  "ram_mb": 3794.7,
+  "swap_mb": 2048.0,
+  "disk_free_gb": 51.09,
+  "python": "3.13.5",
+  "packages": {
+    "onnxruntime": null,
+    "tflite_runtime": null,
+    "tensorflow": null,
+    "torch": null,
+    "numpy": null,
+    "sounddevice": null,
+    "pyaudio": null,
+    "vosk": null
+  },
+  "audio_inputs": "**** List of CAPTURE Hardware Devices ****",
+  "audio_outputs": "**** List of PLAYBACK Hardware Devices ****\ncard 0: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]\n  Subdevices: 8/8\n  Subdevice #0: subdevice #0\n  Subdevice #1: subdevice #1\n  Subdevice #2: subdevice #2\n  Subdevice #3: subdevice #3\n  Subdevice #4: subdevice #4\n  Subdevice #5: subdevice #5\n  Subdevice #6: subdevice #6\n  Subdevice #7: subdevice #7\ncard 1: vc4hdmi0 [vc4-hdmi-0], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0\ncard 2: vc4hdmi1 [vc4-hdmi-1], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0",
+  "throttled": "0x0",
+  "uptime_s": 136410.95
+}

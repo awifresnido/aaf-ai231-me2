@@ -1,0 +1,82 @@
+id: AGREE_B2_E1
+display_name: Double-Check (Agreement)
+description: Acts only when Sweep and Focus agree and both are confident. Rarely wrong;
+  sometimes asks you to repeat.
+based_on: Agreement of Sweep and Focus
+task: vcm
+engine: agreement
+members:
+- B2_s0
+- E1_s0
+label_scheme: leaf
+labels:
+- ALARM|6:00 AM
+- ALARM|8:00 AM
+- ALARM|9:00 PM
+- BRIGHTNESS|20 percent
+- BRIGHTNESS|60 percent
+- BRIGHTNESS|100 percent
+- CALL
+- COLOR|Red
+- COLOR|Blue
+- COLOR|Green
+- CREATE_REMINDER|Drink water
+- CREATE_REMINDER|Study
+- CREATE_REMINDER|Exercise
+- LIGHT_OFF
+- LIGHT_ON
+- LIST_REMINDERS
+- MESSAGE
+- NEXT
+- PAUSE
+- PLAY_MUSIC
+- SILENCE
+- STOP
+- TEMPERATURE|18 degrees
+- TEMPERATURE|22 degrees
+- TEMPERATURE|26 degrees
+- TIME
+- TIMER|10 seconds
+- TIMER|30 seconds
+- TIMER|1 minute
+- UNKNOWN
+- VOLUME_DOWN
+- VOLUME_UP
+- WEATHER
+features:
+  sample_rate: 16000
+  n_mels: 40
+  n_fft: 512
+  hop_length: 160
+  f_min: 50
+  f_max: 7600
+  top_db: 80.0
+  trim_db: 40.0
+  max_duration_s: 3.0
+reject:
+  min_confidence: 0.9
+  non_command_labels:
+  - UNKNOWN
+  - SILENCE
+lineage:
+  training_phase: phase2
+  training_data: composite_v1
+  notes: No weights of its own. Acts only if Sweep and Focus predict the same class
+    with both >= threshold. Rule and numbers from tiny-vcm CRNN_ATTN_RESULTS.md (agreement
+    row).
+scores:
+  training:
+    status: not_applicable
+    source: no training of its own
+  validation:
+    dataset_id: composite_v1
+    split: validation
+    metrics:
+      command_wrong: 0.00178
+      far: 0.00065
+      tuning_session_correct: 0.918
+    threshold: 0.9
+    source: CRNN_ATTN_RESULTS.md agreement row (tau 0.90)
+    status: reported
+  test:
+    status: not_evaluated

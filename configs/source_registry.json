@@ -1,0 +1,48 @@
+{
+  "fsc": {
+    "name": "Fluent Speech Commands",
+    "record": "https://zenodo.org/records/11106540",
+    "download": "https://zenodo.org/api/records/11106540/files/fluentai.zip/content",
+    "license": "Fluent Speech Commands Public License (academic/non-commercial; no sharing)",
+    "license_note": "Zenodo metadata says CC-BY-4.0, but the downloaded archive bundles stricter terms; use the bundled license",
+    "role": "real multi-speaker commands for lights, media, volume, and thermostat overlap",
+    "download_size_bytes": 1545730387
+  },
+  "gsc_v2": {
+    "name": "Google Speech Commands v0.02",
+    "record": "https://www.tensorflow.org/datasets/catalog/speech_commands",
+    "download": "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz",
+    "license": "CC-BY-4.0",
+    "role": "unknown words, background noise, and zero-to-nine slot vocabulary"
+  },
+  "slurp": {
+    "name": "SLURP",
+    "record": "https://github.com/pswietojanski/slurp",
+    "download": "use repository scripts/download_audio.sh",
+    "license": "CC-BY-4.0 text; CC-BY-NC-4.0 audio",
+    "role": "phase-2 coverage for alarms, reminders, weather, lists, calls and messaging",
+    "download_size_note": "approximately 6 GB audio"
+  },
+  "syntts_commands": {
+    "name": "SynTTS-Commands",
+    "record": "https://github.com/lugan113/SynTTS-Commands-Official",
+    "download": null,
+    "license": "MIT repository; verify dataset card once full data is released",
+    "role": "sample inspection and methodology only until the masked full-dataset URL is released",
+    "availability_note": "README currently exposes only data_samples during double-blind review"
+  },
+  "mark_optionb": {
+    "name": "Option B synthetic set (Chatterbox TTS)",
+    "record": "https://github.com/markandrian30/AI231/tree/main/MEX2/OptionB",
+    "download": "git clone --depth 1 --filter=blob:none --sparse https://github.com/markandrian30/AI231.git data/external/mark_optionb && git -C data/external/mark_optionb sparse-checkout set MEX2/OptionB",
+    "license": "NO LICENSE file upstream; treat as class-internal research data until written terms are confirmed",
+    "role": "covers all 19 Option B labels: 3 phrasings x 3 slot values, clean plus ~30 dB-SNR noisy variants",
+    "verified_format": "16000 Hz mono 16-bit PCM, ~2.56 s per clip",
+    "flags": "9300 clean + 9300 noisy clips; the upstream FLAGGED/ folder (646 files) is excluded as the author's own quarantine; noisy variants are installed by --include-noisy only"
+  },
+  "personal_awi": {
+    "name": "Awi personal recordings",
+    "license": "private-research",
+    "role": "exact target phrases and deployment-domain adaptation"
+  }
+}

@@ -1,0 +1,61 @@
+# configs/data.yaml — dataset sources, access terms, and pinned revisions.
+#
+# This is the single source of truth for the data stage of reproduce.sh and for
+# docs/data.md. The repo contains NO audio; every source below is downloaded or
+# read from the shared DGX cache at build time.
+
+dataset:
+  name: "ME2 Gold"
+  hf_repo: "airimonda/ai231-me2-voice-commands"
+  revision: "6947f13073e57eb6ae67e7e2fc3680700b82aa13"
+  configs:
+    default:                 # train / test / holdout / numerals
+      role: "primary"
+    supplemental_synth:      # unused synthetic clips (see voice_split)
+      role: "excluded"
+    synthetic_negatives:     # generated out-of-scope clips (train/test)
+      role: "negatives"
+  access:
+    dgx_cache_dir: "/data/ai231"
+    loader: "/data/ai231/load.py"          # owner-provided loader (datasets.load_dataset)
+    download_fallback: "hf download airimonda/ai231-me2-voice-commands --revision 6947f13073e57eb6ae67e7e2fc3680700b82aa13"
+  license: "per-source; FSC non-commercial academic use; group audio linked, never re-hosted"
+  doi: "pending (Zenodo deposit of derived artefacts)"
+
+manifest:
+  file: "data/manifests/me2_gold_v1.csv"
+  sha256: "f81867392d20e3a23cbbcd2b77559c3b357e943f10e3095b65f7aa1b6171cdb2"
+
+v1_slices:
+  gsc_v2:
+    name: "Google Speech Commands v0.02"
+    url: "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz"
+    license: "CC-BY-4.0"
+    role: "clean Single-Words FAR slice"
+    optional: true
+
+release:
+  tag: "v0"
+  checksums: "results/me2_gold/checksums.sha256"
+  assets:
+    - checkpoints/B2_s0/best.pt
+    - checkpoints/B2_s1/best.pt
+    - checkpoints/B2_s2/best.pt
+    - checkpoints/E1_s0/best.pt
+    - checkpoints/E1_s1/best.pt
+    - checkpoints/E1_s2/best.pt
+    - checkpoints/G2_s0/best.pt
+    - checkpoints/G2_s1/best.pt
+    - checkpoints/G2_s2/best.pt
+    - checkpoints/B2f_s0/best.pt
+    - checkpoints/B2f_s1/best.pt
+    - checkpoints/B2f_s2/best.pt
+    - checkpoints/E1f_s0/best.pt
+    - checkpoints/E1f_s1/best.pt
+    - checkpoints/E1f_s2/best.pt
+    - checkpoints/G2f_s0/best.pt
+    - checkpoints/G2f_s1/best.pt
+    - checkpoints/G2f_s2/best.pt
+    - exports/me2_gold/E1f_s1/model.onnx
+    - exports/me2_gold/B2f_s0/model.onnx
+    - personal_awi.zip                 # Awi's own recordings (s01/s02/s03), published

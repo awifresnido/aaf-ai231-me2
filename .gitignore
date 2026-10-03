@@ -1,0 +1,50 @@
+# --- model weights & audio: never tracked ----------------------------------
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.safetensors
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.aac
+*.m4a
+*.pcm
+*.raw
+*.parquet
+*.arrow
+*.bin
+
+# --- release assets (documented, fetched by reproduce.sh) -------------------
+release/*
+!release/README.md
+
+# --- checkpoints / exports (fetched by reproduce.sh) ------------------------
+checkpoints/
+exports/
+
+# --- data (fetched / built) -------------------------------------------------
+data/
+!data/manifests/
+data/manifests/*
+!data/manifests/me2_gold_v1.csv
+
+# --- venvs & caches ---------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.pytest_cache/
+*.egg-info/
+
+# --- app frontend build artifacts -------------------------------------------
+app/laptop/frontend/node_modules/
+app/laptop/frontend/dist/
+app/laptop/frontend/tsconfig.tsbuildinfo
+
+# --- local runtime ----------------------------------------------------------
+runtime/
+*.log
+.DS_Store

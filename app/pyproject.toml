@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app"
+version = "0.1.0"
+description = "TinyVCM demo: edge VCM service (RPi 4) + laptop control-center app"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.29",
+  "pydantic>=2.6",
+  "pyyaml>=6.0",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+laptop = ["httpx>=0.27", "websockets>=12", "python-multipart>=0.0.9", "sounddevice>=0.5", "soxr>=0.3", "tzdata"]
+edge = ["psutil>=5.9"]            # + torch/torchaudio (CPU wheels), see docs/runbook.md
+# openWakeWord itself: `pip install --no-deps -e ../openwakeword` (its speexdsp extra has no py3.13 wheel)
+wake = ["onnxruntime>=1.16,<2", "scipy>=1.10", "scikit-learn>=1.2", "requests>=2.28", "tqdm>=4.60"]
+dev = ["pytest>=8", "ruff>=0.11", "httpx>=0.27", "websockets>=12", "python-multipart>=0.0.9"]
+
+[tool.setuptools.packages.find]
+include = ["vcm_common*", "edge*", "laptop*"]
+
+[tool.setuptools.package-data]
+vcm_common = ["ontology.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

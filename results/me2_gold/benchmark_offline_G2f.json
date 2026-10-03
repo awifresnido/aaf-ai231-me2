@@ -1,0 +1,3746 @@
+{
+ "model": "G2f",
+ "tau": 0.95,
+ "seeds": [
+  "G2f_s0",
+  "G2f_s1",
+  "G2f_s2"
+ ],
+ "note": "pooled over 3 seeds; command level = 33-leaf (intent,slot) match, equivalent to the benchmark's 93-command intent+slot accuracy",
+ "holdout": {
+  "holdout_only": {
+   "n": 606,
+   "intent": {
+    "n": 606,
+    "accuracy": 0.641914191419142,
+    "accuracy_ci95": [
+     0.60295754167556,
+     0.6790829094842167
+    ],
+    "balanced_accuracy": 0.5878472222222222,
+    "macro_precision": 0.9089353612167301,
+    "macro_recall": 0.5878472222222222,
+    "macro_f1": 0.6791009293910253,
+    "macro_f2": 0.6076797184040382,
+    "false_accept_rate": 0.020833333333333332,
+    "false_accept_ci95": [
+     0.003687015979399688,
+     0.10899469137531158
+    ],
+    "false_accepts": 1,
+    "n_out_of_scope": 48,
+    "false_reject_rate": 0.3870967741935484,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.6296296296296297,
+      "f1": 0.7727272727272727,
+      "f2": 0.68
+     },
+     "BRIGHTNESS": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "CALL": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     },
+     "COLOR": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.6296296296296297,
+      "f1": 0.7727272727272727,
+      "f2": 0.68
+     },
+     "CREATE_REMINDER": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "LIGHT_OFF": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "LIST_REMINDERS": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "f2": 0.8620689655172415
+     },
+     "MESSAGE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "NEXT": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "PAUSE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "PLAY_MUSIC": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "REJECT": {
+      "support": 48,
+      "precision": 0.17870722433460076,
+      "recall": 0.9791666666666666,
+      "f1": 0.30225080385852093,
+      "f2": 0.5164835164835164
+     },
+     "STOP": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "TEMPERATURE": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.5740740740740741,
+      "f1": 0.7294117647058824,
+      "f2": 0.6275303643724696
+     },
+     "TIME": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "TIMER": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "VOLUME_DOWN": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "VOLUME_UP": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "WEATHER": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     }
+    },
+    "confusions": [
+     [
+      [
+       "TEMPERATURE",
+       "REJECT"
+      ],
+      23
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      20
+     ],
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      20
+     ],
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "CREATE_REMINDER",
+       "REJECT"
+      ],
+      15
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      14
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      10
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "MESSAGE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      7
+     ]
+    ]
+   },
+   "command": {
+    "n": 606,
+    "accuracy": 0.641914191419142,
+    "accuracy_ci95": [
+     0.60295754167556,
+     0.6790829094842167
+    ],
+    "balanced_accuracy": 0.6243489583333333,
+    "macro_precision": 0.9430846007604563,
+    "macro_recall": 0.6243489583333333,
+    "macro_f1": 0.726284335190464,
+    "macro_f2": 0.6525599170448287,
+    "false_accept_rate": 0.020833333333333332,
+    "false_accept_ci95": [
+     0.003687015979399688,
+     0.10899469137531158
+    ],
+    "false_accepts": 1,
+    "n_out_of_scope": 48,
+    "false_reject_rate": 0.3870967741935484,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "ALARM|8:00 AM": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     },
+     "ALARM|9:00 PM": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "CALL": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     },
+     "COLOR|Blue": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "COLOR|Green": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "COLOR|Red": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "LIGHT_OFF": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "LIST_REMINDERS": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "f2": 0.8620689655172415
+     },
+     "MESSAGE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "NEXT": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "PAUSE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "PLAY_MUSIC": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "REJECT": {
+      "support": 48,
+      "precision": 0.17870722433460076,
+      "recall": 0.9791666666666666,
+      "f1": 0.30225080385852093,
+      "f2": 0.5164835164835164
+     },
+     "STOP": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7222222222222222,
+      "f1": 0.8387096774193548,
+      "f2": 0.7647058823529411
+     },
+     "TIME": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "TIMER|1 minute": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER|10 seconds": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "TIMER|30 seconds": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "VOLUME_DOWN": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "VOLUME_UP": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "WEATHER": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      14
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      10
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "MESSAGE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TEMPERATURE|18 degrees",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TEMPERATURE|22 degrees",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "BRIGHTNESS|20 percent",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "COLOR|Blue",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "ALARM|8:00 AM",
+       "REJECT"
+      ],
+      7
+     ]
+    ]
+   }
+  },
+  "holdout_real": {
+   "n": 252,
+   "intent": {
+    "n": 252,
+    "accuracy": 0.3055555555555556,
+    "accuracy_ci95": [
+     0.2519536323608496,
+     0.3649968557536713
+    ],
+    "balanced_accuracy": 0.2731481481481481,
+    "macro_precision": 0.7894736842105263,
+    "macro_recall": 0.2731481481481481,
+    "macro_f1": 0.37172762193054776,
+    "macro_f2": 0.30338832931080273,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.6944444444444444,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM": {
+      "support": 24,
+      "precision": 1.0,
+      "recall": 0.20833333333333334,
+      "f1": 0.3448275862068966,
+      "f2": 0.24752475247524755
+     },
+     "BRIGHTNESS": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "CALL": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "COLOR": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "CREATE_REMINDER": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "LIGHT_OFF": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "LIST_REMINDERS": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "MESSAGE": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "NEXT": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "PAUSE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "PLAY_MUSIC": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "STOP": {
+      "support": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "f2": 0.19999999999999996
+     },
+     "TEMPERATURE": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 0.14814814814814814,
+      "f1": 0.25806451612903225,
+      "f2": 0.17857142857142858
+     },
+     "TIME": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "TIMER": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "VOLUME_DOWN": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "VOLUME_UP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "WEATHER": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     }
+    },
+    "confusions": [
+     [
+      [
+       "TEMPERATURE",
+       "REJECT"
+      ],
+      23
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      19
+     ],
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "CREATE_REMINDER",
+       "REJECT"
+      ],
+      15
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      12
+     ],
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "MESSAGE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "TIMER",
+       "REJECT"
+      ],
+      6
+     ]
+    ]
+   },
+   "command": {
+    "n": 252,
+    "accuracy": 0.3055555555555556,
+    "accuracy_ci95": [
+     0.2519536323608496,
+     0.3649968557536713
+    ],
+    "balanced_accuracy": 0.28853046594982074,
+    "macro_precision": 0.6774193548387096,
+    "macro_recall": 0.28853046594982074,
+    "macro_f1": 0.37637177812699624,
+    "macro_f2": 0.3162731822333501,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.6944444444444444,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "ALARM|8:00 AM": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "ALARM|9:00 PM": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 6,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 6,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "CALL": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "COLOR|Blue": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR|Green": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR|Red": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "LIGHT_OFF": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "LIST_REMINDERS": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "f2": 0.7142857142857142
+     },
+     "MESSAGE": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "NEXT": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "PAUSE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "PLAY_MUSIC": {
+      "support": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "STOP": {
+      "support": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "f2": 0.19999999999999996
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.4444444444444444,
+      "f1": 0.6153846153846153,
+      "f2": 0.5
+     },
+     "TIME": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "TIMER|1 minute": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER|10 seconds": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "TIMER|30 seconds": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "VOLUME_DOWN": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "VOLUME_UP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "WEATHER": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "MESSAGE",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TEMPERATURE|18 degrees",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TEMPERATURE|22 degrees",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      8
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "ALARM|8:00 AM",
+       "REJECT"
+      ],
+      7
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "ALARM|6:00 AM",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "ALARM|9:00 PM",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "BRIGHTNESS|20 percent",
+       "REJECT"
+      ],
+      6
+     ]
+    ]
+   }
+  },
+  "holdout_syn": {
+   "n": 300,
+   "intent": {
+    "n": 300,
+    "accuracy": 0.8833333333333333,
+    "accuracy_ci95": [
+     0.8420660083343473,
+     0.9149073620007219
+    ],
+    "balanced_accuracy": 0.8345029239766083,
+    "macro_precision": 0.9473684210526315,
+    "macro_recall": 0.8345029239766083,
+    "macro_f1": 0.8760017112026873,
+    "macro_f2": 0.849242229689062,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.11666666666666667,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM": {
+      "support": 30,
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.983050847457627,
+      "f2": 0.9731543624161073
+     },
+     "BRIGHTNESS": {
+      "support": 36,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "f2": 0.8620689655172415
+     },
+     "CALL": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "COLOR": {
+      "support": 36,
+      "precision": 1.0,
+      "recall": 0.9444444444444444,
+      "f1": 0.9714285714285714,
+      "f2": 0.9550561797752809
+     },
+     "CREATE_REMINDER": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "LIGHT_OFF": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "LIST_REMINDERS": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "MESSAGE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "NEXT": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "PAUSE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "PLAY_MUSIC": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "STOP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "TEMPERATURE": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIME": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER": {
+      "support": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "VOLUME_DOWN": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "VOLUME_UP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "WEATHER": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      4
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      1
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      1
+     ]
+    ]
+   },
+   "command": {
+    "n": 300,
+    "accuracy": 0.8833333333333333,
+    "accuracy_ci95": [
+     0.8420660083343473,
+     0.9149073620007219
+    ],
+    "balanced_accuracy": 0.8826164874551972,
+    "macro_precision": 0.967741935483871,
+    "macro_recall": 0.8826164874551972,
+    "macro_f1": 0.914850340238097,
+    "macro_f2": 0.8941465348436242,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.11666666666666667,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "ALARM|8:00 AM": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "ALARM|9:00 PM": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 0.9166666666666666,
+      "f1": 0.9565217391304348,
+      "f2": 0.9322033898305083
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "f2": 0.7894736842105263
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "f2": 0.7894736842105263
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "CALL": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "COLOR|Blue": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "f2": 0.8620689655172415
+     },
+     "COLOR|Green": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "COLOR|Red": {
+      "support": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "LIGHT_OFF": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "LIST_REMINDERS": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "MESSAGE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "NEXT": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "PAUSE": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "PLAY_MUSIC": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "STOP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIME": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER|1 minute": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER|10 seconds": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "TIMER|30 seconds": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "VOLUME_DOWN": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "f2": 0.813953488372093
+     },
+     "VOLUME_UP": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "WEATHER": {
+      "support": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      9
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      6
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      4
+     ],
+     [
+      [
+       "BRIGHTNESS|100 percent",
+       "REJECT"
+      ],
+      3
+     ],
+     [
+      [
+       "BRIGHTNESS|20 percent",
+       "REJECT"
+      ],
+      3
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "COLOR|Blue",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      2
+     ],
+     [
+      [
+       "ALARM|9:00 PM",
+       "REJECT"
+      ],
+      1
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      1
+     ]
+    ]
+   }
+  },
+  "out_of_scope": {
+   "holdout_oos": {
+    "n": 48,
+    "false_accepts": 1,
+    "false_accept_rate": 0.020833333333333332
+   }
+  }
+ },
+ "validation": {
+  "validation_all": {
+   "n": 14445,
+   "intent": {
+    "n": 14445,
+    "accuracy": 0.744202146071305,
+    "accuracy_ci95": [
+     0.7370226012041792,
+     0.7512518359659259
+    ],
+    "balanced_accuracy": 0.659540281814343,
+    "macro_precision": 0.9576999129387829,
+    "macro_recall": 0.659540281814343,
+    "macro_f1": 0.7344890825833373,
+    "macro_f2": 0.6757745178412615,
+    "false_accept_rate": 0.01596244131455399,
+    "false_accept_ci95": [
+     0.009989661354070152,
+     0.025414649256594708
+    ],
+    "false_accepts": 17,
+    "n_out_of_scope": 1065,
+    "false_reject_rate": 0.2740657698056801,
+    "misfire_rate": 0.0008221225710014948,
+    "per_class": {
+     "ALARM": {
+      "support": 1296,
+      "precision": 0.9991007194244604,
+      "recall": 0.8572530864197531,
+      "f1": 0.9227574750830564,
+      "f2": 0.8823062261753495
+     },
+     "BRIGHTNESS": {
+      "support": 1296,
+      "precision": 0.9991119005328597,
+      "recall": 0.8680555555555556,
+      "f1": 0.9289843104872008,
+      "f2": 0.8914421553090334
+     },
+     "CALL": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.6319444444444444,
+      "f1": 0.774468085106383,
+      "f2": 0.6821589205397302
+     },
+     "COLOR": {
+      "support": 1296,
+      "precision": 0.9967707212055974,
+      "recall": 0.7145061728395061,
+      "f1": 0.8323595505617978,
+      "f2": 0.7574022574840502
+     },
+     "CREATE_REMINDER": {
+      "support": 1296,
+      "precision": 0.9944,
+      "recall": 0.9591049382716049,
+      "f1": 0.97643362136685,
+      "f2": 0.9659620764687595
+     },
+     "LIGHT_OFF": {
+      "support": 432,
+      "precision": 0.9879518072289156,
+      "recall": 0.18981481481481483,
+      "f1": 0.31844660194174756,
+      "f2": 0.2263942573163998
+     },
+     "LIGHT_ON": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.46296296296296297,
+      "f1": 0.6329113924050632,
+      "f2": 0.5186721991701245
+     },
+     "LIST_REMINDERS": {
+      "support": 432,
+      "precision": 0.9770114942528736,
+      "recall": 0.7870370370370371,
+      "f1": 0.8717948717948719,
+      "f2": 0.8188824662813102
+     },
+     "MESSAGE": {
+      "support": 420,
+      "precision": 1.0,
+      "recall": 0.888095238095238,
+      "f1": 0.9407313997477932,
+      "f2": 0.9084266926449098
+     },
+     "NEXT": {
+      "support": 432,
+      "precision": 0.9965397923875432,
+      "recall": 0.6666666666666666,
+      "f1": 0.7988904299583911,
+      "f2": 0.7139315815567674
+     },
+     "PAUSE": {
+      "support": 432,
+      "precision": 0.9951923076923077,
+      "recall": 0.4791666666666667,
+      "f1": 0.646875,
+      "f2": 0.5346074380165289
+     },
+     "PLAY_MUSIC": {
+      "support": 432,
+      "precision": 0.9964285714285714,
+      "recall": 0.6458333333333334,
+      "f1": 0.7837078651685393,
+      "f2": 0.6947211155378488
+     },
+     "REJECT": {
+      "support": 1065,
+      "precision": 0.2222693531283139,
+      "recall": 0.984037558685446,
+      "f1": 0.3626297577854671,
+      "f2": 0.5838440111420612
+     },
+     "STOP": {
+      "support": 432,
+      "precision": 0.9951456310679612,
+      "recall": 0.47453703703703703,
+      "f1": 0.6426332288401254,
+      "f2": 0.529989658738366
+     },
+     "TEMPERATURE": {
+      "support": 1296,
+      "precision": 0.9990859232175503,
+      "recall": 0.8433641975308642,
+      "f1": 0.9146443514644351,
+      "f2": 0.8705001592863968
+     },
+     "TIME": {
+      "support": 432,
+      "precision": 0.995850622406639,
+      "recall": 0.5555555555555556,
+      "f1": 0.7132243684992571,
+      "f2": 0.6094464195022854
+     },
+     "TIMER": {
+      "support": 1296,
+      "precision": 0.9991394148020654,
+      "recall": 0.8958333333333334,
+      "f1": 0.9446704637917006,
+      "f2": 0.9147494484714781
+     },
+     "VOLUME_DOWN": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.3194444444444444,
+      "f1": 0.4842105263157894,
+      "f2": 0.3697749196141479
+     },
+     "VOLUME_UP": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.19675925925925927,
+      "f1": 0.3288201160541586,
+      "f2": 0.2344180915609487
+     },
+     "WEATHER": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.7708333333333334,
+      "f1": 0.8705882352941177,
+      "f2": 0.8078602620087337
+     }
+    },
+    "confusions": [
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      369
+     ],
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      350
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      346
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      294
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      231
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      225
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      224
+     ],
+     [
+      [
+       "TEMPERATURE",
+       "REJECT"
+      ],
+      203
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      192
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      185
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      171
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      159
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      152
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      144
+     ],
+     [
+      [
+       "TIMER",
+       "REJECT"
+      ],
+      135
+     ]
+    ]
+   },
+   "command": {
+    "n": 14445,
+    "accuracy": 0.744202146071305,
+    "accuracy_ci95": [
+     0.7370226012041792,
+     0.7512518359659259
+    ],
+    "balanced_accuracy": 0.733345006380878,
+    "macro_precision": 0.9728063224429992,
+    "macro_recall": 0.733345006380878,
+    "macro_f1": 0.80341124719011,
+    "macro_f2": 0.7521653993959102,
+    "false_accept_rate": 0.01596244131455399,
+    "false_accept_ci95": [
+     0.009989661354070152,
+     0.025414649256594708
+    ],
+    "false_accepts": 17,
+    "n_out_of_scope": 1065,
+    "false_reject_rate": 0.2740657698056801,
+    "misfire_rate": 0.0008221225710014948,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.8912037037037037,
+      "f1": 0.9424724602203183,
+      "f2": 0.911026975863701
+     },
+     "ALARM|8:00 AM": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.7754629629629629,
+      "f1": 0.8735332464146024,
+      "f2": 0.8119243819680078
+     },
+     "ALARM|9:00 PM": {
+      "support": 432,
+      "precision": 0.9974489795918368,
+      "recall": 0.9050925925925926,
+      "f1": 0.9490291262135921,
+      "f2": 0.9221698113207548
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 432,
+      "precision": 0.997289972899729,
+      "recall": 0.8518518518518519,
+      "f1": 0.9188514357053683,
+      "f2": 0.8774439675727229
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.8171296296296297,
+      "f1": 0.8993630573248407,
+      "f2": 0.8481499279192695
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.9351851851851852,
+      "f1": 0.9665071770334929,
+      "f2": 0.9474671669793622
+     },
+     "CALL": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.6319444444444444,
+      "f1": 0.774468085106383,
+      "f2": 0.6821589205397302
+     },
+     "COLOR|Blue": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.625,
+      "f1": 0.7692307692307693,
+      "f2": 0.6756756756756757
+     },
+     "COLOR|Green": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.7569444444444444,
+      "f1": 0.8616600790513834,
+      "f2": 0.7956204379562044
+     },
+     "COLOR|Red": {
+      "support": 432,
+      "precision": 0.9909638554216867,
+      "recall": 0.7615740740740741,
+      "f1": 0.8612565445026179,
+      "f2": 0.7985436893203883
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 432,
+      "precision": 0.9905660377358491,
+      "recall": 0.9722222222222222,
+      "f1": 0.9813084112149533,
+      "f2": 0.9758364312267658
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.9421296296296297,
+      "f1": 0.970202622169249,
+      "f2": 0.9531615925058547
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 432,
+      "precision": 0.9928400954653938,
+      "recall": 0.9629629629629629,
+      "f1": 0.9776733254994124,
+      "f2": 0.9687936655798789
+     },
+     "LIGHT_OFF": {
+      "support": 432,
+      "precision": 0.9879518072289156,
+      "recall": 0.18981481481481483,
+      "f1": 0.31844660194174756,
+      "f2": 0.2263942573163998
+     },
+     "LIGHT_ON": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.46296296296296297,
+      "f1": 0.6329113924050632,
+      "f2": 0.5186721991701245
+     },
+     "LIST_REMINDERS": {
+      "support": 432,
+      "precision": 0.9770114942528736,
+      "recall": 0.7870370370370371,
+      "f1": 0.8717948717948719,
+      "f2": 0.8188824662813102
+     },
+     "MESSAGE": {
+      "support": 420,
+      "precision": 1.0,
+      "recall": 0.888095238095238,
+      "f1": 0.9407313997477932,
+      "f2": 0.9084266926449098
+     },
+     "NEXT": {
+      "support": 432,
+      "precision": 0.9965397923875432,
+      "recall": 0.6666666666666666,
+      "f1": 0.7988904299583911,
+      "f2": 0.7139315815567674
+     },
+     "PAUSE": {
+      "support": 432,
+      "precision": 0.9951923076923077,
+      "recall": 0.4791666666666667,
+      "f1": 0.646875,
+      "f2": 0.5346074380165289
+     },
+     "PLAY_MUSIC": {
+      "support": 432,
+      "precision": 0.9964285714285714,
+      "recall": 0.6458333333333334,
+      "f1": 0.7837078651685393,
+      "f2": 0.6947211155378488
+     },
+     "REJECT": {
+      "support": 1065,
+      "precision": 0.2222693531283139,
+      "recall": 0.984037558685446,
+      "f1": 0.3626297577854671,
+      "f2": 0.5838440111420612
+     },
+     "STOP": {
+      "support": 432,
+      "precision": 0.9951456310679612,
+      "recall": 0.47453703703703703,
+      "f1": 0.6426332288401254,
+      "f2": 0.529989658738366
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 432,
+      "precision": 0.9968354430379747,
+      "recall": 0.7291666666666666,
+      "f1": 0.8422459893048128,
+      "f2": 0.7705479452054794
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.8587962962962963,
+      "f1": 0.9240348692403487,
+      "f2": 0.883754168651739
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.9421296296296297,
+      "f1": 0.970202622169249,
+      "f2": 0.9531615925058547
+     },
+     "TIME": {
+      "support": 432,
+      "precision": 0.995850622406639,
+      "recall": 0.5555555555555556,
+      "f1": 0.7132243684992571,
+      "f2": 0.6094464195022854
+     },
+     "TIMER|1 minute": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.9490740740740741,
+      "f1": 0.9738717339667459,
+      "f2": 0.9588400374181477
+     },
+     "TIMER|10 seconds": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.8263888888888888,
+      "f1": 0.9049429657794676,
+      "f2": 0.8561151079136691
+     },
+     "TIMER|30 seconds": {
+      "support": 432,
+      "precision": 0.9974683544303797,
+      "recall": 0.9120370370370371,
+      "f1": 0.9528415961305925,
+      "f2": 0.9279321714554876
+     },
+     "VOLUME_DOWN": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.3194444444444444,
+      "f1": 0.4842105263157894,
+      "f2": 0.3697749196141479
+     },
+     "VOLUME_UP": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.19675925925925927,
+      "f1": 0.3288201160541586,
+      "f2": 0.2344180915609487
+     },
+     "WEATHER": {
+      "support": 432,
+      "precision": 1.0,
+      "recall": 0.7708333333333334,
+      "f1": 0.8705882352941177,
+      "f2": 0.8078602620087337
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      350
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      346
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      294
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      231
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      225
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      224
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      192
+     ],
+     [
+      [
+       "COLOR|Blue",
+       "REJECT"
+      ],
+      161
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      159
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      152
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      144
+     ],
+     [
+      [
+       "TEMPERATURE|18 degrees",
+       "REJECT"
+      ],
+      117
+     ],
+     [
+      [
+       "COLOR|Green",
+       "REJECT"
+      ],
+      105
+     ],
+     [
+      [
+       "COLOR|Red",
+       "REJECT"
+      ],
+      103
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      99
+     ]
+    ]
+   }
+  },
+  "validation_real": {
+   "n": 537,
+   "intent": {
+    "n": 537,
+    "accuracy": 0.10986964618249534,
+    "accuracy_ci95": [
+     0.0861390316237214,
+     0.13914245559915495
+    ],
+    "balanced_accuracy": 0.09429128376496798,
+    "macro_precision": 0.521531100478469,
+    "macro_recall": 0.09429128376496798,
+    "macro_f1": 0.14581172084266153,
+    "macro_f2": 0.10930126282677406,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.888268156424581,
+    "misfire_rate": 0.00186219739292365,
+    "per_class": {
+     "ALARM": {
+      "support": 42,
+      "precision": 1.0,
+      "recall": 0.2619047619047619,
+      "f1": 0.41509433962264153,
+      "f2": 0.30726256983240224
+     },
+     "BRIGHTNESS": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.05555555555555555,
+      "f1": 0.10526315789473684,
+      "f2": 0.06849315068493152
+     },
+     "CALL": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.018518518518518517,
+      "f1": 0.03636363636363636,
+      "f2": 0.02304147465437788
+     },
+     "CREATE_REMINDER": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.25925925925925924,
+      "f1": 0.4117647058823529,
+      "f2": 0.3043478260869565
+     },
+     "LIGHT_OFF": {
+      "support": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIST_REMINDERS": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "MESSAGE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "NEXT": {
+      "support": 18,
+      "precision": 0.9090909090909091,
+      "recall": 0.5555555555555556,
+      "f1": 0.6896551724137931,
+      "f2": 0.6024096385542168
+     },
+     "PAUSE": {
+      "support": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "PLAY_MUSIC": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "STOP": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "f2": 0.19999999999999996
+     },
+     "TIME": {
+      "support": 15,
+      "precision": 1.0,
+      "recall": 0.06666666666666667,
+      "f1": 0.125,
+      "f2": 0.08196721311475409
+     },
+     "TIMER": {
+      "support": 54,
+      "precision": 1.0,
+      "recall": 0.07407407407407407,
+      "f1": 0.13793103448275862,
+      "f2": 0.0909090909090909
+     },
+     "VOLUME_DOWN": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "VOLUME_UP": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "WEATHER": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     }
+    },
+    "confusions": [
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      53
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      51
+     ],
+     [
+      [
+       "TIMER",
+       "REJECT"
+      ],
+      50
+     ],
+     [
+      [
+       "TEMPERATURE",
+       "REJECT"
+      ],
+      45
+     ],
+     [
+      [
+       "CREATE_REMINDER",
+       "REJECT"
+      ],
+      40
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      31
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "LIST_REMINDERS",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      17
+     ],
+     [
+      [
+       "WEATHER",
+       "REJECT"
+      ],
+      16
+     ],
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      15
+     ]
+    ]
+   },
+   "command": {
+    "n": 537,
+    "accuracy": 0.10986964618249534,
+    "accuracy_ci95": [
+     0.0861390316237214,
+     0.13914245559915495
+    ],
+    "balanced_accuracy": 0.10609318996415773,
+    "macro_precision": 0.41642228739002934,
+    "macro_recall": 0.10609318996415773,
+    "macro_f1": 0.155324297754547,
+    "macro_f2": 0.12093323128232429,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.888268156424581,
+    "misfire_rate": 0.00186219739292365,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.6111111111111112,
+      "f1": 0.7586206896551725,
+      "f2": 0.6626506024096387
+     },
+     "ALARM|8:00 AM": {
+      "support": 9,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "ALARM|9:00 PM": {
+      "support": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "f2": 0.19999999999999996
+     },
+     "CALL": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR|Blue": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR|Green": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "COLOR|Red": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.05555555555555555,
+      "f1": 0.10526315789473684,
+      "f2": 0.06849315068493152
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "f2": 0.3846153846153846
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.2777777777777778,
+      "f1": 0.4347826086956522,
+      "f2": 0.3246753246753247
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "f2": 0.19999999999999996
+     },
+     "LIGHT_OFF": {
+      "support": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIGHT_ON": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "LIST_REMINDERS": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "MESSAGE": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "f2": 0.2631578947368421
+     },
+     "NEXT": {
+      "support": 18,
+      "precision": 0.9090909090909091,
+      "recall": 0.5555555555555556,
+      "f1": 0.6896551724137931,
+      "f2": 0.6024096385542168
+     },
+     "PAUSE": {
+      "support": 15,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "PLAY_MUSIC": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "STOP": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "f2": 0.5555555555555556
+     },
+     "TIME": {
+      "support": 15,
+      "precision": 1.0,
+      "recall": 0.06666666666666667,
+      "f1": 0.125,
+      "f2": 0.08196721311475409
+     },
+     "TIMER|1 minute": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "TIMER|10 seconds": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "TIMER|30 seconds": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     },
+     "VOLUME_DOWN": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "VOLUME_UP": {
+      "support": 18,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0
+     },
+     "WEATHER": {
+      "support": 18,
+      "precision": 1.0,
+      "recall": 0.1111111111111111,
+      "f1": 0.19999999999999998,
+      "f2": 0.13513513513513514
+     }
+    },
+    "confusions": [
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "LIST_REMINDERS",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "TIMER|1 minute",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "TEMPERATURE|18 degrees",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "TEMPERATURE|22 degrees",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "BRIGHTNESS|20 percent",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "BRIGHTNESS|100 percent",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "COLOR|Blue",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "COLOR|Green",
+       "REJECT"
+      ],
+      18
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      17
+     ],
+     [
+      [
+       "COLOR|Red",
+       "REJECT"
+      ],
+      17
+     ]
+    ]
+   }
+  },
+  "validation_synthetic": {
+   "n": 10770,
+   "intent": {
+    "n": 10770,
+    "accuracy": 0.8534818941504179,
+    "accuracy_ci95": [
+     0.8466771694675971,
+     0.8600345386384513
+    ],
+    "balanced_accuracy": 0.7651338667622687,
+    "macro_precision": 1.0,
+    "macro_recall": 0.7651338667622687,
+    "macro_f1": 0.8488684540466175,
+    "macro_f2": 0.7945000919916655,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.14651810584958216,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM": {
+      "support": 1116,
+      "precision": 1.0,
+      "recall": 0.9238351254480287,
+      "f1": 0.96040987424313,
+      "f2": 0.9381255686988172
+     },
+     "BRIGHTNESS": {
+      "support": 1194,
+      "precision": 1.0,
+      "recall": 0.9187604690117253,
+      "f1": 0.9576604103011785,
+      "f2": 0.9339349565809637
+     },
+     "CALL": {
+      "support": 375,
+      "precision": 1.0,
+      "recall": 0.7226666666666667,
+      "f1": 0.8390092879256966,
+      "f2": 0.7651044607566346
+     },
+     "COLOR": {
+      "support": 915,
+      "precision": 1.0,
+      "recall": 0.9639344262295082,
+      "f1": 0.9816360601001669,
+      "f2": 0.9709379128137384
+     },
+     "CREATE_REMINDER": {
+      "support": 1215,
+      "precision": 1.0,
+      "recall": 0.9901234567901235,
+      "f1": 0.9950372208436724,
+      "f2": 0.9920831271647699
+     },
+     "LIGHT_OFF": {
+      "support": 279,
+      "precision": 1.0,
+      "recall": 0.2867383512544803,
+      "f1": 0.4456824512534819,
+      "f2": 0.33444816053511706
+     },
+     "LIGHT_ON": {
+      "support": 351,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "LIST_REMINDERS": {
+      "support": 339,
+      "precision": 1.0,
+      "recall": 0.9351032448377581,
+      "f1": 0.9664634146341463,
+      "f2": 0.9473998804542737
+     },
+     "MESSAGE": {
+      "support": 375,
+      "precision": 1.0,
+      "recall": 0.9626666666666667,
+      "f1": 0.9809782608695652,
+      "f2": 0.969908651262762
+     },
+     "NEXT": {
+      "support": 303,
+      "precision": 1.0,
+      "recall": 0.8679867986798679,
+      "f1": 0.9293286219081272,
+      "f2": 0.8915254237288135
+     },
+     "PAUSE": {
+      "support": 273,
+      "precision": 1.0,
+      "recall": 0.5970695970695971,
+      "f1": 0.7477064220183486,
+      "f2": 0.6494023904382471
+     },
+     "PLAY_MUSIC": {
+      "support": 360,
+      "precision": 1.0,
+      "recall": 0.7666666666666667,
+      "f1": 0.8679245283018869,
+      "f2": 0.8041958041958043
+     },
+     "STOP": {
+      "support": 207,
+      "precision": 1.0,
+      "recall": 0.6521739130434783,
+      "f1": 0.7894736842105263,
+      "f2": 0.7009345794392524
+     },
+     "TEMPERATURE": {
+      "support": 1185,
+      "precision": 1.0,
+      "recall": 0.889451476793249,
+      "f1": 0.9414917373827602,
+      "f2": 0.9095616154642735
+     },
+     "TIME": {
+      "support": 273,
+      "precision": 1.0,
+      "recall": 0.7582417582417582,
+      "f1": 0.8624999999999999,
+      "f2": 0.7967667436489607
+     },
+     "TIMER": {
+      "support": 1212,
+      "precision": 1.0,
+      "recall": 0.9372937293729373,
+      "f1": 0.9676320272572402,
+      "f2": 0.9491978609625669
+     },
+     "VOLUME_DOWN": {
+      "support": 237,
+      "precision": 1.0,
+      "recall": 0.5021097046413502,
+      "f1": 0.6685393258426967,
+      "f2": 0.5576382380506091
+     },
+     "VOLUME_UP": {
+      "support": 216,
+      "precision": 1.0,
+      "recall": 0.37962962962962965,
+      "f1": 0.5503355704697986,
+      "f2": 0.4334038054968288
+     },
+     "WEATHER": {
+      "support": 345,
+      "precision": 1.0,
+      "recall": 0.927536231884058,
+      "f1": 0.9624060150375939,
+      "f2": 0.9411764705882354
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      199
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      156
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      134
+     ],
+     [
+      [
+       "TEMPERATURE",
+       "REJECT"
+      ],
+      131
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      118
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      110
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      104
+     ],
+     [
+      [
+       "BRIGHTNESS",
+       "REJECT"
+      ],
+      97
+     ],
+     [
+      [
+       "ALARM",
+       "REJECT"
+      ],
+      85
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      84
+     ],
+     [
+      [
+       "TIMER",
+       "REJECT"
+      ],
+      76
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      72
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      66
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      40
+     ],
+     [
+      [
+       "COLOR",
+       "REJECT"
+      ],
+      33
+     ]
+    ]
+   },
+   "command": {
+    "n": 10770,
+    "accuracy": 0.8534818941504179,
+    "accuracy_ci95": [
+     0.8466771694675971,
+     0.8600345386384513
+    ],
+    "balanced_accuracy": 0.8320610069976326,
+    "macro_precision": 1.0,
+    "macro_recall": 0.8320610069976326,
+    "macro_f1": 0.8944716748129015,
+    "macro_f2": 0.8543109674627751,
+    "false_accept_rate": NaN,
+    "false_accept_ci95": [
+     NaN,
+     NaN
+    ],
+    "false_accepts": 0,
+    "n_out_of_scope": 0,
+    "false_reject_rate": 0.14651810584958216,
+    "misfire_rate": 0.0,
+    "per_class": {
+     "ALARM|6:00 AM": {
+      "support": 339,
+      "precision": 1.0,
+      "recall": 0.9705014749262537,
+      "f1": 0.9850299401197605,
+      "f2": 0.9762611275964392
+     },
+     "ALARM|8:00 AM": {
+      "support": 390,
+      "precision": 1.0,
+      "recall": 0.8435897435897436,
+      "f1": 0.9151599443671766,
+      "f2": 0.8708311275807307
+     },
+     "ALARM|9:00 PM": {
+      "support": 387,
+      "precision": 1.0,
+      "recall": 0.9638242894056848,
+      "f1": 0.9815789473684211,
+      "f2": 0.9708485163977095
+     },
+     "BRIGHTNESS|100 percent": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.8888888888888888,
+      "f1": 0.9411764705882353,
+      "f2": 0.9090909090909091
+     },
+     "BRIGHTNESS|20 percent": {
+      "support": 384,
+      "precision": 1.0,
+      "recall": 0.8984375,
+      "f1": 0.9465020576131687,
+      "f2": 0.9170653907496013
+     },
+     "BRIGHTNESS|60 percent": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.9679012345679012,
+      "f1": 0.9836888331242158,
+      "f2": 0.974155069582505
+     },
+     "CALL": {
+      "support": 375,
+      "precision": 1.0,
+      "recall": 0.7226666666666667,
+      "f1": 0.8390092879256966,
+      "f2": 0.7651044607566346
+     },
+     "COLOR|Blue": {
+      "support": 279,
+      "precision": 1.0,
+      "recall": 0.9605734767025089,
+      "f1": 0.979890310786106,
+      "f2": 0.9682080924855491
+     },
+     "COLOR|Green": {
+      "support": 315,
+      "precision": 1.0,
+      "recall": 0.9682539682539683,
+      "f1": 0.9838709677419354,
+      "f2": 0.97444089456869
+     },
+     "COLOR|Red": {
+      "support": 321,
+      "precision": 1.0,
+      "recall": 0.9626168224299065,
+      "f1": 0.9809523809523809,
+      "f2": 0.9698681732580038
+     },
+     "CREATE_REMINDER|Drink water": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "CREATE_REMINDER|Exercise": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.9703703703703703,
+      "f1": 0.9849624060150376,
+      "f2": 0.9761549925484352
+     },
+     "CREATE_REMINDER|Study": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "f2": 1.0
+     },
+     "LIGHT_OFF": {
+      "support": 279,
+      "precision": 1.0,
+      "recall": 0.2867383512544803,
+      "f1": 0.4456824512534819,
+      "f2": 0.33444816053511706
+     },
+     "LIGHT_ON": {
+      "support": 351,
+      "precision": 1.0,
+      "recall": 0.5555555555555556,
+      "f1": 0.7142857142857143,
+      "f2": 0.6097560975609756
+     },
+     "LIST_REMINDERS": {
+      "support": 339,
+      "precision": 1.0,
+      "recall": 0.9351032448377581,
+      "f1": 0.9664634146341463,
+      "f2": 0.9473998804542737
+     },
+     "MESSAGE": {
+      "support": 375,
+      "precision": 1.0,
+      "recall": 0.9626666666666667,
+      "f1": 0.9809782608695652,
+      "f2": 0.969908651262762
+     },
+     "NEXT": {
+      "support": 303,
+      "precision": 1.0,
+      "recall": 0.8679867986798679,
+      "f1": 0.9293286219081272,
+      "f2": 0.8915254237288135
+     },
+     "PAUSE": {
+      "support": 273,
+      "precision": 1.0,
+      "recall": 0.5970695970695971,
+      "f1": 0.7477064220183486,
+      "f2": 0.6494023904382471
+     },
+     "PLAY_MUSIC": {
+      "support": 360,
+      "precision": 1.0,
+      "recall": 0.7666666666666667,
+      "f1": 0.8679245283018869,
+      "f2": 0.8041958041958043
+     },
+     "STOP": {
+      "support": 207,
+      "precision": 1.0,
+      "recall": 0.6521739130434783,
+      "f1": 0.7894736842105263,
+      "f2": 0.7009345794392524
+     },
+     "TEMPERATURE|18 degrees": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.7728395061728395,
+      "f1": 0.8718662952646239,
+      "f2": 0.809622348680807
+     },
+     "TEMPERATURE|22 degrees": {
+      "support": 387,
+      "precision": 1.0,
+      "recall": 0.9276485788113695,
+      "f1": 0.9624664879356568,
+      "f2": 0.9412690089145255
+     },
+     "TEMPERATURE|26 degrees": {
+      "support": 393,
+      "precision": 1.0,
+      "recall": 0.9720101781170484,
+      "f1": 0.9858064516129033,
+      "f2": 0.9774820880245652
+     },
+     "TIME": {
+      "support": 273,
+      "precision": 1.0,
+      "recall": 0.7582417582417582,
+      "f1": 0.8624999999999999,
+      "f2": 0.7967667436489607
+     },
+     "TIMER|1 minute": {
+      "support": 402,
+      "precision": 1.0,
+      "recall": 0.9925373134328358,
+      "f1": 0.9962546816479401,
+      "f2": 0.9940209267563528
+     },
+     "TIMER|10 seconds": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.8716049382716049,
+      "f1": 0.9313984168865436,
+      "f2": 0.8945767866193614
+     },
+     "TIMER|30 seconds": {
+      "support": 405,
+      "precision": 1.0,
+      "recall": 0.9481481481481482,
+      "f1": 0.973384030418251,
+      "f2": 0.9580838323353293
+     },
+     "VOLUME_DOWN": {
+      "support": 237,
+      "precision": 1.0,
+      "recall": 0.5021097046413502,
+      "f1": 0.6685393258426967,
+      "f2": 0.5576382380506091
+     },
+     "VOLUME_UP": {
+      "support": 216,
+      "precision": 1.0,
+      "recall": 0.37962962962962965,
+      "f1": 0.5503355704697986,
+      "f2": 0.4334038054968288
+     },
+     "WEATHER": {
+      "support": 345,
+      "precision": 1.0,
+      "recall": 0.927536231884058,
+      "f1": 0.9624060150375939,
+      "f2": 0.9411764705882354
+     }
+    },
+    "confusions": [
+     [
+      [
+       "LIGHT_OFF",
+       "REJECT"
+      ],
+      199
+     ],
+     [
+      [
+       "LIGHT_ON",
+       "REJECT"
+      ],
+      156
+     ],
+     [
+      [
+       "VOLUME_UP",
+       "REJECT"
+      ],
+      134
+     ],
+     [
+      [
+       "VOLUME_DOWN",
+       "REJECT"
+      ],
+      118
+     ],
+     [
+      [
+       "PAUSE",
+       "REJECT"
+      ],
+      110
+     ],
+     [
+      [
+       "CALL",
+       "REJECT"
+      ],
+      104
+     ],
+     [
+      [
+       "TEMPERATURE|18 degrees",
+       "REJECT"
+      ],
+      92
+     ],
+     [
+      [
+       "PLAY_MUSIC",
+       "REJECT"
+      ],
+      84
+     ],
+     [
+      [
+       "STOP",
+       "REJECT"
+      ],
+      72
+     ],
+     [
+      [
+       "TIME",
+       "REJECT"
+      ],
+      66
+     ],
+     [
+      [
+       "ALARM|8:00 AM",
+       "REJECT"
+      ],
+      61
+     ],
+     [
+      [
+       "TIMER|10 seconds",
+       "REJECT"
+      ],
+      52
+     ],
+     [
+      [
+       "BRIGHTNESS|100 percent",
+       "REJECT"
+      ],
+      45
+     ],
+     [
+      [
+       "NEXT",
+       "REJECT"
+      ],
+      40
+     ],
+     [
+      [
+       "BRIGHTNESS|20 percent",
+       "REJECT"
+      ],
+      39
+     ]
+    ]
+   }
+  },
+  "out_of_scope": {
+   "validation_oos": {
+    "n": 228,
+    "false_accepts": 1,
+    "false_accept_rate": 0.0043859649122807015
+   }
+  }
+ },
+ "slot": {
+  "ALARM": {
+   "n": 2221,
+   "exact_rate": 1.0,
+   "mean_abs_error": 0.0,
+   "unit": "min",
+   "mean_rel_error": 0.0,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "BRIGHTNESS": {
+   "n": 2297,
+   "exact_rate": 1.0,
+   "mean_abs_error": 0.0,
+   "unit": "%",
+   "mean_rel_error": 0.0,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "COLOR": {
+   "n": 1877,
+   "exact_rate": 1.0,
+   "mean_abs_error": null,
+   "unit": null,
+   "mean_rel_error": null,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "CREATE_REMINDER": {
+   "n": 2538,
+   "exact_rate": 1.0,
+   "mean_abs_error": null,
+   "unit": null,
+   "mean_rel_error": null,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "TEMPERATURE": {
+   "n": 2218,
+   "exact_rate": 1.0,
+   "mean_abs_error": 0.0,
+   "unit": "deg",
+   "mean_rel_error": 0.0,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "TIMER": {
+   "n": 2397,
+   "exact_rate": 1.0,
+   "mean_abs_error": 0.0,
+   "unit": "s",
+   "mean_rel_error": 0.0,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  },
+  "ALL": {
+   "n": 13548,
+   "exact_rate": 1.0,
+   "mean_rel_error": 0.0,
+   "mean_phonetic_dist": 0.0,
+   "mean_char_dist": 0.0
+  }
+ }
+}

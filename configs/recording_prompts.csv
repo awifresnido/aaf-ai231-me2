@@ -1,0 +1,123 @@
+prompt_id,label,type,text,slot_value,pool_eligible
+PLAY_MUSIC_V1,PLAY_MUSIC,fixed,Play music,,true
+PLAY_MUSIC_V2,PLAY_MUSIC,fixed,Play a song,,true
+PLAY_MUSIC_V3,PLAY_MUSIC,fixed,Start the music,,true
+WEATHER_V1,WEATHER,fixed,Weather,,true
+WEATHER_V2,WEATHER,fixed,What's the weather?,,true
+WEATHER_V3,WEATHER,fixed,Tell me the weather,,true
+TIME_V1,TIME,fixed,Time,,true
+TIME_V2,TIME,fixed,What time is it?,,true
+TIME_V3,TIME,fixed,Tell me the time,,true
+LIGHT_ON_V1,LIGHT_ON,fixed,Lights on,,true
+LIGHT_ON_V2,LIGHT_ON,fixed,Power on the lights,,true
+LIGHT_ON_V3,LIGHT_ON,fixed,Turn on the lights,,true
+LIGHT_OFF_V1,LIGHT_OFF,fixed,Lights off,,true
+LIGHT_OFF_V2,LIGHT_OFF,fixed,Kill the lights,,true
+LIGHT_OFF_V3,LIGHT_OFF,fixed,Turn off the lights,,true
+PAUSE_V1,PAUSE,fixed,Pause,,true
+PAUSE_V2,PAUSE,fixed,Pause the music,,true
+PAUSE_V3,PAUSE,fixed,Pause this song,,true
+STOP_V1,STOP,fixed,Stop song,,true
+STOP_V2,STOP,fixed,Stop music,,true
+STOP_V3,STOP,fixed,Stop playing music,,true
+NEXT_V1,NEXT,fixed,Skip song,,true
+NEXT_V2,NEXT,fixed,Next song,,true
+NEXT_V3,NEXT,fixed,Play next song,,true
+VOLUME_UP_V1,VOLUME_UP,fixed,Volume up,,true
+VOLUME_UP_V2,VOLUME_UP,fixed,Increase the volume,,true
+VOLUME_UP_V3,VOLUME_UP,fixed,Turn the volume up,,true
+VOLUME_DOWN_V1,VOLUME_DOWN,fixed,Volume down,,true
+VOLUME_DOWN_V2,VOLUME_DOWN,fixed,Lower the volume,,true
+VOLUME_DOWN_V3,VOLUME_DOWN,fixed,Turn the volume down,,true
+CALL_V1,CALL,fixed,Call,,true
+CALL_V2,CALL,fixed,Make a call,,true
+CALL_V3,CALL,fixed,Make a phone call,,true
+MESSAGE_V1,MESSAGE,fixed,Message,,true
+MESSAGE_V2,MESSAGE,fixed,Send a message,,true
+MESSAGE_V3,MESSAGE,fixed,Send my message,,true
+LIST_REMINDERS_V1,LIST_REMINDERS,fixed,Reminders,,true
+LIST_REMINDERS_V2,LIST_REMINDERS,fixed,Show my reminders,,true
+LIST_REMINDERS_V3,LIST_REMINDERS,fixed,List my reminders,,true
+TIMER_V1_1,TIMER,slotted,Timer 10 seconds,10 seconds,true
+TIMER_V1_2,TIMER,slotted,Timer 30 seconds,30 seconds,true
+TIMER_V1_3,TIMER,slotted,Timer 1 minute,1 minute,true
+TIMER_V2_1,TIMER,slotted,Countdown for 10 seconds,10 seconds,true
+TIMER_V2_2,TIMER,slotted,Countdown for 30 seconds,30 seconds,true
+TIMER_V2_3,TIMER,slotted,Countdown for 1 minute,1 minute,true
+TIMER_V3_1,TIMER,slotted,Start a timer for 10 seconds,10 seconds,true
+TIMER_V3_2,TIMER,slotted,Start a timer for 30 seconds,30 seconds,true
+TIMER_V3_3,TIMER,slotted,Start a timer for 1 minute,1 minute,true
+ALARM_V1_1,ALARM,slotted,Alarm 6:00 AM,6:00 AM,true
+ALARM_V1_2,ALARM,slotted,Alarm 8:00 AM,8:00 AM,true
+ALARM_V1_3,ALARM,slotted,Alarm 9:00 PM,9:00 PM,true
+ALARM_V2_1,ALARM,slotted,Wake me up at 6:00 AM,6:00 AM,true
+ALARM_V2_2,ALARM,slotted,Wake me up at 8:00 AM,8:00 AM,true
+ALARM_V2_3,ALARM,slotted,Wake me up at 9:00 PM,9:00 PM,true
+ALARM_V3_1,ALARM,slotted,Set an alarm for 6:00 AM,6:00 AM,true
+ALARM_V3_2,ALARM,slotted,Set an alarm for 8:00 AM,8:00 AM,true
+ALARM_V3_3,ALARM,slotted,Set an alarm for 9:00 PM,9:00 PM,true
+TEMPERATURE_V1_1,TEMPERATURE,slotted,Temperature 18 degrees,18 degrees,true
+TEMPERATURE_V1_2,TEMPERATURE,slotted,Temperature 22 degrees,22 degrees,true
+TEMPERATURE_V1_3,TEMPERATURE,slotted,Temperature 26 degrees,26 degrees,true
+TEMPERATURE_V2_1,TEMPERATURE,slotted,Change the temperature to 18 degrees,18 degrees,true
+TEMPERATURE_V2_2,TEMPERATURE,slotted,Change the temperature to 22 degrees,22 degrees,true
+TEMPERATURE_V2_3,TEMPERATURE,slotted,Change the temperature to 26 degrees,26 degrees,true
+TEMPERATURE_V3_1,TEMPERATURE,slotted,Set the temperature to 18 degrees,18 degrees,true
+TEMPERATURE_V3_2,TEMPERATURE,slotted,Set the temperature to 22 degrees,22 degrees,true
+TEMPERATURE_V3_3,TEMPERATURE,slotted,Set the temperature to 26 degrees,26 degrees,true
+BRIGHTNESS_V1_1,BRIGHTNESS,slotted,Brightness 20 percent,20 percent,true
+BRIGHTNESS_V1_2,BRIGHTNESS,slotted,Brightness 60 percent,60 percent,true
+BRIGHTNESS_V1_3,BRIGHTNESS,slotted,Brightness 100 percent,100 percent,true
+BRIGHTNESS_V2_1,BRIGHTNESS,slotted,Set the brightness to 20 percent,20 percent,true
+BRIGHTNESS_V2_2,BRIGHTNESS,slotted,Set the brightness to 60 percent,60 percent,true
+BRIGHTNESS_V2_3,BRIGHTNESS,slotted,Set the brightness to 100 percent,100 percent,true
+BRIGHTNESS_V3_1,BRIGHTNESS,slotted,Change the brightness to 20 percent,20 percent,true
+BRIGHTNESS_V3_2,BRIGHTNESS,slotted,Change the brightness to 60 percent,60 percent,true
+BRIGHTNESS_V3_3,BRIGHTNESS,slotted,Change the brightness to 100 percent,100 percent,true
+COLOR_V1_1,COLOR,slotted,Color Red,Red,true
+COLOR_V1_2,COLOR,slotted,Color Blue,Blue,true
+COLOR_V1_3,COLOR,slotted,Color Green,Green,true
+COLOR_V2_1,COLOR,slotted,Change the lights to Red,Red,true
+COLOR_V2_2,COLOR,slotted,Change the lights to Blue,Blue,true
+COLOR_V2_3,COLOR,slotted,Change the lights to Green,Green,true
+COLOR_V3_1,COLOR,slotted,Set the lights to Red,Red,true
+COLOR_V3_2,COLOR,slotted,Set the lights to Blue,Blue,true
+COLOR_V3_3,COLOR,slotted,Set the lights to Green,Green,true
+CREATE_REMINDER_V1_1,CREATE_REMINDER,slotted,Reminder Drink water,Drink water,true
+CREATE_REMINDER_V1_2,CREATE_REMINDER,slotted,Reminder Study,Study,true
+CREATE_REMINDER_V1_3,CREATE_REMINDER,slotted,Reminder Exercise,Exercise,true
+CREATE_REMINDER_V2_1,CREATE_REMINDER,slotted,Remind me to Drink water,Drink water,true
+CREATE_REMINDER_V2_2,CREATE_REMINDER,slotted,Remind me to Study,Study,true
+CREATE_REMINDER_V2_3,CREATE_REMINDER,slotted,Remind me to Exercise,Exercise,true
+CREATE_REMINDER_V3_1,CREATE_REMINDER,slotted,Create a reminder to Drink water,Drink water,true
+CREATE_REMINDER_V3_2,CREATE_REMINDER,slotted,Create a reminder to Study,Study,true
+CREATE_REMINDER_V3_3,CREATE_REMINDER,slotted,Create a reminder to Exercise,Exercise,true
+UNKNOWN_01,UNKNOWN,local,What is the capital of France,,false
+UNKNOWN_02,UNKNOWN,local,How do I get to the airport,,false
+UNKNOWN_03,UNKNOWN,local,Order me a pizza,,false
+UNKNOWN_04,UNKNOWN,local,Tell me a joke,,false
+UNKNOWN_05,UNKNOWN,local,Open the front door,,false
+UNKNOWN_06,UNKNOWN,local,Increase the heat,,false
+UNKNOWN_07,UNKNOWN,local,Stop the music right now please,,false
+UNKNOWN_08,UNKNOWN,local,Play something upbeat,,false
+UNKNOWN_09,UNKNOWN,local,Call mom,,false
+UNKNOWN_10,UNKNOWN,local,Send a message to John,,false
+UNKNOWN_11,UNKNOWN,local,What are my reminders,,false
+UNKNOWN_12,UNKNOWN,local,Set a timer,,false
+UNKNOWN_13,UNKNOWN,local,Turn the lights off in ten minutes,,false
+UNKNOWN_14,UNKNOWN,local,Do not set an alarm,,false
+UNKNOWN_15,UNKNOWN,local,The weather was nice yesterday,,false
+UNKNOWN_16,UNKNOWN,local,Remind me in ten minutes,,false
+UNKNOWN_17,UNKNOWN,local,Next,,false
+UNKNOWN_18,UNKNOWN,local,Pause,,false
+UNKNOWN_19,UNKNOWN,local,Red,,false
+UNKNOWN_20,UNKNOWN,local,Twenty degrees,,false
+SILENCE_01,SILENCE,local,room tone only,,false
+SILENCE_02,SILENCE,local,fan noise only,,false
+SILENCE_03,SILENCE,local,keyboard noise only,,false
+SILENCE_04,SILENCE,local,chair movement only,,false
+SILENCE_05,SILENCE,local,distant conversation only,,false
+SILENCE_06,SILENCE,local,air conditioner only,,false
+SILENCE_07,SILENCE,local,handling noise only,,false
+SILENCE_08,SILENCE,local,open window ambience only,,false
+SILENCE_09,SILENCE,local,quiet microphone only,,false

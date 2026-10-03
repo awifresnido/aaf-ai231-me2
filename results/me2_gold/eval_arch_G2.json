@@ -1,0 +1,1056 @@
+{
+  "tau": 0.95,
+  "per_slice": {
+    "holdout_oos": {
+      "n": 48,
+      "n_command": 0,
+      "n_unknown_silence": 48,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.041666666666666664,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.011501652078965613,
+        0.13975911147771472
+      ]
+    },
+    "holdout_paraphrase": {
+      "n": 6,
+      "n_command": 6,
+      "n_unknown_silence": 0,
+      "correct": 0.16666666666666666,
+      "wrong": 0.3333333333333333,
+      "rejected": 0.5,
+      "FAR": null,
+      "correct_ci": [
+        0.03005258587173032,
+        0.563509436563646
+      ],
+      "wrong_ci": [
+        0.09676933255921683,
+        0.7000116786584712
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "holdout_real": {
+      "n": 252,
+      "n_command": 252,
+      "n_unknown_silence": 0,
+      "correct": 0.29365079365079366,
+      "wrong": 0.0,
+      "rejected": 0.7063492063492064,
+      "FAR": null,
+      "correct_ci": [
+        0.2408553755729651,
+        0.35264310160979173
+      ],
+      "wrong_ci": [
+        0.0,
+        0.015015540865910781
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "holdout_syn": {
+      "n": 300,
+      "n_command": 300,
+      "n_unknown_silence": 0,
+      "correct": 0.87,
+      "wrong": 0.0,
+      "rejected": 0.13,
+      "FAR": null,
+      "correct_ci": [
+        0.8272186992368379,
+        0.9034251625648376
+      ],
+      "wrong_ci": [
+        0.0,
+        0.012643429997735661
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "awi_s03": {
+      "n": 366,
+      "n_command": 279,
+      "n_unknown_silence": 87,
+      "correct": 0.7060931899641577,
+      "wrong": 0.0035842293906810036,
+      "rejected": 0.2903225806451613,
+      "FAR": 0.05747126436781609,
+      "correct_ci": [
+        0.6501293358207881,
+        0.7564586625500315
+      ],
+      "wrong_ci": [
+        0.0006329686531462951,
+        0.020020287444966568
+      ],
+      "FAR_ci": [
+        0.024795272156794536,
+        0.1275754478657502
+      ]
+    },
+    "validation_all": {
+      "n": 14445,
+      "n_command": 13380,
+      "n_unknown_silence": 1065,
+      "correct": 0.7266816143497757,
+      "wrong": 0.003288490284005979,
+      "rejected": 0.27002989536621824,
+      "FAR": 0.020657276995305163,
+      "correct_ci": [
+        0.7190658302605671,
+        0.7341672683738337
+      ],
+      "wrong_ci": [
+        0.002450691834320652,
+        0.004411433611037278
+      ],
+      "FAR_ci": [
+        0.013680676877446504,
+        0.031079557005665833
+      ]
+    },
+    "validation_oos": {
+      "n": 228,
+      "n_command": 0,
+      "n_unknown_silence": 228,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.008771929824561403,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.002408834518876697,
+        0.031414258489453124
+      ]
+    },
+    "validation_paraphrase": {
+      "n": 1794,
+      "n_command": 1794,
+      "n_unknown_silence": 0,
+      "correct": 0.14994425863991082,
+      "wrong": 0.022296544035674472,
+      "rejected": 0.8277591973244147,
+      "FAR": null,
+      "correct_ci": [
+        0.13417207882426016,
+        0.1672124257950567
+      ],
+      "wrong_ci": [
+        0.016416382848981104,
+        0.030218203868780904
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "validation_real": {
+      "n": 537,
+      "n_command": 537,
+      "n_unknown_silence": 0,
+      "correct": 0.09869646182495345,
+      "wrong": 0.00186219739292365,
+      "rejected": 0.8994413407821229,
+      "FAR": null,
+      "correct_ci": [
+        0.07624917195867925,
+        0.12684467289349188
+      ],
+      "wrong_ci": [
+        0.00032879077560053847,
+        0.010472153530458758
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "validation_synthetic": {
+      "n": 10770,
+      "n_command": 10770,
+      "n_unknown_silence": 0,
+      "correct": 0.8565459610027855,
+      "wrong": 0.0002785515320334262,
+      "rejected": 0.14317548746518105,
+      "FAR": null,
+      "correct_ci": [
+        0.8497984532799012,
+        0.8630392034385712
+      ],
+      "wrong_ci": [
+        9.473536334722382e-05,
+        0.000818736392168469
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "awi_s02": {
+      "n": 366,
+      "n_command": 279,
+      "n_unknown_silence": 87,
+      "correct": 0.6308243727598566,
+      "wrong": 0.0,
+      "rejected": 0.36917562724014336,
+      "FAR": 0.04597701149425287,
+      "correct_ci": [
+        0.5727781561312385,
+        0.6853168341389339
+      ],
+      "wrong_ci": [
+        0.0,
+        0.013582160474272523
+      ],
+      "FAR_ci": [
+        0.018022396823237183,
+        0.11233197826482823
+      ]
+    },
+    "synthetic_neg_test": {
+      "n": 750,
+      "n_command": 0,
+      "n_unknown_silence": 750,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.021333333333333333,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.01317328210165988,
+        0.03437198470240081
+      ]
+    },
+    "synthetic_neg_babble": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.07333333333333333,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.04143838680502927,
+        0.12653698526598406
+      ]
+    },
+    "synthetic_neg_near_silence": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.0,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.0,
+        0.02497113914571871
+      ]
+    },
+    "synthetic_neg_noise_only": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.0,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.0,
+        0.02497113914571871
+      ]
+    },
+    "synthetic_neg_reversed": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.0,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.0,
+        0.02497113914571871
+      ]
+    },
+    "synthetic_neg_truncated": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.03333333333333333,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.014320220695575196,
+        0.07565284250709559
+      ]
+    },
+    "near_miss": {
+      "n": 474,
+      "n_command": 0,
+      "n_unknown_silence": 474,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.1350210970464135,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.1071731307224687,
+        0.16873754762784654
+      ]
+    },
+    "tau_set": {
+      "n": 12651,
+      "n_command": 11586,
+      "n_unknown_silence": 1065,
+      "correct": 0.8159848092525461,
+      "wrong": 0.00034524426031417227,
+      "rejected": 0.18366994648713966,
+      "FAR": 0.020657276995305163,
+      "correct_ci": [
+        0.8088244866893531,
+        0.8229356574699941
+      ],
+      "wrong_ci": [
+        0.00013426451170369844,
+        0.0008874578214125714
+      ],
+      "FAR_ci": [
+        0.013680676877446504,
+        0.031079557005665833
+      ]
+    },
+    "holdout_only": {
+      "n": 606,
+      "n_command": 558,
+      "n_unknown_silence": 48,
+      "correct": 0.6021505376344086,
+      "wrong": 0.0035842293906810036,
+      "rejected": 0.3942652329749104,
+      "FAR": 0.041666666666666664,
+      "correct_ci": [
+        0.5609734604139098,
+        0.641930703321919
+      ],
+      "wrong_ci": [
+        0.0009834553134659852,
+        0.012973503373822387
+      ],
+      "FAR_ci": [
+        0.011501652078965613,
+        0.13975911147771472
+      ]
+    },
+    "single_words": {
+      "n": 32190,
+      "n_command": 1179,
+      "n_unknown_silence": 31011,
+      "correct": 0.9508057675996607,
+      "wrong": 0.0,
+      "rejected": 0.04919423240033927,
+      "FAR": 0.020895811163780594,
+      "correct_ci": [
+        0.9369297458123413,
+        0.9617535605576748
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0032477721446388086
+      ],
+      "FAR_ci": [
+        0.019362150402260664,
+        0.022548158757596533
+      ]
+    }
+  },
+  "per_slice_tau0": {
+    "holdout_oos": {
+      "n": 48,
+      "n_command": 0,
+      "n_unknown_silence": 48,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.5416666666666666,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.4029083309494732,
+        0.6742497814544648
+      ]
+    },
+    "holdout_paraphrase": {
+      "n": 6,
+      "n_command": 6,
+      "n_unknown_silence": 0,
+      "correct": 0.5,
+      "wrong": 0.5,
+      "rejected": 0.0,
+      "FAR": null,
+      "correct_ci": [
+        0.18761280689940868,
+        0.8123871931005913
+      ],
+      "wrong_ci": [
+        0.18761280689940868,
+        0.8123871931005913
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "holdout_real": {
+      "n": 252,
+      "n_command": 252,
+      "n_unknown_silence": 0,
+      "correct": 0.6666666666666666,
+      "wrong": 0.23809523809523808,
+      "rejected": 0.09523809523809523,
+      "FAR": null,
+      "correct_ci": [
+        0.6063449636225318,
+        0.7219831894221647
+      ],
+      "wrong_ci": [
+        0.18968885692379872,
+        0.2943669025773926
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "holdout_syn": {
+      "n": 300,
+      "n_command": 300,
+      "n_unknown_silence": 0,
+      "correct": 0.9733333333333334,
+      "wrong": 0.02666666666666667,
+      "rejected": 0.0,
+      "FAR": null,
+      "correct_ci": [
+        0.9482704597024538,
+        0.9864270932330232
+      ],
+      "wrong_ci": [
+        0.013572906766976815,
+        0.051729540297546284
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "awi_s03": {
+      "n": 366,
+      "n_command": 279,
+      "n_unknown_silence": 87,
+      "correct": 0.946236559139785,
+      "wrong": 0.053763440860215055,
+      "rejected": 0.0,
+      "FAR": 0.5632183908045977,
+      "correct_ci": [
+        0.9131998184300393,
+        0.9671515867380832
+      ],
+      "wrong_ci": [
+        0.032848413261916884,
+        0.08680018156996074
+      ],
+      "FAR_ci": [
+        0.45851365231750213,
+        0.6625762448221343
+      ]
+    },
+    "validation_all": {
+      "n": 14445,
+      "n_command": 13380,
+      "n_unknown_silence": 1065,
+      "correct": 0.8943198804185352,
+      "wrong": 0.07511210762331838,
+      "rejected": 0.03056801195814649,
+      "FAR": 0.49107981220657276,
+      "correct_ci": [
+        0.8889970148865657,
+        0.8994163805618683
+      ],
+      "wrong_ci": [
+        0.07076694958783461,
+        0.07970117908457885
+      ],
+      "FAR_ci": [
+        0.46114092176102356,
+        0.5210828240213261
+      ]
+    },
+    "validation_oos": {
+      "n": 228,
+      "n_command": 0,
+      "n_unknown_silence": 228,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.5482456140350878,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.48337939613465364,
+        0.6115129786591712
+      ]
+    },
+    "validation_paraphrase": {
+      "n": 1794,
+      "n_command": 1794,
+      "n_unknown_silence": 0,
+      "correct": 0.463768115942029,
+      "wrong": 0.38851727982162765,
+      "rejected": 0.14771460423634336,
+      "FAR": null,
+      "correct_ci": [
+        0.4407934848427267,
+        0.48689758649526
+      ],
+      "wrong_ci": [
+        0.3662233826849014,
+        0.41128760604736514
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "validation_real": {
+      "n": 537,
+      "n_command": 537,
+      "n_unknown_silence": 0,
+      "correct": 0.521415270018622,
+      "wrong": 0.24581005586592178,
+      "rejected": 0.23277467411545624,
+      "FAR": null,
+      "correct_ci": [
+        0.47916189148953664,
+        0.563364423054315
+      ],
+      "wrong_ci": [
+        0.2112828305230885,
+        0.2839483055433679
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "validation_synthetic": {
+      "n": 10770,
+      "n_command": 10770,
+      "n_unknown_silence": 0,
+      "correct": 0.983008356545961,
+      "wrong": 0.015227483751160632,
+      "rejected": 0.001764159702878366,
+      "FAR": null,
+      "correct_ci": [
+        0.9803896279521469,
+        0.985282635133659
+      ],
+      "wrong_ci": [
+        0.01308154018981515,
+        0.017719135402074003
+      ],
+      "FAR_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    "awi_s02": {
+      "n": 366,
+      "n_command": 279,
+      "n_unknown_silence": 87,
+      "correct": 0.956989247311828,
+      "wrong": 0.043010752688172046,
+      "rejected": 0.0,
+      "FAR": 0.5862068965517241,
+      "correct_ci": [
+        0.9263369253311919,
+        0.9752277667084515
+      ],
+      "wrong_ci": [
+        0.024772233291548578,
+        0.07366307466880803
+      ],
+      "FAR_ci": [
+        0.4812140531159266,
+        0.6839085338926685
+      ]
+    },
+    "synthetic_neg_test": {
+      "n": 750,
+      "n_command": 0,
+      "n_unknown_silence": 750,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.46266666666666667,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.4272628015903746,
+        0.49845103537484464
+      ]
+    },
+    "synthetic_neg_babble": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.72,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.6433420194970179,
+        0.7856706792788659
+      ]
+    },
+    "synthetic_neg_near_silence": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.05333333333333334,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.027269212890132462,
+        0.1017050047467096
+      ]
+    },
+    "synthetic_neg_noise_only": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.4066666666666667,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.33133978704521405,
+        0.48665482559532014
+      ]
+    },
+    "synthetic_neg_reversed": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.34,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.2690321465825542,
+        0.4189586179440758
+      ]
+    },
+    "synthetic_neg_truncated": {
+      "n": 150,
+      "n_command": 0,
+      "n_unknown_silence": 150,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.7933333333333333,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.7216049669151186,
+        0.8504119647860597
+      ]
+    },
+    "near_miss": {
+      "n": 474,
+      "n_command": 0,
+      "n_unknown_silence": 474,
+      "correct": null,
+      "wrong": null,
+      "rejected": null,
+      "FAR": 0.7742616033755274,
+      "correct_ci": [
+        0.0,
+        0.0
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0
+      ],
+      "FAR_ci": [
+        0.7345066171354409,
+        0.8096067459539176
+      ]
+    },
+    "tau_set": {
+      "n": 12651,
+      "n_command": 11586,
+      "n_unknown_silence": 1065,
+      "correct": 0.9609873985844986,
+      "wrong": 0.026583808044191266,
+      "rejected": 0.012428793371310202,
+      "FAR": 0.49107981220657276,
+      "correct_ci": [
+        0.9573061301214312,
+        0.964363066807024
+      ],
+      "wrong_ci": [
+        0.02380782486686389,
+        0.02967363082447188
+      ],
+      "FAR_ci": [
+        0.46114092176102356,
+        0.5210828240213261
+      ]
+    },
+    "holdout_only": {
+      "n": 606,
+      "n_command": 558,
+      "n_unknown_silence": 48,
+      "correct": 0.8297491039426523,
+      "wrong": 0.12724014336917563,
+      "rejected": 0.043010752688172046,
+      "FAR": 0.5416666666666666,
+      "correct_ci": [
+        0.7963337499253208,
+        0.8586551295026176
+      ],
+      "wrong_ci": [
+        0.10211575365647373,
+        0.15746203481629154
+      ],
+      "FAR_ci": [
+        0.4029083309494732,
+        0.6742497814544648
+      ]
+    },
+    "single_words": {
+      "n": 32190,
+      "n_command": 1179,
+      "n_unknown_silence": 31011,
+      "correct": 0.9991518235793045,
+      "wrong": 0.0,
+      "rejected": 0.0008481764206955047,
+      "FAR": 0.9371513333978265,
+      "correct_ci": [
+        0.9952111201883928,
+        0.9998502641930834
+      ],
+      "wrong_ci": [
+        0.0,
+        0.0032477721446388086
+      ],
+      "FAR_ci": [
+        0.9343956461911409,
+        0.9397987266087511
+      ]
+    }
+  },
+  "per_seed_tau": [
+    0.95,
+    0.95,
+    0.95
+  ],
+  "per_seed_wrong": [
+    0.0005178663904712584,
+    0.0,
+    0.0005178663904712584
+  ],
+  "per_leaf_validation_real": {
+    "ALARM|6:00 AM": {
+      "correct": 15,
+      "total": 18,
+      "rate": 0.8333333333333334
+    },
+    "ALARM|8:00 AM": {
+      "correct": 2,
+      "total": 9,
+      "rate": 0.2222222222222222
+    },
+    "ALARM|9:00 PM": {
+      "correct": 4,
+      "total": 15,
+      "rate": 0.26666666666666666
+    },
+    "BRIGHTNESS|100 percent": {
+      "correct": 6,
+      "total": 18,
+      "rate": 0.3333333333333333
+    },
+    "BRIGHTNESS|20 percent": {
+      "correct": 5,
+      "total": 18,
+      "rate": 0.2777777777777778
+    },
+    "BRIGHTNESS|60 percent": {
+      "correct": 12,
+      "total": 18,
+      "rate": 0.6666666666666666
+    },
+    "CALL": {
+      "correct": 7,
+      "total": 18,
+      "rate": 0.3888888888888889
+    },
+    "COLOR|Blue": {
+      "correct": 4,
+      "total": 18,
+      "rate": 0.2222222222222222
+    },
+    "COLOR|Green": {
+      "correct": 6,
+      "total": 18,
+      "rate": 0.3333333333333333
+    },
+    "COLOR|Red": {
+      "correct": 3,
+      "total": 18,
+      "rate": 0.16666666666666666
+    },
+    "CREATE_REMINDER|Drink water": {
+      "correct": 12,
+      "total": 18,
+      "rate": 0.6666666666666666
+    },
+    "CREATE_REMINDER|Exercise": {
+      "correct": 13,
+      "total": 18,
+      "rate": 0.7222222222222222
+    },
+    "CREATE_REMINDER|Study": {
+      "correct": 15,
+      "total": 18,
+      "rate": 0.8333333333333334
+    },
+    "LIGHT_OFF": {
+      "correct": 7,
+      "total": 15,
+      "rate": 0.4666666666666667
+    },
+    "LIGHT_ON": {
+      "correct": 12,
+      "total": 18,
+      "rate": 0.6666666666666666
+    },
+    "LIST_REMINDERS": {
+      "correct": 2,
+      "total": 18,
+      "rate": 0.1111111111111111
+    },
+    "MESSAGE": {
+      "correct": 15,
+      "total": 18,
+      "rate": 0.8333333333333334
+    },
+    "NEXT": {
+      "correct": 18,
+      "total": 18,
+      "rate": 1.0
+    },
+    "PAUSE": {
+      "correct": 14,
+      "total": 15,
+      "rate": 0.9333333333333333
+    },
+    "PLAY_MUSIC": {
+      "correct": 12,
+      "total": 18,
+      "rate": 0.6666666666666666
+    },
+    "STOP": {
+      "correct": 3,
+      "total": 18,
+      "rate": 0.16666666666666666
+    },
+    "TEMPERATURE|18 degrees": {
+      "correct": 5,
+      "total": 18,
+      "rate": 0.2777777777777778
+    },
+    "TEMPERATURE|22 degrees": {
+      "correct": 1,
+      "total": 18,
+      "rate": 0.05555555555555555
+    },
+    "TEMPERATURE|26 degrees": {
+      "correct": 15,
+      "total": 18,
+      "rate": 0.8333333333333334
+    },
+    "TIME": {
+      "correct": 4,
+      "total": 15,
+      "rate": 0.26666666666666666
+    },
+    "TIMER|1 minute": {
+      "correct": 9,
+      "total": 18,
+      "rate": 0.5
+    },
+    "TIMER|10 seconds": {
+      "correct": 11,
+      "total": 18,
+      "rate": 0.6111111111111112
+    },
+    "TIMER|30 seconds": {
+      "correct": 13,
+      "total": 18,
+      "rate": 0.7222222222222222
+    },
+    "VOLUME_DOWN": {
+      "correct": 10,
+      "total": 18,
+      "rate": 0.5555555555555556
+    },
+    "VOLUME_UP": {
+      "correct": 15,
+      "total": 18,
+      "rate": 0.8333333333333334
+    },
+    "WEATHER": {
+      "correct": 10,
+      "total": 18,
+      "rate": 0.5555555555555556
+    }
+  }
+}

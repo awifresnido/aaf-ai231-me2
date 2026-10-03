@@ -1,0 +1,95 @@
+class_key,phrase,source
+ALARM|6:00 AM,alarm 6 am,schema
+ALARM|8:00 AM,alarm 8 am,schema
+ALARM|9:00 PM,alarm 9 pm,schema
+BRIGHTNESS|100 percent,brightness 100 percent,schema
+BRIGHTNESS|20 percent,brightness 20 percent,schema
+BRIGHTNESS|60 percent,brightness 60 percent,schema
+CALL,call,schema
+BRIGHTNESS|100 percent,change the brightness to 100 percent,schema
+BRIGHTNESS|20 percent,change the brightness to 20 percent,schema
+BRIGHTNESS|60 percent,change the brightness to 60 percent,schema
+COLOR|Blue,change the lights to blue,schema
+COLOR|Green,change the lights to green,schema
+COLOR|Red,change the lights to red,schema
+TEMPERATURE|18 degrees,change the temperature to 18 degrees,schema
+TEMPERATURE|22 degrees,change the temperature to 22 degrees,schema
+TEMPERATURE|26 degrees,change the temperature to 26 degrees,schema
+COLOR|Blue,color blue,schema
+COLOR|Green,color green,schema
+COLOR|Red,color red,schema
+TIMER|1 minute,countdown for 1 minute,schema
+TIMER|10 seconds,countdown for 10 seconds,schema
+TIMER|30 seconds,countdown for 30 seconds,schema
+CREATE_REMINDER|Drink water,create a reminder to drink water,schema
+CREATE_REMINDER|Exercise,create a reminder to exercise,schema
+CREATE_REMINDER|Study,create a reminder to study,schema
+VOLUME_UP,increase the volume,schema
+LIGHT_OFF,kill the lights,schema
+LIGHT_OFF,lights off,schema
+LIGHT_ON,lights on,schema
+LIST_REMINDERS,list my reminders,schema
+VOLUME_DOWN,lower the volume,schema
+CALL,make a call,schema
+CALL,make a phone call,schema
+MESSAGE,message,schema
+NEXT,next song,schema
+PAUSE,pause,schema
+PAUSE,pause the music,schema
+PAUSE,pause this song,schema
+PLAY_MUSIC,play a song,schema
+PLAY_MUSIC,play music,schema
+NEXT,play next song,schema
+LIGHT_ON,power on the lights,schema
+CREATE_REMINDER|Drink water,remind me to drink water,schema
+CREATE_REMINDER|Exercise,remind me to exercise,schema
+CREATE_REMINDER|Study,remind me to study,schema
+CREATE_REMINDER|Drink water,reminder drink water,schema
+CREATE_REMINDER|Exercise,reminder exercise,schema
+CREATE_REMINDER|Study,reminder study,schema
+LIST_REMINDERS,reminders,schema
+MESSAGE,send a message,schema
+MESSAGE,send my message,schema
+ALARM|6:00 AM,set an alarm for 6 am,schema
+ALARM|8:00 AM,set an alarm for 8 am,schema
+ALARM|9:00 PM,set an alarm for 9 pm,schema
+BRIGHTNESS|100 percent,set the brightness to 100 percent,schema
+BRIGHTNESS|20 percent,set the brightness to 20 percent,schema
+BRIGHTNESS|60 percent,set the brightness to 60 percent,schema
+COLOR|Blue,set the lights to blue,schema
+COLOR|Green,set the lights to green,schema
+COLOR|Red,set the lights to red,schema
+TEMPERATURE|18 degrees,set the temperature to 18 degrees,schema
+TEMPERATURE|22 degrees,set the temperature to 22 degrees,schema
+TEMPERATURE|26 degrees,set the temperature to 26 degrees,schema
+LIST_REMINDERS,show my reminders,schema
+NEXT,skip song,schema
+TIMER|1 minute,start a timer for 1 minute,schema
+TIMER|10 seconds,start a timer for 10 seconds,schema
+TIMER|30 seconds,start a timer for 30 seconds,schema
+PLAY_MUSIC,start the music,schema
+STOP,stop music,schema
+STOP,stop playing music,schema
+STOP,stop song,schema
+TIME,tell me the time,schema
+WEATHER,tell me the weather,schema
+TEMPERATURE|18 degrees,temperature 18 degrees,schema
+TEMPERATURE|22 degrees,temperature 22 degrees,schema
+TEMPERATURE|26 degrees,temperature 26 degrees,schema
+TIME,time,schema
+TIMER|1 minute,timer 1 minute,schema
+TIMER|10 seconds,timer 10 seconds,schema
+TIMER|30 seconds,timer 30 seconds,schema
+LIGHT_OFF,turn off the lights,schema
+LIGHT_ON,turn on the lights,schema
+VOLUME_DOWN,turn the volume down,schema
+VOLUME_UP,turn the volume up,schema
+VOLUME_DOWN,volume down,schema
+VOLUME_UP,volume up,schema
+ALARM|6:00 AM,wake me up at 6 am,schema
+ALARM|8:00 AM,wake me up at 8 am,schema
+ALARM|9:00 PM,wake me up at 9 pm,schema
+WEATHER,weather,schema
+WEATHER,what s the weather,schema
+TIME,what time is it,schema
+STOP,stop,reconciled_single_word

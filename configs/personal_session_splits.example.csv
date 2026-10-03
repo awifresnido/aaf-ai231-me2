@@ -1,0 +1,4 @@
+session_id,split,condition,purpose
+awi01_s01,train,quiet_room_near,personal adaptation
+awi01_s02,validation,quiet_room_far,same-speaker condition holdout
+awi01_s03,test,demo_noise_mixed_distance,same-speaker session holdout

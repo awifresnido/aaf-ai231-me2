@@ -1,0 +1,13 @@
+{
+  "host": "dgx:ai-n003",
+  "source": "tiny-vcm/data/manifests/composite_v1.csv",
+  "note": "Row counts by corpus_id x source_split, computed on the DGX (the manifest is not synced locally). Corpus ids are pre-aliased to public ids (mark_optionb -> synthetic_tts).",
+  "total_clips": 71601,
+  "datasets": {
+    "synthetic_tts": {"name": "Synthetic Voices", "train": 14376, "validation": 1632, "test": 1978},
+    "fsc": {"name": "Home Commands", "train": 19003, "validation": 3103, "test": 3776},
+    "gsc_v2": {"name": "Single Words", "train": 3763, "validation": 9962, "test": 10730},
+    "gsc_noise": {"name": "Background Noise", "train": 110, "validation": 24, "test": 24},
+    "personal_awi": {"name": "Demo Speaker", "train": 2880, "validation": 120, "test": 120}
+  }
+}
