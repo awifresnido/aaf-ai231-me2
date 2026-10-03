@@ -141,6 +141,19 @@ stage_weights() {
                 "https://github.com/${REPO}/releases/download/${RELEASE_TAG}/${src}"
         fi
     done
+    # model_config.json sidecars (architecture config, next to each best.pt)
+    local sidecars=("E1_s0" "E1_s1" "E1_s2" "G2_s0" "G2_s1" "G2_s2"
+                    "B2f_s0" "B2f_s1" "B2f_s2" "E1f_s0" "E1f_s1" "E1f_s2"
+                    "G2f_s0" "G2f_s1" "G2f_s2")
+    for id in "${sidecars[@]}"; do
+        local dst="checkpoints/${id}/model_config.json"
+        if [[ -n "$WEIGHTS_LOCAL" && -f "$WEIGHTS_LOCAL/${id}.model_config.json" ]]; then
+            run cp "$WEIGHTS_LOCAL/${id}.model_config.json" "$dst"
+        else
+            run curl -fL -o "$dst" \
+                "https://github.com/${REPO}/releases/download/${RELEASE_TAG}/${id}.model_config.json" || true
+        fi
+    done
     if [[ "$NO_PERSONAL" == "0" ]]; then
         note "weights(+personal)" "Awi's personal recordings (published; needed for the exact manifest)"
         if [[ -n "$WEIGHTS_LOCAL" && -f "$WEIGHTS_LOCAL/personal_awi.zip" ]]; then
