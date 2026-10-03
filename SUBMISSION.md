@@ -1,14 +1,13 @@
 # SUBMISSION.md — slide-2 table (AI231 ME2)
 
-Filled from the repository's own files; fields Awi still owns are left in
-`[brackets]`.
+Filled from the repository's own files.
 
 | Field | Value |
 |---|---|
-| GitHub repository | [`awifresnido/aaf-ai231-me2` — public, MIT] |
+| GitHub repository | [awifresnido/aaf-ai231-me2](https://github.com/awifresnido/aaf-ai231-me2) — public, MIT |
 | Dataset location | Hugging Face `airimonda/ai231-me2-voice-commands` @ `6947f13073e57eb6ae67e7e2fc3680700b82aa13` · DOI [10.57967/hf/10723](https://doi.org/10.57967/hf/10723) · access: per-source (FSC non-commercial; group audio linked, never re-hosted); on the DGX read via `/data/ai231/load.py` |
 | A100 cluster | `ai-n003` · GPUs used `0,1,3` · total & per-run wall-clock (see `results/me2_gold/logs/summary_*.json`) · seeds `0, 1, 2` |
-| Model weights | `[release URL]` · CC BY-NC 4.0 · sha256 in `results/me2_gold/checksums.sha256` |
+| Model weights | [`v0`](https://github.com/awifresnido/aaf-ai231-me2/releases/tag/v0) · CC BY-NC 4.0 · sha256 in `results/me2_gold/checksums.sha256` |
 
 ## Checklist evidence
 
