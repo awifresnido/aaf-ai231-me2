@@ -11,8 +11,8 @@ downloaded by `reproduce.sh` (stage `weights`), then verified against
 |---|---|
 | `B2_s0` … `G2_s2` (9 v1 checkpoints) | `checkpoints/<id>/best.pt` |
 | `B2f_s0` … `G2f_s2` (9 fine-tuned checkpoints) | `checkpoints/<id>/best.pt` |
-| `E1f_s1_onnx` | `exports/me2_gold/E1f_s1/model.onnx` |
-| `B2f_s0_onnx` | `exports/me2_gold/B2f_s0/model.onnx` |
+| `E1f_s1.model.onnx` | `exports/me2_gold/E1f_s1/model.onnx` |
+| `B2f_s0.model.onnx` | `exports/me2_gold/B2f_s0/model.onnx` |
 | `personal_awi.zip` | `data/personal/raw/202453069/` (Awi's s01/s02/s03) |
 
 ## Creating the release (Awi, after review)
